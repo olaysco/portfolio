@@ -1,5 +1,26 @@
 
+const glob = require('glob');
+const path = require('path');
+
+var getDynamicRoutes = function() {
+  return [].concat(
+    glob
+      .sync('*.md', { cwd: 'posts/' })
+      .map((filepath) => `/software/${path.basename(filepath, '.md')}`),
+    glob
+      .sync('*.md', { cwd: 'blog/' })
+      .map((filepath) => `/blog/${path.basename(filepath, '.md')}`)
+  )
+}
+
+var dynamicPaths = getDynamicRoutes();
+
 export default {
+
+  generate: {
+    routes: dynamicPaths
+  },
+
   mode: 'universal',
   /*
   ** Headers of the page
@@ -23,11 +44,14 @@ export default {
   ** Global CSS
   */
   css: [
+    'bootstrap-vue/dist/bootstrap-vue.css',
+    '~assets/style.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/common.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -48,7 +72,12 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.md$/,
+        include: [path.resolve(__dirname, 'posts')],
+        loader: 'frontmatter-markdown-loader'
+      })
     }
   }
 }

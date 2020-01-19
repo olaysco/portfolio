@@ -1,72 +1,53 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        olaysco-portfolio
-      </h1>
-      <h2 class="subtitle">
-        My exquisite Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class=" container">
+    <div class="row banner-container">
+      <div class="col-md-7 banner-wrapper">
+        <div class="banner-content">
+          <h3 class="text-uppercase">Hell0</h3>
+          <h1 class="text-uppercase">I'm Olayiwola Odunsi</h1>
+          <h5 class="text-uppercase">Software Engineer</h5>
+          <div class="d-flex align-items-center">
+            <a class="btn primary-btn mr-4" href="#"><span>Hire Me</span></a>
+            <a class="btn primary-btn primary-btn-inverse" href="#"><span>Get CV</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 banner-image">
+        <img class="w-100 img-responsive" src="../assets/images/top-vector.png" alt="Software engineer illustration">
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+
 
 export default {
-  components: {
-    Logo
-  }
 }
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.banner-wrapper,.banner-image {
+  vertical-align: middle;
+  align-self: center;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.banner-content{
+  text-align: left;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.banner-content h3{
+  font-size: 40px;
+  margin-bottom: 20px;
+  position: relative;
 }
-
-.links {
-  padding-top: 15px;
+.banner-content h1{
+  margin-top: 20px;
+  font-size: 70px;
+  line-height: 60px;
+  margin-bottom: 25px;
+}
+.banner-content h5{
+  font-size: 24px;
+  margin-bottom: 35px;
+  letter-spacing: 2px;
 }
 </style>
