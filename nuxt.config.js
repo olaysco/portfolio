@@ -45,7 +45,8 @@ export default {
   */
   css: [
     'bootstrap-vue/dist/bootstrap-vue.css',
-    '~assets/style.css'
+    '~assets/style.css',
+    '@fortawesome/fontawesome-free/css/all.css',
   ],
   /*
   ** Plugins to load before mounting the App
