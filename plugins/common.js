@@ -1,17 +1,8 @@
 import Vue from 'vue'
+import VueLazyload from 'vue-lazyload'
 
-Vue.mixin({
-    methods: {
-        getClassType () {
-            let c = [
-                'default',
-                'primary',
-                'info',
-                'success',
-                'danger',
-                'warning'
-            ]
-            return c[Math.floor(Math.random() * c.length)]
-        }
-    }
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  attempt: 1
 })
+
