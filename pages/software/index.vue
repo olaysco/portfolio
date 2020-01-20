@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Exhibit from '~/components/Exhibit.vue'
+import Exhibit from '../../components/Exhibit.vue'
 export default {
   layout: 'Olayiwola Odunsi',
   name: 'Software',
@@ -14,7 +14,7 @@ export default {
   },
   props: ['slug'],
   async asyncData() {
-    const resolve = require.context('~/posts/', true, /\.md$/)
+    const resolve = require.context('../../posts/', true, /\.md$/)
     const imports = resolve
       .keys()
       .map((key) => {
