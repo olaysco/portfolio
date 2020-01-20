@@ -8,7 +8,7 @@
           <h5 class="text-uppercase">Software Engineer</h5>
           <div class="d-flex align-items-center">
             <a class="btn primary-btn mr-4" href="#"><span>Hire Me</span></a>
-            <a class="btn primary-btn primary-btn-inverse" href="#"><span>Get CV</span></a>
+            <a class="btn primary-btn primary-btn-inverse" target="__bkank" href="https://drive.google.com/file/d/1cIiWCdXwX0FL7GIpH7f38wtY0IyA8ALA/view?usp=sharing"><span>Get CV</span></a>
           </div>
         </div>
       </div>
@@ -29,14 +29,16 @@
         <Skills></Skills>
       </div>
     </div>
+    <SelectedWork />
   </div>
 </template>
 
 <script>
 
 import Skills from "../components/Skills";
+import SelectedWork from"../components/SelectedWork";
 export default {
-  components: { Skills }
+  components: { Skills, SelectedWork }
 }
 </script>
 
