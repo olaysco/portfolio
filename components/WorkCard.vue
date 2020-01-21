@@ -1,7 +1,8 @@
 <template>
   <div class="card border-0 work-card pt-0 click">
-    <div class="card-body p-0">
-      <img v-lazy="work.image" :alt="work.image" class="w-100 img-responsive br-10">
+    <div class="card-body p-0" @mouseenter="changeImage('enter')" @mouseleave="changeImage('leave')">
+      <img :src="imgLink" :alt="imgLink" class="w-100 img-responsive br-10 hide" >
+      <img :src="imgLink" :alt="imgLink" class="w-100 img-responsive br-10">
     </div>
     <div class="card-footer">
       <h6 class="text-left my-2 text-bold">{{work.title}}</h6>
@@ -16,10 +17,20 @@ export default {
   props:{
     work: Object
   },
-  computed: {
-    imgLink(){
-      return '~/assets/images/'+this.work.image;
+  data: ()=>{
+    return { imgLink: '' }
+  },
+  methods: {
+    changeImage(event){
+      if(event === 'enter'){
+        this.imgLink = this.work.image;
+      }else{
+        this.imgLink = this.work.thumbnail;
+      }
     }
+  },
+  created(){
+    this.imgLink = this.work.thumbnail;
   }
 }
 </script>
@@ -43,5 +54,8 @@ export default {
 }
 .click{
   cursor: pointer;
+}
+.hide{
+  display: none;
 }
 </style>

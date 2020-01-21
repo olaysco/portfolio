@@ -7,7 +7,7 @@
           <h1 class="text-uppercase">I'm Olayiwola Odunsi</h1>
           <h5 class="text-uppercase">Software Engineer</h5>
           <div class="d-flex align-items-center">
-            <a class="btn primary-btn mr-4" href="#"><span>Hire Me</span></a>
+            <a class="btn primary-btn mr-4" @click="hireMe()"><span>Hire Me</span></a>
             <a class="btn primary-btn primary-btn-inverse" target="__bkank" href="https://drive.google.com/file/d/1cIiWCdXwX0FL7GIpH7f38wtY0IyA8ALA/view?usp=sharing"><span>Get CV</span></a>
           </div>
         </div>
@@ -30,15 +30,21 @@
       </div>
     </div>
     <SelectedWork />
+    <Contact />
   </div>
 </template>
 
 <script>
-
+import Contact from "../components/Contact";
 import Skills from "../components/Skills";
 import SelectedWork from"../components/SelectedWork";
 export default {
-  components: { Skills, SelectedWork }
+  components: { Skills, SelectedWork, Contact },
+  methods: {
+    hireMe(){
+      this.$eventBus.$emit("hire-me-clicked");
+    }
+  }
 }
 </script>
 

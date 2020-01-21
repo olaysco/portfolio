@@ -52,7 +52,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/common.js'
+    '~/plugins/common.js',
+    '~/plugins/eventBus.js'
   ],
   /*
   ** Nuxt.js dev-modules
