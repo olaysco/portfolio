@@ -11,7 +11,7 @@
             </h4>
             <div class="mb-2 text-center">
               <span class="font-light mr-1">
-                <i class="fas fa-envelope mr-1"></i>olayiwolaodunsi@gmai.com
+                <i class="fas fa-envelope mr-1"></i>olayiwolaodunsi@gmail.com
               </span>
               <br />
               <span class="font-light">
