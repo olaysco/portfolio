@@ -40,9 +40,11 @@
         <div class="about-content text-left">
           <h2>WHO I AM</h2>
           <p>
-            I am a full-stack software engineer and artist currently working at Penciledge LLC.
-            I open source much of my software and write technical tutorials and articles on development.
+            Olayiwola is a technology enthusiast with a passion for creating solutions that can scale and offer users seamless
+            experience. He holds a Higher Diploma in computer science from one of the prestigious polytechnics in Nigeria.
+            A certified scrum master. Olayiwola has the interpersonal skills to scale any distributed team.
           </p>
+          <p>Years of Commercial Expericence: <b>{{yearsOfExp}}</b></p>
         </div>
         <Skills></Skills>
       </div>
@@ -62,6 +64,11 @@ export default {
   methods: {
     hireMe() {
       this.$eventBus.$emit('hire-me-clicked')
+    }
+  },
+  data(){
+    return {
+      yearsOfExp: new Date().getFullYear() - 2016
     }
   }
 }
