@@ -9,6 +9,8 @@
       <span class="d-block text-left">
         {{work.desc}}
       </span>
+      <br />
+      <a :href="work.link" target="__blank">{{work.link}}</a>
     </div>
   </div>
 </template>
