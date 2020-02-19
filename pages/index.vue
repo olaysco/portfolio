@@ -7,7 +7,7 @@
           <h1 class="text-uppercase">I'm Olayiwola Odunsi</h1>
           <h5 class="text-uppercase">Software Engineer</h5>
           <div class="d-flex align-items-center">
-            <a class="btn primary-btn mr-4" @click="hireMe()">
+            <a class="btn primary-btn mr-4 text-white" @click="hireMe()">
               <span>Hire Me</span>
             </a>
             <a
@@ -99,7 +99,7 @@ export default {
 }
 .banner-content h1 {
   margin-top: 20px;
-  font-size: 70px;
+  font-size:3.2rem;
   line-height: 60px;
   margin-bottom: 25px;
 }

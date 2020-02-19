@@ -164,6 +164,12 @@ export default {
   padding-left: 75px;
   transform: rotate(45deg);
 }
+@media only screen and (max-width: 768px) {
+  .section{
+    transform: unset;
+    padding-left: 0px;
+  }
+}
 
 .wall {
   display: flex;

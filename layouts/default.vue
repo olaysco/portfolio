@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="theme" :data-theme="theme">
     <ConstructionAlert />
     <Header />
     <nuxt />
@@ -8,12 +8,19 @@
 </template>
 
 <script>
-import ConstructionAlert from'../components/ConstructionAlert';
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
+import ConstructionAlert from '../components/ConstructionAlert'
+import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 export default {
   components: {
-    Header, Footer, ConstructionAlert
+    Header,
+    Footer,
+    ConstructionAlert
+  },
+  computed: {
+    theme() {
+      return 'dark'
+    }
   }
 }
 </script>
