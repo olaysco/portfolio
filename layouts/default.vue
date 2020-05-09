@@ -1,20 +1,20 @@
 <template>
   <div class="theme" :data-theme="theme">
-    <ConstructionAlert />
+    <!-- <ConstructionAlert /> -->
     <Header />
     <nuxt />
-    <Footer />
+    <page-footer />
   </div>
 </template>
 
 <script>
 import ConstructionAlert from '../components/ConstructionAlert'
 import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
+import PageFooter from '../components/PageFooter.vue'
 export default {
   components: {
     Header,
-    Footer,
+    PageFooter,
     ConstructionAlert
   },
   computed: {

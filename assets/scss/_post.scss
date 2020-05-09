@@ -1,0 +1,48 @@
+.post{
+  vertical-align: baseline;
+  .post-head{
+    padding: 2rem 0rem;
+    text-align: center;
+  }
+  .title{
+    text-align: center;
+  }
+  span.meta{
+    color: var(--color__text--muted);
+    &:not(:last-of-type){
+      margin-right: 1rem;
+    }
+  }
+  .markdown{
+    border: 1px solid #312006;
+    padding: 2em;
+    background-color: var(--markdown__background);
+    border-radius: 0.5em;
+    color: var(--color__text);
+    box-shadow: 0px 0px 4px 1px #FF9800;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    .header-anchor {
+      color: $color__text--muted;
+      opacity: 0;
+      transition: opacity 150ms $transition__normal;
+
+      &:focus {
+        opacity: 1;
+      }
+    }
+
+    &:hover .header-anchor {
+      opacity: 1;
+    }
+  }
+  a{
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}

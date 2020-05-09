@@ -1,20 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-body{
-  font-family: 'Ubuntu', sans-serif;
+
+html{
+  scroll-behavior: smooth;
+}
+body {
   font-size: 16px;
   color: #000;
   line-height: 1.6;
   overflow-y: scroll;
   overflow-x: hidden;
   background: #fff;
-  background-image: url("./images/Confetti-Doodles.svg");
+  background-image: url('./images/Confetti-Doodles.svg');
   background-attachment: fixed;
 }
-.header-container{
-  height: 100px;
+.header-container {
+  min-height: 100px;
 }
-.banner-container{
-  height: calc( 100vh - 100px);
+.banner-container {
+  height: calc(100vh - 100px);
+}
+.text-underline{
+  text-decoration: underline !important;
 }
 .primary-btn {
   color: #fff;
@@ -28,39 +33,46 @@ body{
   border-radius: 5px;
   background-origin: border-box;
   background-clip: content-box, border-box;
-  background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
+  background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%),
+    radial-gradient(circle at top left, #4458dc, #854fee);
   border: double 2px transparent;
   box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
 }
-.primary-btn-inverse{
-  background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #4458dc, #854fee);
+.primary-btn-inverse {
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(circle at top left, #4458dc, #854fee);
   border: 2px solid transparent;
   color: #222222;
   box-shadow: none;
 }
+p {
+  text-rendering: optimizeLegibility;
+}
 .primary-btn span {
   padding: 0 42px;
 }
-
+a.nav-link.nuxt-link-exact-active.nuxt-link-active {
+  color: rgb(22, 22, 22, 0.8);
+}
 .slide-enter-active {
-	        animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .slide-leave-active {
-	animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 @keyframes slide-in-right {
   0% {
     -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
- @keyframes slide-out-right {
+@keyframes slide-out-right {
   0% {
     transform: translateX(0);
     opacity: 1;
@@ -70,4 +82,3 @@ body{
     opacity: 0;
   }
 }
-

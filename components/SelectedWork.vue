@@ -1,6 +1,6 @@
 <template>
   <section class=" work-container pb-4">
-    <h3>Selected Work</h3>
+    <h4 class="mb-l">Selected Work</h4>
     <div class="row">
       <div class="col-md-4 mb-4" v-for="(work,index) in works" :key="index">
         <WorkCard :work="work" />
@@ -42,5 +42,7 @@ export default {
 }
 </script>
 <style scoped>
-
+h4{
+  color: var(--color__text--muted);
+}
 </style>

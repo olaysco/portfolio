@@ -1,57 +1,62 @@
 <template>
   <div>
     <transition name="slide">
-    <div id="floating-chat" class="sidebar-floating" v-if="showChat">
-      <div class="sidebar-content">
-        <div data-filter-list="chat-module-body" class="chat-module">
-          <div class="chat-module-bottom">
-            <h4 class="m-auto text-center pb-2 contact-head">
-              Contact me
-              <i class="fas fa-smile"></i>
-            </h4>
-            <div class="mb-2 text-center">
-              <span class="font-light mr-1">
-                <i class="fas fa-envelope mr-1"></i>olayiwolaodunsi@gmail.com
-              </span>
-              <br />
-              <span class="font-light">
-                <i class="fas fa-phone mr-1"></i>+2348113376030
-              </span>
-            </div>
-            <form
-              class="chat-form"
-              name="contact-me"
-              method="post"
-              @submit.prevent="sendContact()"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              netlify
-            >
-              <input type="hidden" name="form-name" value="contact-me" />
-              <div class="chat-form-buttons-left position-absolute"></div>
-              <textarea
-                v-model="form.message"
-                name="message"
-                placeholder="Type message"
-                rows="3"
-                class="form-control"
-              ></textarea>
-              <div class="chat-form-buttons">
-                <div></div>
-                <div class="btn-send">
-                  <button class="btn" type="submit">
-                    <i aria-hidden="true" class="fa fa-paper-plane"></i>
-                  </button>
+      <div id="floating-chat" class="sidebar-floating" v-if="showChat">
+        <div class="sidebar-content">
+          <div data-filter-list="chat-module-body" class="chat-module">
+            <div class="chat-module-bottom">
+              <h4 class="m-auto text-center pb-2 contact-head">
+                Contact me
+                <i class="fas fa-smile"></i>
+              </h4>
+              <div class="mb-2 text-center">
+                <small class="font-light-gray mr-1">
+                  <i class="fas fa-envelope mr-1"></i>olayiwolaodunsi@gmail.com
+                </small>
+                <br />
+                <small class="font-light-gray">
+                  <i class="fas fa-phone mr-1"></i>+2348113376030
+                </small>
+              </div>
+              <form
+                class="chat-form"
+                name="contact-me"
+                method="post"
+                @submit.prevent="sendContact()"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                netlify
+              >
+                <input type="hidden" name="form-name" value="contact-me" />
+                <div class="chat-form-buttons-left position-absolute"></div>
+                <textarea
+                  v-model="form.message"
+                  name="message"
+                  placeholder="Type message"
+                  rows="3"
+                  class="form-control no-border"
+                ></textarea>
+                <div class="chat-form-buttons">
+                  <div></div>
+                  <div class="btn-send">
+                    <button class="btn" type="submit">
+                      <i aria-hidden="true" class="fa fa-paper-plane"></i>
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group mt-4">
-                <input name="email" placeholder="Email" v-model="form.email" class="form-control" />
-              </div>
-            </form>
+                <div class="form-group mt-4">
+                  <input
+                    name="email"
+                    placeholder="Email"
+                    v-model="form.email"
+                    class="form-control no-border"
+                  />
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </transition>
     <a class="float" @click="()=> showChat = !showChat">
       <i v-if="!showChat" class="fa fa-comment" id="chat-open-icon"></i>
@@ -125,8 +130,15 @@ export default {
 }
 </script>
 <style scoped>
-.fa-smile{
-  color: #FFC107;
+.no-border {
+  border: 0;
+  background-color: #f7f7f7;
+}
+.font-light-gray {
+  color: #8a8a8a;
+}
+.fa-smile {
+  color: #ffc107;
 }
 .font-light {
   font-weight: 300;
@@ -226,36 +238,34 @@ a.float {
   overflow-wrap: break-word;
   resize: none;
   max-height: 5rem;
-  padding-right: 2.375rem;
-  padding-left: 1rem;
-  font-size: 0.875rem;
   display: block;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
-  font-weight: 400;
   line-height: 1.6;
-  color: #495057;
-  background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  /* border: 1px solid #ced4da;
+  background-color: #fff; */
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s;
 }
 .chat-form-buttons {
   position: absolute;
-  top: 105px;
+  top: 93px;
   right: 1rem;
   display: flex;
   align-items: center;
 }
 .btn-send > button > i {
   color: #896ae5;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .btn-send > button:focus,
-.btn-send > button:active{
+.btn-send > button:active {
   box-shadow: unset;
+}
+.form-control {
+  font-size: 0.775rem;
 }
 
 .hide {
