@@ -109,9 +109,9 @@ export default {
   margin: auto;
   right: 0;
   left: 0;
-  bottom: 50px;
-  height: 4px;
-  width: 4px;
+  bottom: 9px;
+  height: 80px;
+  width: 80px;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
 }
