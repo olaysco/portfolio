@@ -4,11 +4,11 @@
       <div class="col-md-7 banner-wrapper centerlize">
         <div class="banner-content">
           <!-- <h3 class="text-uppercase">Hell0</h3> -->
-          <h1 class="text-uppercase d-none animate__slow" ref="my_name">I'm Olayiwola Odunsi</h1>
-          <h5 class="text-uppercase d-none animate__slow" ref="my_title">Software Engineer</h5>
-          <div class="align-items-center display-flex d-none animate__slow" ref="hero_btns">
+          <h1 class="text-uppercase invisible animate__slow" ref="my_name">I'm Olayiwola Odunsi</h1>
+          <h5 class="text-uppercase invisible animate__slow" ref="my_title">Software Engineer</h5>
+          <div class="align-items-center display-flex invisible animate__slow" ref="hero_btns">
             <a class="btn primary-btn mr-4 text-white" @click="hireMe()">
-              <span>Hire Me</span>
+              <span>Let's Talk</span>
             </a>
             <a
               class="btn primary-btn primary-btn-inverse"
@@ -27,7 +27,9 @@
           alt="Software engineer illustration"
         />
       </div>
-      <a href="#about" class="arrow-down animate__animated animate__bounce"></a>
+      <a href="#about" class="arrow-down animate__animated animate__bounce">
+        <img src="../assets/images/triangle.svg" alt="triangle">
+      </a>
     </div>
     <div class="row about-container" id="about">
       <div class="col-md-5">
@@ -41,16 +43,19 @@
         <div class="about-content text-left">
           <h2>WHO I AM</h2>
           <p>
-            Olayiwola is a technology enthusiast with a passion for creating solutions that can scale and offer users seamless
-            experience.
-            A certified scrum master.
+            Olayiwola is a technology enthusiast with a passion for crafting software solutions
+            that makes life easy for the rest of world.
+            <br>
+             let me also brag that I'm a certified scrum master.
+            <br>
+            <br>
+            <a href="/blog">This is where I share everything I learn on my journey with the world.</a>
           </p>
-          <p>Years of Commercial Expericence: <b>{{yearsOfExp}}</b></p>
         </div>
         <Skills></Skills>
       </div>
     </div>
-    <SelectedWork />
+    <!-- <SelectedWork /> -->
     <Contact />
   </div>
 </template>
@@ -86,11 +91,11 @@ export default {
     }
   },
   mounted() {
-    this.$refs.my_name.classList.remove('d-none')
+    this.$refs.my_name.classList.remove('invisible')
     this.animateNow("my_name", "bounce").then(()=>{
-      this.$refs.my_title.classList.remove('d-none')
+      this.$refs.my_title.classList.remove('invisible')
       this.animateNow("my_title", "bounce").then(()=>{
-        this.$refs.hero_btns.classList.remove('d-none')
+        this.$refs.hero_btns.classList.remove('invisible')
         this.animateNow("hero_btns", "bounce")
       })
     })
@@ -107,32 +112,8 @@ export default {
   bottom: 50px;
   height: 4px;
   width: 4px;
-  border-radius: 2px;
-  background: #fff;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
-  &::after,
-  &::before{
-    position: absolute;
-    top: -23px;
-    content: "";
-    height: 30px;
-    width: 27px;
-    border-radius: 2px;
-    }
-    &::before {
-      left: -10px;
-      transform: rotate(-45deg);
-      background: rgba(103, 58, 183, 0.32);
-    }
-    &::after {
-      right: -10px;
-      transform: rotate(90deg);
-      top: -43px;
-      height: 52px;
-      left: -16px;
-      background: #fff;
-    }
 }
 .display-flex{
   display: flex

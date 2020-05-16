@@ -82,3 +82,6 @@ a.nav-link.nuxt-link-exact-active.nuxt-link-active {
     opacity: 0;
   }
 }
+.svg-water{
+  fill: rgba(118, 85, 225, 0.3);
+}

@@ -1,5 +1,6 @@
 <template>
   <section class="section">
+    <!-- <img src="../assets/images/water.svg" alt="" srcset=""> -->
   <div class="wall">
     <div class="v-boxes">
       <div class="box">
@@ -127,9 +128,9 @@
         </div>
       </div>
       <div class="box">
-        <span class="tooltip">Typescript</span>
+        <span class="tooltip">Go</span>
         <div class="box-face">
-          <div class="box-text"><img src="https://www.typescriptlang.org/assets/images/icons/favicon.ico" alt=""></div>
+          <div class="box-text"><img src="../assets/images/golang.svg" alt="golang" ></div>
         </div>
         <div class="box-back">
           <div class="box-text">
@@ -162,7 +163,7 @@ export default {
   display: flex;
   justify-content: center;
   padding-left: 75px;
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
 @media only screen and (max-width: 768px) {
   .section{
@@ -240,9 +241,6 @@ export default {
   width: 100px;
   height: 100px;
   background-color: #dedede;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
   transform: rotate(90deg);
   transform-style: preserver-3d;
   -webkit-transform-style: preserver-3d;
@@ -255,10 +253,7 @@ export default {
   text-align: center;
   font-size: 40px;
   color: #bababa;
-  -webkit-transform: rotate(-135deg);
-  -ms-transform: rotate(-135deg);
-  -moz-transform: rotate(-135deg);
-  transform: rotate(-135deg);
+  transform: rotate(-225deg);
   transition: opacity 0s linear .3s;
 }
 

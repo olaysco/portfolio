@@ -2,10 +2,10 @@
   <div class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-6">
           <span> —— Olayiwola Odunsi {{year}} &copy </span>
         </div>
-        <div class="col-md-6 text-right">
+        <div class="col-6 text-right">
           <a href="github.com/olaysco">
             <i class="fab fa-github"></i> Check on github ——
           </a>
