@@ -115,7 +115,7 @@ In the `contents` directory, we're also going to create an `index.js` JavaScript
 
 ```js
 export const postSlugs = ['my-first-blog-post']
-export const postRoutes = postSlugs.map((postSlug) => `/blog/${postSlug}`)
+export const postRoutes = postSlugs.map((postSlug) => `/${postSlug}`)
 ```
 
 ### Nuxt Configuration
@@ -148,7 +148,7 @@ In `index.vue`, we're going to use `asyncData` to load the blog posts before the
     <h1>My Blog</h1>
     <ol>
       <li v-for="post in posts" :key="post.title">
-        <nuxt-link :to="`/blog/${post.slug}`">
+        <nuxt-link :to="`/${post.slug}`">
           {{ post.title }}
         </nuxt-link>
         — {{ post.date.toLocaleDateString() }}
@@ -184,7 +184,7 @@ export default {
 
 The last thing we need to do is create the page for the individual blog posts, the content itself! In a dynamic route such as `_post.vue`, the route parameters are passed into the context of `asyncData`: we can access the slug of our post (`my-first-blog-post`) using `params.post`. If you named your dynamic route `_slug.vue` instead, then you would access the route as `params.slug`.
 
-When we have the slug of the blog post, we're going to import the corresponding Markdown file, again which will be loaded using `frontmatter-markdown-loader`. Note that if the user has requested a blog post which doesn't exist, for example `/blog/non-existent-blog-post`, this would try to load `contents/non-existent-blog-post.md` which would error. We need to catch this error and instead render the error page by calling `error()` with the status code and error message.
+When we have the slug of the blog post, we're going to import the corresponding Markdown file, again which will be loaded using `frontmatter-markdown-loader`. Note that if the user has requested a blog post which doesn't exist, for example `/non-existent-blog-post`, this would try to load `contents/non-existent-blog-post.md` which would error. We need to catch this error and instead render the error page by calling `error()` with the status code and error message.
 
 The template of our blog post displays the title and the date from the attributes of the Markdown file, then uses our Markdown component to render the body of the blog post!
 
@@ -227,7 +227,7 @@ export default {
 
 ## Wrapping Up
 
-That's everything! When you've finished all of these steps, you'll be able to write blog posts in Markdown and see them appear in your `/blog` page. Clicking on a blog post will take you to `/blog/name-of-blog-post`, where you'll see your blog post compiled from the Markdown using Vue's render functions.
+That's everything! When you've finished all of these steps, you'll be able to write blog posts in Markdown and see them appear in your `` page. Clicking on a blog post will take you to `/name-of-blog-post`, where you'll see your blog post compiled from the Markdown using Vue's render functions.
 
 Feel free to <nuxt-link to="/contact/">contact me</nuxt-link> if you have any queries or feedback and keep an eye out for my next blog post!
 

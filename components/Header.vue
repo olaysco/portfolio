@@ -5,9 +5,6 @@
         <Logo />
       </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item to="/blog" target>
-          <i class="fas fa-book fa-2x"  v-b-tooltip.hover title="Blog"></i>
-        </b-nav-item>
         <b-nav-item href="https://github.com/olaysco" target="__blank">
           <i class="fab fa-github fa-2x" v-b-tooltip.hover title="Github profile"></i>
         </b-nav-item>

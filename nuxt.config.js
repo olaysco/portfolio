@@ -3,19 +3,6 @@ import markdown from './config/markdown'
 const glob = require('glob')
 const path = require('path')
 
-// var getDynamicRoutes = function() {
-//   return [].concat(
-//     glob
-//       .sync('*.md', { cwd: 'posts/' })
-//       .map(filepath => `${url}/${path.basename(filepath, '.md')}`),
-//     glob
-//       .sync('*.md', { cwd: 'blog/' })
-//       .map(filepath => `/blog/${path.basename(filepath, '.md')}`)
-//   )
-// }
-
-// var dynamicPaths = getDynamicRoutes()
-
 function getDynamicPaths(urlFilepathTable) {
   return [].concat(
     ...Object.keys(urlFilepathTable).map(url => {

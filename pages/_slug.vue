@@ -14,7 +14,7 @@
     </div>
     <div class="row">
       <div class="col-md-12 mt-4">
-        <a href="/blog" class="float-right text-underline">See more posts</a>
+        <a href="/" class="float-right text-underline">See more posts</a>
       </div>
     </div>
   </div>
