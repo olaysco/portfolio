@@ -7,7 +7,7 @@
 
   $color__body: hsl(hue($color__primary), 16%, 98%);
   $color__body--overlay: lighten($color__body, 2%);
-  $markdown__background: #{transparentize(#cca976, 0.8)};
+  $markdown__background: #{darken(#fff, 0)};
   --color__body: #{$color__body};
   --color__body--overlay: #{$color__body--overlay};
   --color__body--blur: #{transparentize($color__body--overlay, 0.1)};
@@ -15,7 +15,6 @@
   --color__text--muted: #{transparentize(black, 0.4)};
   --color__text--muter: #{transparentize(black, 0.98)};
   --markdown__background: #{$markdown__background};
-
 
   --box-shadow: 0 0 2rem -1rem #{transparentize(black, 0.8)};
   --box-shadow--small: 0 0 0.5rem -0.25rem #{transparentize(black, 0.9)};
