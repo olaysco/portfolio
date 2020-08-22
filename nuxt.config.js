@@ -1,5 +1,6 @@
 import Mode from 'frontmatter-markdown-loader/mode'
 import markdown from './config/markdown'
+import createSitemap from './sitemap';
 const glob = require('glob')
 const path = require('path')
 
@@ -8,22 +9,25 @@ async function getDynamicPaths(urlFilepathTable) {
     ...Object.keys(urlFilepathTable).map(url => {
       var filepathGlob = urlFilepathTable[url];
       return glob
-        .sync(filepathGlob, { cwd: "content" })
+        .sync(filepathGlob, { cwd: "" })
         .map(filepath => `${url}/${path.basename(filepath, ".md")}`);
     })
   );
 }
 
 export default async () => {
+  const dynamicRoutes = await getDynamicPaths({
+    '': 'posts/*.md'
+  });
+  console.log(dynamicRoutes);
+  await createSitemap(dynamicRoutes);
   return {
     generate: {
-      routes: await getDynamicPaths({
-        '/': 'posts/*.md'
-      })
+      routes: dynamicRoutes
     },
     target: 'static',
 
-    mode: 'spa',
+    mode: 'universal',
     /*
      ** Headers of the page
      */
