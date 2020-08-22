@@ -34,6 +34,18 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      {
+        name: 'theme-color', content: '#08193d'
+      },
+      {
+        name: 'apple-mobile-web-app-capable', content:'yes'
+      },
+      {
+        name: 'apple-mobile-web-app-status-bar-style', content:'black-translucent'
+      },
+      {
+        name: 'msapplication-navbutton-color', content: '#08193d'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
