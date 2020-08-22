@@ -11,13 +11,15 @@
       enable-background="new 0 0 500 300"
       xml:space="preserve"
       class="img-logo"
+      width="500"
+      height="300"
     >
       <g>
         <path
-          class="o"
+          class="o svg-elem-1"
           stroke-miterlimit="10"
           fill="none"
-          stroke="#000000"
+          stroke="#ffffff"
           d="M16.751,144.167c0-19.432,3.158-36.914,9.477-52.441c6.316-15.527,15.101-27.66,26.35-36.401
 		c11.249-8.739,24.006-13.11,38.272-13.11c14.917,0,27.98,4.372,39.189,13.11c11.207,8.741,19.849,20.826,25.922,36.255
 		c6.071,15.431,9.109,32.959,9.109,52.588c0,19.336-3.139,36.72-9.416,52.148c-6.278,15.432-15.021,27.517-26.228,36.255
@@ -32,17 +34,17 @@
       </g>
       <g>
         <path
-          class=""
+          class="svg-elem-2"
           stroke="none"
-          fill="#000000"
+          fill="#ffffff"
           d="M184.798,126.319c0-0.731,0.102-1.507,0.307-2.327L197.22,66.36h3.512l-11.764,55.921l-0.483,3.161
 		c0,0.761,0.168,1.28,0.505,1.558c0.336,0.278,0.958,0.417,1.866,0.417l2.765-0.176l-0.702,2.941
 		c-0.995,0.234-1.903,0.352-2.722,0.352c-1.814,0-3.168-0.323-4.06-0.966C185.244,128.924,184.798,127.841,184.798,126.319z"
         />
         <path
-          class=""
+          class="svg-elem-3"
           stroke="none"
-          fill="#000000"
+          fill="#ffffff"
           d="M202.97,116.97c0-4.39,0.848-8.837,2.546-13.344c1.697-4.506,4.155-8.259,7.374-11.259
 		c3.219-3,6.979-4.5,11.281-4.5c4.097,0,7.375,1.888,9.832,5.663h0.176l1.977-4.609h2.502l-7.023,33.359
 		c-0.234,1.171-0.352,2.166-0.352,2.985c0,1.434,0.658,2.151,1.975,2.151c1.084,0,1.99-0.058,2.723-0.176l-0.834,2.941
@@ -54,34 +56,34 @@
 		 M221.845,80.582l8.339-15.319h4.961l-9.964,15.319H221.845z"
         />
         <path
-          class=""
+          class="svg-elem-4"
           stroke="none"
-          fill="#000000"
+          fill="#ffffff"
           d="M236.198,151.119l0.834-3.6l1.712,0.221c3.716,0,6.993-1.428,9.832-4.281
 		c2.838-2.852,5.663-7.513,8.472-13.979l-9.306-40.558h3.864l7.066,31.56l1.098,4.652h0.176l2.765-5.048l16.636-31.165h4.434
 		l-22.913,41.875c-2.721,5.033-5.033,8.969-6.935,11.807c-1.902,2.838-4.054,5.012-6.454,6.52c-2.399,1.506-5.34,2.26-8.822,2.26
 		C237.778,151.383,236.958,151.295,236.198,151.119z"
         />
         <path
-          class=""
+          class="svg-elem-5"
           stroke="none"
-          fill="#000000"
+          fill="#ffffff"
           d="M284.395,129.918l8.384-40.997h3.6l-8.472,40.997H284.395z M294.227,80.582l8.34-15.319h4.96l-9.964,15.319
 		H294.227z"
         />
         <path
-          class=""
+          class="svg-elem-6"
           stroke="none"
-          fill="#000000"
+          fill="#ffffff"
           d="M304.19,88.921h3.774l5.224,36.695h0.264c0.321-0.819,1.155-2.575,2.502-5.267l1.8-3.731l12.334-27.697
 		h4.652l3.249,28.882l0.438,3.292l0.57,4.521h0.088l1.361-2.546l2.677-4.828l15.627-29.321h4.17l-22.386,40.997h-4.434
 		l-2.766-24.186c-0.79-6.028-1.185-10.228-1.185-12.598h-0.264c-0.117,0.293-0.257,0.629-0.417,1.009
 		c-0.161,0.381-5.626,12.306-16.395,35.774h-4.565L304.19,88.921z"
         />
         <path
-          class=""
+          class="svg-elem-7"
           stroke="none"
-          fill="#000000"
+          fill="#ffffff"
           d="M364.501,115.17c0-3.014,0.717-6.672,2.151-10.974c1.434-4.301,3.745-8.098,6.936-11.39
 		c3.188-3.292,7.286-4.938,12.29-4.938c4.418,0,7.762,1.464,10.03,4.39c2.267,2.926,3.401,7.023,3.401,12.291
 		c0,3.072-0.718,6.687-2.15,10.842c-1.435,4.155-3.775,7.799-7.023,10.93c-3.248,3.131-7.39,4.696-12.422,4.696
@@ -92,17 +94,17 @@
 		S395.534,107.825,395.534,104.372z M374.114,140.146l0.878-4.039h3.774l-0.702,4.039H374.114z"
         />
         <path
-          class=""
+          class="svg-elem-8"
           stroke="none"
-          fill="#000000"
+          fill="#ffffff"
           d="M407.737,126.319c0-0.731,0.102-1.507,0.307-2.327l12.115-57.633h3.512l-11.764,55.921l-0.483,3.161
 		c0,0.761,0.168,1.28,0.505,1.558c0.336,0.278,0.958,0.417,1.865,0.417l2.766-0.176l-0.702,2.941
 		c-0.995,0.234-1.902,0.352-2.722,0.352c-1.814,0-3.168-0.323-4.061-0.966C408.183,128.924,407.737,127.841,407.737,126.319z"
         />
         <path
-          class=""
+          class="svg-elem-9"
           stroke="none"
-          fill="#000000"
+          fill="#ffffff"
           d="M425.908,116.97c0-4.39,0.849-8.837,2.546-13.344s4.155-8.259,7.375-11.259c3.219-3,6.979-4.5,11.28-4.5
 		c4.097,0,7.374,1.888,9.832,5.663h0.176l1.976-4.609h2.502l-7.023,33.359c-0.234,1.171-0.351,2.166-0.351,2.985
 		c0,1.434,0.658,2.151,1.975,2.151c1.083,0,1.99-0.058,2.722-0.176l-0.834,2.941c-0.937,0.234-1.917,0.352-2.94,0.352
@@ -116,7 +118,7 @@
       </g>
       <g>
         <path
-          fill="#000000"
+          fill="#ffffff"
           d="M184.402,201.173c0-2.896,0.285-5.465,0.856-7.703s1.324-4.192,2.261-5.86
 		c0.936-1.668,2.033-3.064,3.292-4.191c1.258-1.126,2.56-2.041,3.906-2.743c1.346-0.702,2.714-1.207,4.104-1.515
 		c1.389-0.308,2.699-0.461,3.928-0.461c2.546,0,4.755,0.425,6.628,1.273c1.873,0.849,3.556,2.092,5.048,3.73h0.132v-25.766h6.804
@@ -128,26 +130,29 @@
 		c0.922-0.585,1.712-1.207,2.371-1.865c0.658-0.658,1.178-1.266,1.558-1.822v-21.815c-1.405-1.433-3.029-2.582-4.872-3.445
 		c-1.844-0.862-3.834-1.295-5.97-1.295c-1.288,0-2.641,0.241-4.06,0.725c-1.42,0.482-2.737,1.354-3.951,2.611
 		c-1.214,1.259-2.217,2.948-3.007,5.07S191.513,197.779,191.513,201.085z"
+          class="svg-elem-10"
         />
         <path
-          fill="#000000"
+          fill="#ffffff"
           d="M251.517,222.594c-2.166,0-4.112-0.234-5.838-0.702s-3.241-1.127-4.543-1.976s-2.407-1.865-3.313-3.051
 		c-0.907-1.186-1.624-2.48-2.151-3.885c-0.41-1.054-0.702-2.209-0.878-3.468c-0.175-1.258-0.263-2.634-0.263-4.126v-25.59h6.804
 		v25.546c0,2.313,0.307,4.243,0.921,5.794c0.703,1.756,1.837,3.139,3.402,4.148s3.563,1.515,5.992,1.515
 		c2.575,0,4.646-0.556,6.211-1.668s2.685-2.604,3.358-4.478c0.497-1.434,0.746-3.204,0.746-5.312v-25.546h6.804v25.634
 		c0,1.404-0.081,2.715-0.241,3.929c-0.161,1.215-0.417,2.334-0.769,3.357c-0.526,1.435-1.251,2.759-2.173,3.973
 		c-0.922,1.215-2.056,2.261-3.401,3.139c-1.347,0.878-2.905,1.559-4.675,2.041C255.737,222.352,253.74,222.594,251.517,222.594z"
+          class="svg-elem-11"
         />
         <path
-          fill="#000000"
+          fill="#ffffff"
           d="M288.08,185.591h0.132c0.761-0.966,1.603-1.865,2.524-2.699s1.953-1.565,3.094-2.195
 		c1.142-0.629,2.393-1.119,3.753-1.471c1.361-0.351,2.846-0.526,4.456-0.526c1.901,0,3.687,0.264,5.354,0.79
 		s3.117,1.376,4.346,2.546c1.229,1.171,2.201,2.699,2.919,4.587c0.717,1.888,1.075,4.207,1.075,6.957v27.917h-6.804v-26.819
 		c0-3.6-0.695-6.189-2.085-7.77s-3.416-2.37-6.079-2.37c-2.342,0-4.608,0.651-6.804,1.953c-2.194,1.303-4.082,3.095-5.662,5.377
 		v29.629h-6.804v-41.699h5.268L288.08,185.591z"
+          class="svg-elem-12"
         />
         <path
-          fill="#000000"
+          fill="#ffffff"
           d="M333.773,190.902c0,1.141,0.243,2.077,0.729,2.809c0.486,0.732,1.137,1.324,1.952,1.778
 		c0.815,0.453,1.76,0.827,2.833,1.119c1.072,0.293,2.182,0.556,3.326,0.79c1.573,0.351,3.061,0.739,4.463,1.163
 		c1.401,0.425,2.696,1.061,3.884,1.909c1.188,0.85,2.146,1.997,2.875,3.445c0.729,1.449,1.095,3.329,1.095,5.641
@@ -162,108 +167,774 @@
 		c2.312,0,4.455,0.22,6.431,0.658c1.976,0.439,3.768,0.995,5.377,1.668v5.794c-1.713-0.673-3.448-1.221-5.204-1.646
 		c-1.756-0.424-3.562-0.651-5.417-0.681c-1.571,0-2.913,0.161-4.027,0.483c-1.113,0.322-2.027,0.768-2.741,1.338
 		c-0.714,0.571-1.235,1.244-1.563,2.02C333.938,189.109,333.773,189.966,333.773,190.902z"
+          class="svg-elem-13"
         />
         <path
-          fill="#000000"
+          fill="#ffffff"
           d="M365.686,221.496v-41.699h6.804v41.699H365.686z M379.204,156.84l-7.066,15.319h-5.706l5.398-15.319
 		H379.204z"
+          class="svg-elem-14"
         />
       </g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
+      <g />
     </svg>
   </div>
 </template>
 
 <style>
 .logo {
-  width: 150px;
-}
-.logo-img {
-  max-width: 100%;
-  height: auto;
+	width: 150px;
 }
 svg {
-  stroke-width: 17;
-  transition: transform 0.5s ease-out;
+	width: 100%;
+	height: auto;
 }
 .o {
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-  stroke-width: 5;
-  animation: animate-o 0.75s linear forwards 0.5s;
+	stroke-dasharray: 1200;
+	stroke-dashoffset: 1200;
+	stroke-width: 5;
+}
+/* svg {
+	stroke-width: 17;
+	transition: transform 0.5s ease-out;
+} */
+/* .o {
+	stroke-dasharray: 1200;
+	stroke-dashoffset: 1200;
+	stroke-width: 5;
+	animation: animate-o 0.75s linear forwards 0.5s;
 }
 .layiwola {
-  stroke-dasharray: 2400;
-  stroke-dashoffset: 2400;
-  stroke-width: 5;
-  animation: animate-layiwola 1.5s linear forwards 1.1s;
+	stroke-dasharray: 2400;
+	stroke-dashoffset: 2400;
+	stroke-width: 5;
+	animation: animate-layiwola 1.5s linear forwards 1.1s;
 }
 .dunsi {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  stroke-width: 30;
-  animation: summerbird-organic 0.15s linear forwards 3s;
+	stroke-dasharray: 200;
+	stroke-dashoffset: 200;
+	stroke-width: 30;
+	animation: summerbird-organic 0.15s linear forwards 3s;
+} */
+
+@-webkit-keyframes animate-svg-stroke-1 {
+	0% {
+		stroke-dashoffset: 1104.0341796875px;
+		stroke-dasharray: 1104.0341796875px;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes animate-svg-stroke-1 {
+	0% {
+		stroke-dashoffset: 1104.0341796875px;
+		stroke-dasharray: 1104.0341796875px;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+.svg-elem-1 {
+	-webkit-animation: animate-svg-stroke-1 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both,
+		animate-svg-fill-1 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+	animation: animate-svg-stroke-1 6.1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s
+			both,
+		animate-svg-fill-1 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-2 {
+	0% {
+		stroke-dashoffset: 147.1732940673828px;
+		stroke-dasharray: 147.1732940673828px;
+	}
+
+	100% {
+		stroke-dashoffset: 294.3465881347656px;
+	}
+}
+
+@keyframes animate-svg-stroke-2 {
+	0% {
+		stroke-dashoffset: 147.1732940673828px;
+		stroke-dasharray: 147.1732940673828px;
+	}
+
+	100% {
+		stroke-dashoffset: 294.3465881347656px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-2 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-2 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-2 {
+	-webkit-animation: animate-svg-stroke-2 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 2.52s both,
+		animate-svg-fill-2 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
+	animation: animate-svg-stroke-2 6.1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.52s
+			both,
+		animate-svg-fill-2 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-3 {
+	0% {
+		stroke-dashoffset: 301.79168701171875px;
+		stroke-dasharray: 301.79168701171875px;
+	}
+
+	100% {
+		stroke-dashoffset: 603.5833740234375px;
+	}
+}
+
+@keyframes animate-svg-stroke-3 {
+	0% {
+		stroke-dashoffset: 301.79168701171875px;
+		stroke-dasharray: 301.79168701171875px;
+	}
+
+	100% {
+		stroke-dashoffset: 603.5833740234375px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-3 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-3 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-3 {
+	-webkit-animation: animate-svg-stroke-3 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 4.74s both,
+		animate-svg-fill-3 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both;
+	animation: animate-svg-stroke-3 6.1s cubic-bezier(0.47, 0, 0.745, 0.715) 4.74s
+			both,
+		animate-svg-fill-3 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-4 {
+	0% {
+		stroke-dashoffset: 245.5491180419922px;
+		stroke-dasharray: 245.5491180419922px;
+	}
+
+	100% {
+		stroke-dashoffset: 491.0982360839844px;
+	}
+}
+
+@keyframes animate-svg-stroke-4 {
+	0% {
+		stroke-dashoffset: 245.5491180419922px;
+		stroke-dasharray: 245.5491180419922px;
+	}
+
+	100% {
+		stroke-dashoffset: 491.0982360839844px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-4 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-4 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-4 {
+	-webkit-animation: animate-svg-stroke-4 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 6.96s both,
+		animate-svg-fill-4 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s both;
+	animation: animate-svg-stroke-4 6.1s cubic-bezier(0.47, 0, 0.745, 0.715) 6.96s
+			both,
+		animate-svg-fill-4 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-5 {
+	0% {
+		stroke-dashoffset: 136.8332061767578px;
+		stroke-dasharray: 136.8332061767578px;
+	}
+
+	100% {
+		stroke-dashoffset: 273.6664123535156px;
+	}
+}
+
+@keyframes animate-svg-stroke-5 {
+	0% {
+		stroke-dashoffset: 136.8332061767578px;
+		stroke-dasharray: 136.8332061767578px;
+	}
+
+	100% {
+		stroke-dashoffset: 273.6664123535156px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-5 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-5 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-5 {
+	-webkit-animation: animate-svg-stroke-5 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 9.180000000000001s both,
+		animate-svg-fill-5 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+			1.2000000000000002s both;
+	animation: animate-svg-stroke-5 6.1s cubic-bezier(0.47, 0, 0.745, 0.715)
+			9.180000000000001s both,
+		animate-svg-fill-5 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+			1.2000000000000002s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-6 {
+	0% {
+		stroke-dashoffset: 345.78302001953125px;
+		stroke-dasharray: 345.78302001953125px;
+	}
+
+	100% {
+		stroke-dashoffset: 691.5660400390625px;
+	}
+}
+
+@keyframes animate-svg-stroke-6 {
+	0% {
+		stroke-dashoffset: 345.78302001953125px;
+		stroke-dasharray: 345.78302001953125px;
+	}
+
+	100% {
+		stroke-dashoffset: 691.5660400390625px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-6 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-6 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-6 {
+	-webkit-animation: animate-svg-stroke-6 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 11.400000000000002s both,
+		animate-svg-fill-6 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s both;
+	animation: animate-svg-stroke-6 6.1s cubic-bezier(0.47, 0, 0.745, 0.715)
+			11.400000000000002s both,
+		animate-svg-fill-6 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-7 {
+	0% {
+		stroke-dashoffset: 243.22348022460938px;
+		stroke-dasharray: 243.22348022460938px;
+	}
+
+	100% {
+		stroke-dashoffset: 486.44696044921875px;
+	}
+}
+
+@keyframes animate-svg-stroke-7 {
+	0% {
+		stroke-dashoffset: 243.22348022460938px;
+		stroke-dasharray: 243.22348022460938px;
+	}
+
+	100% {
+		stroke-dashoffset: 486.44696044921875px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-7 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-7 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-7 {
+	-webkit-animation: animate-svg-stroke-7 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 13.620000000000001s both,
+		animate-svg-fill-7 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+			1.4000000000000001s both;
+	animation: animate-svg-stroke-7 6.1s cubic-bezier(0.47, 0, 0.745, 0.715)
+			13.620000000000001s both,
+		animate-svg-fill-7 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+			1.4000000000000001s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-8 {
+	0% {
+		stroke-dashoffset: 147.17379760742188px;
+		stroke-dasharray: 147.17379760742188px;
+	}
+
+	100% {
+		stroke-dashoffset: 294.34759521484375px;
+	}
+}
+
+@keyframes animate-svg-stroke-8 {
+	0% {
+		stroke-dashoffset: 147.17379760742188px;
+		stroke-dasharray: 147.17379760742188px;
+	}
+
+	100% {
+		stroke-dashoffset: 294.34759521484375px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-8 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-8 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-8 {
+	-webkit-animation: animate-svg-stroke-8 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 15.840000000000002s both,
+		animate-svg-fill-8 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s both;
+	animation: animate-svg-stroke-8 6.1s cubic-bezier(0.47, 0, 0.745, 0.715)
+			15.840000000000002s both,
+		animate-svg-fill-8 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-9 {
+	0% {
+		stroke-dashoffset: 301.7899169921875px;
+		stroke-dasharray: 301.7899169921875px;
+	}
+
+	100% {
+		stroke-dashoffset: 603.579833984375px;
+	}
+}
+
+@keyframes animate-svg-stroke-9 {
+	0% {
+		stroke-dashoffset: 301.7899169921875px;
+		stroke-dasharray: 301.7899169921875px;
+	}
+
+	100% {
+		stroke-dashoffset: 603.579833984375px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-9 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-9 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-9 {
+	-webkit-animation: animate-svg-stroke-9 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 18.060000000000002s both,
+		animate-svg-fill-9 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s both;
+	animation: animate-svg-stroke-9 6.1s cubic-bezier(0.47, 0, 0.745, 0.715)
+			18.060000000000002s both,
+		animate-svg-fill-9 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-10 {
+	0% {
+		stroke-dashoffset: 292.0329895019531px;
+		stroke-dasharray: 292.0329895019531px;
+	}
+
+	100% {
+		stroke-dashoffset: 584.0659790039062px;
+	}
+}
+
+@keyframes animate-svg-stroke-10 {
+	0% {
+		stroke-dashoffset: 292.0329895019531px;
+		stroke-dasharray: 292.0329895019531px;
+	}
+
+	100% {
+		stroke-dashoffset: 584.0659790039062px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-10 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-10 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-10 {
+	-webkit-animation: animate-svg-stroke-10 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 20.28s both,
+		animate-svg-fill-10 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+			1.7000000000000002s both;
+	animation: animate-svg-stroke-10 6.1s cubic-bezier(0.47, 0, 0.745, 0.715)
+			20.28s both,
+		animate-svg-fill-10 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+			1.7000000000000002s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-11 {
+	0% {
+		stroke-dashoffset: 208.49664306640625px;
+		stroke-dasharray: 208.49664306640625px;
+	}
+
+	100% {
+		stroke-dashoffset: 416.9932861328125px;
+	}
+}
+
+@keyframes animate-svg-stroke-11 {
+	0% {
+		stroke-dashoffset: 208.49664306640625px;
+		stroke-dasharray: 208.49664306640625px;
+	}
+
+	100% {
+		stroke-dashoffset: 416.9932861328125px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-11 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-11 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-11 {
+	-webkit-animation: animate-svg-stroke-11 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 22.500000000000004s both,
+		animate-svg-fill-11 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.8s both;
+	animation: animate-svg-stroke-11 6.1s cubic-bezier(0.47, 0, 0.745, 0.715)
+			22.500000000000004s both,
+		animate-svg-fill-11 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.8s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-12 {
+	0% {
+		stroke-dashoffset: 222.11436462402344px;
+		stroke-dasharray: 222.11436462402344px;
+	}
+
+	100% {
+		stroke-dashoffset: 444.2287292480469px;
+	}
+}
+
+@keyframes animate-svg-stroke-12 {
+	0% {
+		stroke-dashoffset: 222.11436462402344px;
+		stroke-dasharray: 222.11436462402344px;
+	}
+
+	100% {
+		stroke-dashoffset: 444.2287292480469px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-12 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-12 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-12 {
+	-webkit-animation: animate-svg-stroke-12 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 24.720000000000002s both,
+		animate-svg-fill-12 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+			1.9000000000000001s both;
+	animation: animate-svg-stroke-12 6.1s cubic-bezier(0.47, 0, 0.745, 0.715)
+			24.720000000000002s both,
+		animate-svg-fill-12 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+			1.9000000000000001s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-13 {
+	0% {
+		stroke-dashoffset: 194.52508544921875px;
+		stroke-dasharray: 194.52508544921875px;
+	}
+
+	100% {
+		stroke-dashoffset: 389.0501708984375px;
+	}
+}
+
+@keyframes animate-svg-stroke-13 {
+	0% {
+		stroke-dashoffset: 194.52508544921875px;
+		stroke-dasharray: 194.52508544921875px;
+	}
+
+	100% {
+		stroke-dashoffset: 389.0501708984375px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-13 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-13 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-13 {
+	-webkit-animation: animate-svg-stroke-13 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 26.94s both,
+		animate-svg-fill-13 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2s both;
+	animation: animate-svg-stroke-13 6.1s cubic-bezier(0.47, 0, 0.745, 0.715)
+			26.94s both,
+		animate-svg-fill-13 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-14 {
+	0% {
+		stroke-dashoffset: 145.19830322265625px;
+		stroke-dasharray: 145.19830322265625px;
+	}
+
+	100% {
+		stroke-dashoffset: 290.3966064453125px;
+	}
+}
+
+@keyframes animate-svg-stroke-14 {
+	0% {
+		stroke-dashoffset: 145.19830322265625px;
+		stroke-dasharray: 145.19830322265625px;
+	}
+
+	100% {
+		stroke-dashoffset: 290.3966064453125px;
+	}
+}
+
+@-webkit-keyframes animate-svg-fill-14 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+@keyframes animate-svg-fill-14 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(255, 255, 255);
+	}
+}
+
+.svg-elem-14 {
+	-webkit-animation: animate-svg-stroke-14 6.1s
+			cubic-bezier(0.47, 0, 0.745, 0.715) 29.160000000000004s both,
+		animate-svg-fill-14 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.1s both;
+	animation: animate-svg-stroke-14 6.1s cubic-bezier(0.47, 0, 0.745, 0.715)
+			29.160000000000004s both,
+		animate-svg-fill-14 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.1s both;
 }
 
 svg:not(.clicked):hover {
-  transform: scale(0.9);
-  transition: transform 0.3s cubic-bezier(0.3, 0.86, 0.61, 1.63);
-}
-
-@keyframes animate-o {
-  0% {
-    stroke-dashoffset: 1200;
-  }
-  33% {
-    stroke-width: 5;
-  }
-  90% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    stroke-width: 6;
-  }
-}
-@keyframes animate-layiwola {
-  0% {
-    stroke-dashoffset: 2400;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    stroke-width: 5;
-  }
-}
-@keyframes summerbird-dot {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes summerbird-organic {
-  0% {
-    opacity: 0;
-    stroke-dashoffset: 200;
-  }
-  100% {
-    opacity: 1;
-    stroke-dashoffset: 0;
-  }
+	transform: scale(0.9);
+	transition: transform 0.3s cubic-bezier(0.3, 0.86, 0.61, 1.63);
 }
 </style>
