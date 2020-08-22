@@ -32,6 +32,9 @@ export default async () => {
      ** Headers of the page
      */
     head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
       title: 'Olayiwola Odunsi - Software Engineer',
       meta: [
         { charset: 'utf-8' },
@@ -87,7 +90,17 @@ export default async () => {
     /*
      ** Nuxt.js dev-modules
      */
-    buildModules: [],
+     buildModules: [
+      '@nuxtjs/google-analytics'
+    ],
+    googleAnalytics: {
+      id: 'UA-176052666-1',
+      dev: false,
+      debug: {
+        enabled: true,
+        sendHitTask: true
+      }
+    },
     /*
      ** Nuxt.js modules
      */

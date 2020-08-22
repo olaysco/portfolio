@@ -1,13 +1,17 @@
 <template>
   <div class="container mt-4 position-relative">
-    <a href="#" class="post-search-trigger"></a>
+    <a href="#" class="post-search-trigger" aria-label="search posts trigger"></a>
     <div class="row">
       <div
         class="col-12 col-xs-12 col-sm-12 col-md-12 col-xl-12 mb-4"
         v-for="post in posts"
         :key="post.attributes.title"
       >
-        <nuxt-link :to="getPermalink(post)" class="post-thumb-link">
+        <nuxt-link
+          :to="getPermalink(post)"
+          class="post-thumb-link"
+          :aria-label="post.attributes.title"
+        >
           <article class="row">
             <div
               class="post-thumb d-none d-md-flex justify-content-center align-items-center col-2"
