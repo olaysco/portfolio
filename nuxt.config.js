@@ -97,8 +97,8 @@ export default async () => {
       id: 'UA-176052666-1',
       dev: false,
       debug: {
-        enabled: true,
-        sendHitTask: true
+        enabled: false,
+        sendHitTask: false
       }
     },
     /*
