@@ -28,7 +28,14 @@ import SinglePost from '~/components/SinglePost'
 export default {
 	head() {
 		return {
-			title: this.attributes.title
+			title: this.attributes.title,
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: this.attributes.description
+				}
+			]
 		}
 	},
 	async asyncData({ params, error }) {

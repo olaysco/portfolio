@@ -6,7 +6,7 @@
           <span>—— Olayiwola Odunsi {{year}} &copy</span>
         </div>
         <div class="col-6 text-right">
-          <a href="github.com/olaysco">
+          <a href="hhtps://github.com/olaysco">
             <i class="fab fa-github"></i> Check on github ——
           </a>
         </div>

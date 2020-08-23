@@ -42,7 +42,7 @@ export default async () => {
         {
           hid: 'description',
           name: 'description',
-          content: process.env.npm_package_description || ''
+          content: 'Olayiwola Odunsi is a software engineer with a knack for great products that improves lives. '
         },
         {
           name: 'theme-color', content: '#08193d'

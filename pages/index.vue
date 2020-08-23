@@ -1,6 +1,14 @@
 <template>
   <div class="container mt-4 position-relative">
-    <a href="#" class="post-search-trigger" aria-label="search posts trigger"></a>
+    <search-box @filter="filterPost"></search-box>
+    <div class="row mb-4">
+      <div class="col-md-12 text-center">
+        <blockquote>
+          <span class="quote">Share your knowledge. it is a way to achieve immortality.</span>
+          <b class="ml-3">Dalai Lama</b>
+        </blockquote>
+      </div>
+    </div>
     <div class="row">
       <div
         class="col-12 col-xs-12 col-sm-12 col-md-12 col-xl-12 mb-4"
@@ -40,6 +48,7 @@
   </div>
 </template>
 <script>
+import SearchBox from '~/components/SearchBox.vue'
 export default {
 	async asyncData() {
 		const resolve = require.context('~/posts/', true, /\.md$/)
@@ -53,7 +62,8 @@ export default {
 	},
 	data() {
 		return {
-			prefix: ''
+			prefix: '',
+			allPosts: []
 		}
 	},
 	methods: {
@@ -72,7 +82,13 @@ export default {
 				month: 'long',
 				year: 'numeric'
 			})
+		},
+		filterPost(text) {
+			// alert(text)
 		}
+	},
+	components: {
+		SearchBox
 	}
 }
 </script>
@@ -184,48 +200,7 @@ article {
 	-webkit-transform: scale(0.5);
 	transform: scale(0.5);
 }
-.post-search-trigger {
-	z-index: 1;
-	display: block;
-	color: rgb(133, 172, 197);
-	height: 16px;
-	width: 16px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: contain;
-	/* background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuODA5IDIxLjY0NmwtNi4yMDUtNi4yMDVjMS4xNjctMS42MDUgMS44NTctMy41NzkgMS44NTctNS43MTEgMC01LjM2NS00LjM2NS05LjczLTkuNzMxLTkuNzMtNS4zNjUgMC05LjczIDQuMzY1LTkuNzMgOS43MyAwIDUuMzY2IDQuMzY1IDkuNzMgOS43MyA5LjczIDIuMDM0IDAgMy45MjMtLjYyNyA1LjQ4Ny0xLjY5OGw2LjIzOCA2LjIzOCAyLjM1NC0yLjM1NHptLTIwLjk1NS0xMS45MTZjMC0zLjc5MiAzLjA4NS02Ljg3NyA2Ljg3Ny02Ljg3N3M2Ljg3NyAzLjA4NSA2Ljg3NyA2Ljg3Ny0zLjA4NSA2Ljg3Ny02Ljg3NyA2Ljg3N2MtMy43OTMgMC02Ljg3Ny0zLjA4NS02Ljg3Ny02Ljg3N3oiLz48L3N2Zz4=); */
-	position: fixed;
-	right: 25px;
-	/* top: 6.4rem; */
-}
-.post-search-trigger::before {
-	content: '';
-	display: block;
-	width: 1px;
-	height: calc(100vh - 200px);
-	background-color: rgba(133, 172, 197, 0.2);
-	position: fixed;
-	right: 25px;
-	top: calc(100vh - (100vh - 324px));
-	bottom: 0;
-}
-.post-search-trigger::after {
-	content: 'Search';
-	font-family: 'Heebo', sans-serif;
-	font-weight: 500;
-	font-size: 11px;
-	line-height: 1.6rem;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	width: auto;
-	-webkit-transform: rotate(-90deg);
-	transform: rotate(-90deg);
-	-webkit-transform-origin: 1.6rem 100%;
-	transform-origin: 1.6rem 100%;
-	position: absolute;
-	top: 72px;
-	left: 0;
-}
+
 @media screen and (max-width: 600px) {
 	.container {
 		padding-right: 45px;
@@ -234,5 +209,13 @@ article {
 	/* .post-search-trigger {
     top: 12rem;
   } */
+}
+.quote {
+	&::before {
+		content: '\201C';
+	}
+	&::after {
+		content: '\201D';
+	}
 }
 </style>
