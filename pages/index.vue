@@ -47,6 +47,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import SearchBox from '~/components/SearchBox.vue'
 export default {
@@ -57,13 +58,13 @@ export default {
 			return resolve(key)
 		})
 		return {
-			posts: imports
+			posts: imports,
+			allPosts: imports
 		}
 	},
 	data() {
 		return {
-			prefix: '',
-			allPosts: []
+			prefix: ''
 		}
 	},
 	methods: {
@@ -84,7 +85,14 @@ export default {
 			})
 		},
 		filterPost(text) {
-			// alert(text)
+			if (text.length < 2) {
+				this.posts = this.allPosts
+				return
+			}
+			this.posts = this.allPosts.filter(post => {
+				let t = post.attributes.title + ' ' + post.attributes.description
+				return t.toLowerCase().search(text.toLowerCase()) > -1
+			})
 		}
 	},
 	components: {

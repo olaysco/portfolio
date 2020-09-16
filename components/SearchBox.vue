@@ -2,21 +2,26 @@
   <div class="position-relative">
     <a
       href="#"
+      ref="searchTrigger"
       class="post-search-trigger"
       aria-label="search posts trigger"
       @click="searchVisible()"
     ></a>
-    <div class="search-input-wrapper" v-show="showSearch">
-      <input
-        type="text"
-        name="search-input"
-        aria-label="search posts"
-        v-model="searchText"
-        ref="searchInput"
-        placeholder="Start typing to search"
-      />
-      <button aria-label="close search" @click="showSearch = false">x</button>
-    </div>
+    <transition name="input-fade">
+      <div class="search-input-wrapper" v-show="showSearch">
+        <input
+          type="text"
+          name="search-input"
+          aria-label="search posts"
+          v-model="searchText"
+          ref="searchInput"
+          placeholder="Start typing to search"
+          autofocus
+          autocomplete="off"
+        />
+        <button aria-label="close search" @click="showSearch = false">x</button>
+      </div>
+    </transition>
   </div>
 </template>
 <script>
@@ -29,9 +34,9 @@ export default {
 	},
 	watch: {
 		searchText(oldVal, newVal) {
-			if (oldVal !== newVal && newVal.length > 2) {
-				this.$emit('filter', newVal)
-			}
+			// if (oldVal !== newVal) {
+			this.$emit('filter', newVal)
+			// }
 		}
 	},
 	methods: {
@@ -90,29 +95,45 @@ export default {
 	position: fixed;
 	z-index: 20;
 	width: 60vw;
-	backdrop-filter: blur(10px);
+	// backdrop-filter: blur(10px);
 	left: 50%;
 	transform: translate(-50%, 0);
+	background-color: #fff;
+	padding: 1em 2em;
+	border-radius: 8px;
 	top: 1.5em;
+	box-shadow: 1px 0px 6px 4px rgba(16, 31, 64, 0.67);
+	transition: all 2ms;
+
+	@media (max-width: 768px) {
+		width: 89vw;
+	}
 	& > input {
 		width: 100%;
 		background: transparent;
 		border: 0;
-		border-bottom: 1px solid rgba(133, 172, 197, 0.2);
-		color: #ffffff;
-		font-size: 2em;
+		// border-bottom: 1px solid rgba(133, 172, 197, 0.2);
+		color: #08193d;
+		font-size: 0.9em;
 		&:focus {
 			outline: none;
 		}
 	}
 	& > button {
-		color: red;
+		color: #110909;
 		border: 0;
 		background: 0;
 		position: absolute;
-		right: 20px;
-		font-size: 1.6rem;
-		top: -12px;
+
+		top: 12px;
 	}
+}
+.input-fade-enter-active,
+.input-fade-leave-active {
+	transition: opacity 0.5s;
+}
+.input-fade-enter,
+.input-fade-leave-to {
+	opacity: 0;
 }
 </style>
