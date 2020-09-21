@@ -24,7 +24,11 @@
             <div
               class="post-thumb d-none d-md-flex justify-content-center align-items-center col-2"
             >
-              <img src="~/assets/images/post.jpg" class="img-fluid" alt />
+              <img
+                :src="require(`../assets/images/cover-${post.attributes.cover}`)"
+                class="img-fluid"
+                alt
+              />
             </div>
             <div class="post-text col-12 col-md-10">
               <div class="post-header">
@@ -53,10 +57,13 @@ import SearchBox from '~/components/SearchBox.vue'
 export default {
 	async asyncData() {
 		const resolve = require.context('~/posts/', true, /\.md$/)
-		const imports = resolve.keys().map(key => {
-			const [, name] = key.match(/\/(.+)\.md$/)
-			return resolve(key)
-		})
+		const imports = resolve
+			.keys()
+			.map(key => {
+				const [, name] = key.match(/\/(.+)\.md$/)
+				return resolve(key)
+			})
+			.filter(({ attributes }) => attributes.published)
 		return {
 			posts: imports,
 			allPosts: imports
