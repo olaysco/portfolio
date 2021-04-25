@@ -1,7 +1,7 @@
 ---
 title: How to add retries to external API calls in PHP
 date: 2021-04-24
-description: When making HTTP API calls to external or third party systems and failures, the failure could be as the result of a problem with the connection to the server or other hops in-between.
+description: When making HTTP API calls to external or third-party systems and failures, the failure could be as the result of a problem with the connection to the server or other hops in-between.
 tags: [Laravel, PHP, API, Best Practices]
 cover: http-give-up.jpg
 published: true
@@ -9,9 +9,9 @@ published: true
 
 > Life is full of mountains, Some are big and some are small, But if you don’t give up, you will overcome all. - Anonymous 
 
-API calls to external endpoints is one of the integral part of web applications, and this come at a cost as they can fail at any point of the transmission. the failiure be caused by downtime in the receiveng server end, invalid client request or even the most popular one when sending data to public API which is exceeding rate limit or just some random errors, at any point these failures occur during API communication, being aware or handling this errors is not enough, a more proactive action might just be to retry the request.
+API calls to external endpoints is one of the integral parts of web applications, and this come at a cost as they can fail at any point of the transmission. the failure can be caused by downtime in the receiving server end, invalid client request or even the most popular one when sending data to public API which is exceeding rate limit or just some random errors, at any point these failures occur during API communication, being aware or handling this errors is not enough, a more proactive action might just be to retry the request.
 
-In this article we would look at how to add retries to API request in PHP using the Exponential Back-off Algorithm, that can be used to progressively increase the time between each retries:
+In this article we would look at how to add retries to API request in PHP using the Exponential Back-off Algorithm, that can be used to progressively increase the time between each retry:
 
 **Retry Algorithm**
 
@@ -24,7 +24,7 @@ In this article we would look at how to add retries to API request in PHP using 
 6. goto step 1
 ```
 
-Learn more about Exponentail Back-off  [here](https://en.wikipedia.org/wiki/Exponential_backoff)
+Learn more about Exponential Back-off  [here](https://en.wikipedia.org/wiki/Exponential_backoff)
 
 ### **Exponentail Back-off in action**
 Though for the purpose of this article we will implement the Exponential Back-off retry in PHP, this algorithm can be implemented in any language.
@@ -44,7 +44,7 @@ public function doRequest(string $url, array $options): Array
 }
 ```
 
-Given that our request is likely to fail for variety of reasons, we want to retry the request before giving up:
+Given that our request is likely to fail for a variety of reasons, we want to retry the request before giving up:
 ```php
 public function doRequest($url, $options): Array
 {
@@ -99,5 +99,5 @@ public function doRequest($url, $options, $maxRetry = 5, $statusToRetry = [500, 
 }
 ```
 **Key Takeaways**  
-- The do while loop allows us to try the request at least once, this could have also been a recursive function.
-- The implemenation described in this article can be applied to any http request library if it doesnt have the retry functionality or if you decide to handle the retruy your own way.
+- The do-while loop allows us to try the request at least once, this could have also been a recursive function.
+- The implementation described in this article can be applied to any HTTP request library if it doesn't have the retry functionality or if you decide to handle the retry your own way.
