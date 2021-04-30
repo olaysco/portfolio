@@ -8,10 +8,10 @@
     font-weight: 700;
     text-align: left;
     quotes: "“" "”" "‘" "’";
-    & > p::before {
+    & > p::before, & > span::before {
       content: open-quote;
     }
-    & > p::after {
+    & > p::after, & > span::after {
       content: close-quote;
     }
   }

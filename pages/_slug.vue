@@ -1,22 +1,26 @@
 <template>
   <div class="container post">
-    <div class="row">
+	<div class="row head">
+		<div class="col-md-12">
+			<div class="post-head">
+			<h1 class="title">{{attributes.title}}</h1>
+			<span class="meta">
+				<i class="far fa-calendar-alt"></i>
+				{{date}}
+			</span>
+			<span class="meta">
+				<i class="far fa-clock"></i>
+				{{length}} min read
+			</span>
+			</div>
+		</div>
+	</div>
+    <div class="row body">
       <div class="col-md-12">
-        <div class="post-head">
-          <h1 class="title">{{attributes.title}}</h1>
-          <span class="meta">
-            <i class="far fa-calendar-alt"></i>
-            {{date}}
-          </span>
-          <span class="meta">
-            <i class="far fa-clock"></i>
-            {{length}} min read
-          </span>
-        </div>
         <div v-html="html" class="markdown"></div>
       </div>
     </div>
-    <div class="row">
+    <div class="row footer">
       <div class="col-md-12 mt-4">
         <a href="/" class="float-right text-underline">See more posts</a>
       </div>
@@ -59,4 +63,22 @@ export default {
 	}
 }
 </script>
-<style scoped></style>
+<style lang="scss" scoped>
+@media only screen and (max-width: 640px) {
+  .container.post {
+    padding-left: 0px;
+	padding-right: 0px;
+	.row {
+		margin-right: 0px;
+		margin-left: 0px;
+		&.body >div {
+			padding-right: 0px;
+			padding-left:0px;
+			& > .markdown {
+				border-radius: 0px;
+			}
+		}
+	}
+  }
+}
+</style>
