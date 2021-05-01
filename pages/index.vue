@@ -129,6 +129,8 @@ a {
 	vertical-align: bottom;
 	transition: all 0.3s;
 	border-radius: 0.875rem;
+	height: 100%;
+	object-fit: cover;
 }
 .post-text {
 	padding: 2rem 1.5rem;

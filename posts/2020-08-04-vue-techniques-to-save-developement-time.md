@@ -1,7 +1,7 @@
 ---
 title: Vue.js techniques to save you development time
 date: 2020-08-04
-description: Vue.js have some intrinsic part that are not widely known, and not even mentioned in the documentation, knowing some of these can save you time.
+description: Vue.js have some intrinsic parts that are not widely known, and not even mentioned in the documentation, knowing some of these can save you time.
 tags: [Vue.js, JavaScript]
 cover: advanced-vue.png
 published: true
@@ -11,7 +11,7 @@ So, you've start to use Vue.js has your desired JavaScript framework for front-e
 In this article we will take a look at some of the secret Vue techniques that can increase your productivity and boost your development flow while following best practices.
 
 1. **Smart Watchers**: <br>
-   Watchers are used in Vue to bind changes in a prop to an handler, such that when the value of a prop changes the handler is triggered
+   Watchers are used in Vue to bind changes in a prop to a handler, such that when the value of a prop changes the handler is triggered
 
 ```js
 /**
@@ -41,7 +41,7 @@ watch: {
 }
 ```
 
-we can also make our watcher to be executed immediately, when component is ready and subsequently when prop is mutated
+we can also make our watcher to execute immediately the component is ready and subsequently when the prop is mutated
 
 ```js
 data(){
@@ -79,7 +79,7 @@ watch: {
 ```
 
 2. **Forcing Vue to re-update \<router-view>\</router-view> component**: <br>
-   lets say you're navigating from route `products/1` to `products/2`, if Vue detects that the current component is the same with the next component, it doesnt trigger a re-render, rather Vue will only re-use the component and the created/mounted lifecycle wouldn't be triggered on navigation between these routes, one common way I've seen people do this is by watching for changes in the \$route object:
+   lets say you're navigating from route `products/1` to `products/2`, if Vue detects that the current component is the same with the next component, it doesn't trigger a re-render, rather Vue will only re-use the component and the created/mounted lifecycle wouldn't be triggered on navigation between these routes, one common way I've seen people do this is by watching for changes in the \$route object:
 
 ```js
 watch: {
@@ -132,7 +132,7 @@ export default {
 </script>
 ```
 
-from this we can ee that the two button share the same event and it would increase the code maintainablity if we can combine these events into one.
+from this, we can see that the two buttons share the same event and it would increase the code maintainability if we can combine these events into one.
 
 ```vue
 <template>
@@ -170,7 +170,7 @@ export default {
 ```
 
 4. **Dynamic Listeners on child component**: <br>
-   Using what we learnt from the previous tips, we can also extend this to how we pass listeners to child componenets. by default vue passes listeners on a component to its root element, if we have the following code
+   Using what we learned from the previous tips, we can also extend this to how we pass listeners to child components. by default, Vue passes listeners on a component to its root element if we have the following code
 
 ```vue
 <!-- BaseInput.vue -->
@@ -183,7 +183,7 @@ export default {
 <BaseInput @focus="handleFocus" />
 ```
 
-the focus event here is bind to the div root element which is not what we want, to overide this you can bind the listener to the input directly by using the v-on attributes to listen on all the event listeners passed to the component.
+the focus event here is bind to the div root element which is not what we want, to override this you can bind the listener to the input directly by using the v-on attributes to listen on all the event listeners passed to the component.
 Quick note- the `this.$listiners` property is an object containing all the event listeners passed to a component, equipped with that knowledge let's refactor our code
 
 ```vue
@@ -209,7 +209,7 @@ export default {
 <BaseInput @focus="handleFocus" />
 ```
 
-now we can pass as many events as we want to the Base Input and the events would be binded to the root input element.
+now we can pass as many events as we want to the Base Input and the events would be bind to the root input element.
 
 5. **Dynamic attrributes**: <br>
    In Vue attributes declared on an element if not declared as a prop is automatically inherited by the root element of the component, so let's say we have this
@@ -244,6 +244,6 @@ export default {
 <BaseInput placeholder="email" />
 ```
 
-There are two things to note here first is the `$attrs` this is an object similar to `$listeners` it contains all the attributes declared on the component, he second is the `inheritAttrs`, by seeting it to false we are telling Vue not to automatically bind attributes passed to it to the root element, this allow us to bind the attributes - `$attrs` the way we want.
+There are two things to note here first is the `$attrs` this is an object similar to `$listeners` it contains all the attributes declared on the component, the second is the `inheritAttrs`, by setting it to false we are telling Vue not to automatically bind attributes passed to it to the root element, this allows us to bind the attributes - `$attrs` the way we want.
 
-Yeah, I hope you find these tips helpful and will help improve your reduce your development time.
+Yeah, I hope you find these tips helpful and they will help improve your productivity.
