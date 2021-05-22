@@ -19,7 +19,7 @@
           autofocus
           autocomplete="off"
         />
-        <button aria-label="close search" @click="showSearch = false">x</button>
+        <button aria-label="close search" @click="hideSearch()">x</button>
       </div>
     </transition>
   </div>
@@ -33,17 +33,21 @@ export default {
 		}
 	},
 	watch: {
-		searchText(oldVal, newVal) {
-			// if (oldVal !== newVal) {
+		searchText(newVal, oldVal) {
 			this.$emit('filter', newVal)
-			// }
 		}
 	},
 	methods: {
 		searchVisible() {
 			this.showSearch = true
-			this.searchText = ''
-			this.$refs.searchInput.focus()
+			this.$nextTick(function () {
+				this.$refs.searchInput.focus()
+			});
+			console.log(this.$refs.searchInput)
+		},
+		hideSearch() {
+			this.showSearch = false
+			this.searchText = '';
 		}
 	}
 }
