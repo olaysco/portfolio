@@ -9,7 +9,7 @@ published: true
 
 > Life is full of mountains, Some are big and some are small, But if you don’t give up, you will overcome all. - Anonymous 
 
-API calls to external endpoints is one of the integral parts of web applications, and this come at a cost as they can fail at any point of the transmission. the failure can be caused by downtime in the receiving server end, invalid client request or even the most popular one when sending data to public API which is exceeding rate limit or just some random errors, at any point these failures occur during API communication, being aware or handling this errors is not enough, a more proactive action might just be to retry the request.
+API calls to external endpoints are one of the integral parts of web applications, and this comes at a cost as they can fail at any point of the transmission. the failure can be caused by downtime in the receiving server end, invalid client request or even the most popular one when sending data to public API which is exceeding rate limit or just some random errors, at any point these failures occur during API communication, being aware or handling this errors is not enough, a more proactive action might just be to retry the request.
 
 In this article we would look at how to add retries to API request in PHP using the Exponential Back-off Algorithm, that can be used to progressively increase the time between each retry:
 
@@ -100,4 +100,7 @@ public function doRequest($url, $options, $maxRetry = 5, $statusToRetry = [500, 
 ```
 **Key Takeaways**  
 - The do-while loop allows us to try the request at least once, this could have also been a recursive function.
-- The implementation described in this article can be applied to any HTTP request library if it doesn't have the retry functionality or if you decide to handle the retry your own way.
+- The implementation described in this article can be applied to any HTTP request library if it doesn't have the retry functionality or if you decide to handle the retry your way.
+
+---
+_PS: if you have any questions, or notice any wrong assumptions, feel free to reach out on Twitter [@horllaysco](https://twitter.com/horllaysco)_
