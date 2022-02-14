@@ -64,6 +64,7 @@ export default {
 				return resolve(key)
 			})
 			.filter(({ attributes }) => attributes.published)
+      .sort((a, b) => new Date(b.attributes.date) - new Date(a.attributes.date))
 		return {
 			posts: imports,
 			allPosts: imports
