@@ -36,6 +36,41 @@ a > code {
     width: 100%;
   }
 
+  .copy-icon-wrapper {
+    display: none;
+    top: 0;
+    right: 0;
+    position: absolute;
+    animation: fade-in 200ms both;
+
+    .copy-btn {
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      border: 1px solid #cdcdd1;
+      border-radius: 6px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        fill: #7b7b7b;
+      }
+    }
+
+    .copy-icon {
+      color: $color__text--muted;
+      width: auto;
+    }
+  }
+
+  &:hover {
+    .copy-icon-wrapper{
+      display: block;
+    }
+  }
+
   ::-webkit-scrollbar-track {
     background-color: transparent;
     border-radius: $border-radius;
@@ -56,40 +91,67 @@ a > code {
   }
 }
 
-.highlight__keyword,
-.highlight__selector-tag,
-.highlight__literal,
-.highlight__section,
-.highlight__link {
+.hljs {
   color: $color__text;
 }
 
-.hljs,
-.highlight__subst {
-  color: $color__text;
-}
-
-.highlight__string,
-.highlight__title,
-.highlight__name,
-.highlight__type,
-.highlight__attribute,
-.highlight__symbol,
-.highlight__bullet,
 .highlight__built_in,
-.highlight__addition,
-.highlight__variable,
-.highlight__template-tag,
-.highlight__template-variable {
+.highlight__template-tag {
   color: $color__primary;
 }
 
-.highlight__comment,
-.highlight__quote,
-.highlight__deletion,
-.highlight__meta {
+.highlight__comment {
   color: $color__text--muted;
 }
+
+.highlight__doctag,
+.highlight__formula,
+.highlight__keyword {
+  color: #a626a4
+}
+
+.highlight__deletion,
+.highlight__name,
+.highlight__section,
+.highlight__selector-tag,
+.highlight__subst {
+  color: #e45649
+}
+
+.highlight__literal {
+  color: #0184bb
+}
+
+.highlight__addition,
+.highlight__attribute,
+.highlight__meta,
+.highlight__quote,
+.highlight__meta .highlight__string,
+.highlight__regexp,
+.highlight__string {
+  color: #50a14f
+}
+
+.highlight__attr,
+.highlight__number,
+.highlight__selector-attr,
+.highlight__selector-class,
+.highlight__selector-pseudo,
+.highlight__template-variable,
+.highlight__type,
+.highlight__variable {
+  color: #986801
+}
+
+.highlight__bullet,
+.highlight__link,
+.highlight__meta,
+.highlight__selector-id,
+.highlight__symbol,
+.highlight__title {
+  color: #4078f2
+}
+
 
 .highlight__keyword,
 .highlight__selector-tag,

@@ -42,7 +42,7 @@ export default async () => {
         {
           hid: 'description',
           name: 'description',
-          content: 'Olayiwola Odunsi is a software engineer with a knack for great products that improves lives.'
+          content: 'Olayiwola Odunsi is a software engineer.'
         },
         {
           name: 'theme-color', content: '#08193d'
@@ -57,7 +57,8 @@ export default async () => {
           name: 'msapplication-navbutton-color', content: '#08193d'
         }
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      link: [{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css', integrity:"sha512-o5v54Kh5PH0dgnf9ei0L+vMRsbm5fvIvnR/XkrZZjN4mqdaeH7PW66tumBoQVIaKNVrLCZiBEfHzRY4JJSMK/Q==", crossorigin:"anonymous", referrerpolicy:"no-referrer" }]
     },
     /*
      ** Customize the progress-bar color
