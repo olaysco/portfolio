@@ -26,8 +26,6 @@ Golang is a modern programming language that allows us to create advanced softwa
 
 In this guide, we will learn how to create an API with endpoints to create, read, update, and delete (CRUD) data in GoLang using PostgresSQL as the database. In the article, we will assume the role of a backend developer who has been assigned the task of building an application for managing users’ data. The company previously used a spreadsheet, and now they want to build a web application to manage the data. Since we are backend developers, the focus is on the backend of the application.
 
-![data_format](/images/blog/20220727simplegolangcrud/excel.png 'Imaginary inc. data in a spreadsheet')
-
 ## Prerequisites
 
 - Golang is installed and running on your system.
