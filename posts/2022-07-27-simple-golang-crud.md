@@ -24,7 +24,7 @@ published: true
 
 Golang is a modern programming language that allows us to create advanced software applications that are fast, scalable, and easy to learn. On the other hand, PostgreSQL is a free and open-source object-relational database system that is renowned for its dependability, feature robustness, and performance.
 
-In this guide, we will learn how to create an API with endpoints to create, read, update, and delete (CRUD) data in GoLang using PostgresSQL as the database. In the article, we will assume the role of a backend developer who has been assigned the task of building an application for managing users’ data. The company previously used an excel sheet, and now they want to build a web application to manage the data. Since we are backend developers, the focus is on the backend of the application.
+In this guide, we will learn how to create an API with endpoints to create, read, update, and delete (CRUD) data in GoLang using PostgresSQL as the database. In the article, we will assume the role of a backend developer who has been assigned the task of building an application for managing users’ data. The company previously used a spreadsheet, and now they want to build a web application to manage the data. Since we are backend developers, the focus is on the backend of the application.
 
 ![data_format](/images/blog/20220727simplegolangcrud/excel.png 'Imaginary inc. data in a spreadsheet')
 
@@ -81,7 +81,7 @@ go get github.com/jackc/pgx/v4
 
 ## Database Design
 
-The first task is to translate the excel columns in the image above into a DB schema.
+The first task is to translate the spreadsheet columns into a DB schema.
 
 <div class="d-flex justify-content-center"><iframe width="560" height="315" src='https://dbdiagram.io/embed/62e441d9f31da965e8425d0c'> </iframe></div>
 
@@ -138,7 +138,7 @@ HOST=localhost
 DB_URL=postgres://xyz:xyz
 ```
 
-Let's create new folder ` util``. In this folder, we will create a new file `config.go`. This file will contain the code to help read application configuration from the`.env` file.
+Let's create new folder `util`. In this folder, we will create a new file `config.go`. This file will contain the code to help read application configuration from the `.env` file.
 
 ```go
 package util
@@ -232,11 +232,11 @@ func (a *Api) Run() error {
 }
 ```
 
-The content is fairly simple, and we began by importing the packages we will be using. We defined four new types `Api` `Response`, `PaginatedRespone` and `ErrorResponse. We created the function NewApi(), which simply returns a new instance of Api. We called`initializeRoutes()`which we will define soon, and finally we define the`Run()`method. Once called, the application will start listening on the port defined in the`.env` file.
+The content is fairly simple, and we began by importing the packages we will be using. We defined four new types `Api` `Response`, `PaginatedRespone` and `ErrorResponse`. We created the function NewApi(), which simply returns a new instance of API. We called`initializeRoutes()`which we will define soon, and finally, we define the `Run()` method. Once called, the application will start listening on the port defined in the`.env` file.
 
 ### Define routes supported by the application and their handler function
 
-The request paths and methods we will be defining are:
+The request paths and methods that will be defined are:
 
 - ALL METHODS "/" - returns "OK"
 - GET "/users" - endpoint to get all users
@@ -608,10 +608,10 @@ func DeleteUser(db *pgx.Conn, ctx context.Context, id int64) error {
 ...
 ```
 
-We used prepared statements in the data manipulation queries(INSERT, UPDATE and DELETE) because it is more advantageous than executing the queries directly. The primary benefit is that it safeguards the application from SQL injections.
+Because it is more advantageous than running the queries directly, we used prepared statements in the data manipulation queries (INSERT, UPDATE, and DELETE). The primary benefit is that it safeguards the application from SQL injections.
 Prepared statements "prepare" the SQL query first to identify an effective query strategy, Then the actual values can be sent as pure data.
 
-The last thing to do now is to start the HTTP server, for the application to start receiving HTTP requests.
+The HTTP server must now be started so that the program can start receiving HTTP requests.
 
 ### Start HTTP server
 
@@ -684,7 +684,7 @@ go run main.go
 
 ## Key Takeaways
 
-You have learned how to build a basic REST API and access the database without an ORM. We'll include unit tests and appropriately handle concurrent database read and write with the pgx module concurrency pool in a subsequent article.
+You have learned how to build a basic REST API and access the database without an ORM. We'll include unit tests and appropriately handle concurrent database read and write with pgx concurrency pool in a subsequent article.
 
 ---
 
