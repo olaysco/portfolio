@@ -129,7 +129,7 @@ a {
 .post-thumb img {
 	vertical-align: bottom;
 	transition: all 0.3s;
-	border-radius: 0.875rem;
+	border-radius: 0.875rem 0rem 0rem 0.875rem;
 	height: 100%;
 	object-fit: cover;
 }
