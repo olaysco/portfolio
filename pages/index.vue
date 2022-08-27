@@ -27,7 +27,7 @@
             <div
               class="post-thumb d-none d-md-flex justify-content-center align-items-center col-2"
             >
-              <img :src="`assets/images/cover-${article.cover}`" class="img-fluid" alt />
+              <img :src="`/cover/cover-${article.cover}`" class="img-fluid" alt />
             </div>
             <div class="post-text col-12 col-md-10">
               <div class="post-header">
