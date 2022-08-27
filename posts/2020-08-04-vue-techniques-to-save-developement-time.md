@@ -18,30 +18,34 @@ In this article, we will take a look at some of the secret Vue techniques that c
 * When text changes, call fetchData method,
 * also call fetchData when the component is created
 */
-data(){
-  return {
-    text: ''
-  }
-},
-watch: {
-  text() {
+<script>
+export default() {
+  data () {
+    return {
+      text: ''
+    }
+  },
+  watch: {
+    text() {
+      this.fetchData();
+    }
+  },
+  created() {
     this.fetchData();
   }
-},
-created() {
-  this.fetchData();
 }
+</script>
 ```
 
 A simplified way to write our watcher is this
 
 ```js
 watch: {
-  text: 'fetchData'
+  text: "fetchData";
 }
 ```
 
-we can also make our watcher execute immediately the component is ready and subsequently when the prop is mutated
+we can also make our watcher execute immediately after the component is ready and subsequently when the prop is mutated
 
 ```js
 data(){
@@ -57,7 +61,7 @@ watch: {
 }
 ```
 
-what if our `text` data is a nested object? 
+what if our `text` data is a nested object?
 
 how do we listen for change if one of its nested properties is mutated, that's where we use the `deep: true` option
 
@@ -93,7 +97,7 @@ watch: {
 }
 ```
 
-well let's say you prefer to call `loadProduct` on `created()`, or for some reasons you require the lifecycle hooks to be re-triggered and not just watch for changes in the global \$route object, well there's a way out:
+well let's say you prefer to call `loadProduct` on `created()`, or for some reason, you require the lifecycle hooks to be re-triggered and not just watch for changes in the global \$route object, well there's a way out:
 
 ```js
 <router-view :key="$route.fullPath"> </router-view>
@@ -103,7 +107,7 @@ binding the key attribute to the route fullPath will cause a rerender whenever r
 note: this should be used sparingly.
 
 3. **Binding multiple listeners on an element**: <br>
-   Vue allows us to bind an event to an element using the `v-on` directive or through the `@` shorthand, there are cases you want an element to respond to multiple events and you still want to keep yor code clean, so let's say we have this piece of code :
+   Vue allows us to bind an event to an element using the `v-on` directive or through the `@` shorthand, there are cases you want an element to respond to multiple events and you still want to keep your code clean, so let's say we have this piece of code :
 
 ```vue
 <template>
@@ -121,16 +125,16 @@ note: this should be used sparingly.
 export default {
   methods: {
     btnClicked() {
-      console.log('am clicked')
+      console.log("am clicked");
     },
     btnDblClicked() {
-      console.log('am double clicked')
+      console.log("am double clicked");
     },
     btnHover() {
-      console.log('am hover')
-    }
-  }
-}
+      console.log("am hover");
+    },
+  },
+};
 </script>
 ```
 
@@ -146,32 +150,32 @@ from this, we can see that the two buttons share the same events and it would in
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   computed: {
     listeners() {
       return {
         click: this.btnClicked,
         dblclick: this.btnDblClicked,
-        focus: this.btnFocus
-      }
-    }
+        focus: this.btnFocus,
+      };
+    },
   },
   methods: {
     btnClicked() {
-      console.log('clicked')
+      console.log("clicked");
     },
     btnDblClicked() {
-      console.log('double clicked')
+      console.log("double clicked");
     },
     btnFocus() {
-      console.log('focused')
-    }
-  }
-}
+      console.log("focused");
+    },
+  },
+};
 </script>
 ```
 
-4. **Dynamic Listeners on child component**: <br>
+4. **Dynamic Listeners on child components**: <br>
    Using what we learned from the previous tips, we can also extend this to how we pass listeners to child components. by default, Vue passes listeners on a component to its root element if we have the following code
 
 ```vue
@@ -185,7 +189,8 @@ export default {
 <BaseInput @focus="handleFocus" />
 ```
 
-the focus event here is bind to the div root element which is not what we want, to override this you can bind the listener to the input directly by using the `v-on` attributes to listen on all the event listeners passed to the component.
+the focus event here is bind to the div root element which is not what we want, to override this you can bind the listener to the input directly by using the `v-on` attributes to listen to all the event listeners passed to the component.
+
 > **Note:** the `this.$listiners` property is an object containing all the event listeners passed to a component, equipped with that knowledge let's refactor our code
 
 ```vue
@@ -201,11 +206,11 @@ export default {
     listeners() {
       return {
         ...this.$listeners,
-        input: () => $emit('input', $event.target.value)
-      }
-    }
-  }
-}
+        input: () => $emit("input", $event.target.value),
+      };
+    },
+  },
+};
 </script>
 
 <BaseInput @focus="handleFocus" />
@@ -213,8 +218,8 @@ export default {
 
 now we can pass as many events as we want to the Base Input and the events would be bind to the root input element.
 
-5. **Dynamic attrributes**: <br>
-   In Vue attributes declared on an element if not declared as a prop is automatically inherited by the root element of the component, so let's say we have this
+5. **Dynamic attributes**: <br>
+   Attributes specified on an element but not declared as a prop are automatically inherited by the root element of the component, so let's say we have this
 
 ```vue
 <!-- BaseInput.vue -->
@@ -239,8 +244,8 @@ the placeholder attributes here would be inherited by the root div element, henc
 
 <script>
 export default {
-  inheritAttrs: false
-}
+  inheritAttrs: false,
+};
 </script>
 
 <BaseInput placeholder="email" />
@@ -251,4 +256,5 @@ There are two things to note here first is the `$attrs` this is an object simila
 Yeah, I hope you find these tips helpful and they will help improve your productivity.
 
 ---
+
 _PS: if you have any questions, or notice any wrong assumptions, feel free to reach out on Twitter [@horllaysco](https://twitter.com/horllaysco)_

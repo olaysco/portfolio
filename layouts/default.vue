@@ -2,7 +2,7 @@
   <div class="theme" :data-theme="theme">
     <!-- <ConstructionAlert /> -->
     <Header />
-    <nuxt />
+    <slot />
     <page-footer />
   </div>
 </template>

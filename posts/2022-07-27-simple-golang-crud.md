@@ -45,11 +45,11 @@ func main() {
 
 To manage the application dependencies, we will use `gomod`, and initialize it using the following command, where `{username}` is your Github username, and `{dir}` is the application's directory.
 
-```
+```bash
 go mod init github.com/{username}/{dir}
 ```
 
-![data_format](/images/blog/20220727simplegolangcrud/gomod.png 'go.mod file with no dependencies')
+![data_format](https://res.cloudinary.com/function/image/upload/v1661324334/blog/gomod.png "go.mod file with no dependencies")
 
 The go mod init command creates a go.mod file to track the code's dependencies. So far, the file includes only the name of the application and the Go version the code supports. As we add dependencies, the go.mod file will list the dependencies and the versions the code depends on.
 
@@ -57,7 +57,7 @@ The first dependency we will install is [Viper](https://github.com/spf13/viper).
 
 Run the following command to install Viper
 
-```
+```bash
 go get github.com/spf13/viper
 ```
 
@@ -65,7 +65,7 @@ Install [Gorilla mux](github.com/gorilla/mux), Gorilla Mux is an extension of Go
 
 Run the following command to install Gorilla mux
 
-```
+```bash
 go get github.com/gorilla/mux
 ```
 
@@ -73,7 +73,7 @@ Install [pgx](github.com/jackc/pgx), pgx is a fast, low-level, and performant Go
 
 Run the following command to install pgx
 
-```
+```bash
 go get github.com/jackc/pgx/v4
 ```
 
@@ -91,7 +91,7 @@ create a new folder `db/migration` in the application directory.
 
 Run the following query to create the first migration file
 
-```
+```bash
 migrate create -ext sql -dir db/migration imaginary_schema
 ```
 
@@ -121,7 +121,7 @@ DROP TABLE IF EXISTS users;
 
 Run the following migration to migrate the table
 
-```
+```bash
 migrate -path db/migration -database "postgres://<user>:<password>@localhost:5432/postgres?sslmode=disable" up
 ```
 
@@ -129,7 +129,7 @@ migrate -path db/migration -database "postgres://<user>:<password>@localhost:543
 
 The application configuration would be stored in `.env` file and read as environment variables with Viper. In the application root folder, create a new file named `.env` with the following content. DB_URL should be replaced with the database URL.
 
-```.env
+```bash
 DB_DRIVER=postgres
 PORT=3000
 HOST=localhost
@@ -660,7 +660,7 @@ We are almost done, and your folder structure should look like the image below.
 
 Run the following command to start the HTTP server, so we can start testing
 
-```
+```bash
 go run main.go
 ```
 

@@ -1,17 +1,10 @@
 html {
   scroll-behavior: smooth;
 }
-body {
-  font-size: 16px;
-  color: #ffffff;
-  line-height: 1.6;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background: #08193d;
-  background-image: url('./images/Confetti-Doodles.svg');
-  background-attachment: fixed;
+.text-right {
+  text-align: right;
 }
-.navbar-light .navbar-nav .nav-link {
+.navbar-nav .nav-link {
   color: #fff;
 }
 .header-container {
