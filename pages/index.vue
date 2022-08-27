@@ -58,6 +58,10 @@
 import { ParsedContent } from "@nuxt/content/dist/runtime/types";
 import { Ref } from "vue";
 
+useHead({
+  title: "Olayiwola Odunsi - Software Engineer",
+});
+
 let search: Ref<string> = ref("");
 let articles: Ref<ParsedContent[]> = ref();
 let articlesCache: Ref<ParsedContent[]> = ref();

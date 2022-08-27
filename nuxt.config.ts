@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    "bootstrap/dist/css/bootstrap.css",
     "~/assets/style.css",
     "~/assets/scss/default.scss",
     "@fortawesome/fontawesome-free/css/all.css",
@@ -30,36 +29,85 @@ export default defineNuxtConfig({
   /*
    ** Headers of the page
    */
-  head: {
-    htmlAttrs: {
-      lang: "en",
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: "en",
+      },
+      title: "Olayiwola Odunsi - Software Engineer",
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Olayiwola Odunsi is a software engineer with love for web❤️ and distributed systems.",
+        },
+        {
+          name: "theme-color",
+          content: "#08193d",
+        },
+        {
+          name: "apple-mobile-web-app-capable",
+          content: "yes",
+        },
+        {
+          name: "apple-mobile-web-app-status-bar-style",
+          content: "black-translucent",
+        },
+        {
+          name: "msapplication-navbutton-color",
+          content: "#08193d",
+        },
+        { hid: "og:url", property: "og:url", content: "https://www.olays.co/" },
+        { hid: "og:type", property: "og:type", content: "website" },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: "Olayiwola Odunsi - Software Engineer",
+        },
+        { hid: "og:image", property: "og:image", content: "/olayiwola.jpg" },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content:
+            "Olayiwola Odunsi is a software engineer with love for web❤️ and distributed systems.",
+        },
+
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          hid: "twitter:domain",
+          property: "twitter:domain",
+          content: "olays.co",
+        },
+        {
+          hid: "twitter:url",
+          property: "twitter:url",
+          content: "https://www.olays.co/",
+        },
+        {
+          hid: "twitter:title",
+          property: "twitter:title",
+          content: "Olayiwola Odunsi - Software Engineer",
+        },
+        {
+          hid: "twitter:description",
+          property: "twitter:description",
+          content:
+            "Olayiwola Odunsi is a software engineer with love for web❤️ and distributed systems.",
+        },
+        {
+          hid: "twitter:image",
+          property: "twitter:image",
+          content: "/olayiwola.jpg",
+        },
+      ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
-    title: "Olayiwola Odunsi - Software Engineer",
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        hid: "description",
-        name: "description",
-        content: "Olayiwola Odunsi is a software engineer.",
-      },
-      {
-        name: "theme-color",
-        content: "#08193d",
-      },
-      {
-        name: "apple-mobile-web-app-capable",
-        content: "yes",
-      },
-      {
-        name: "apple-mobile-web-app-status-bar-style",
-        content: "black-translucent",
-      },
-      {
-        name: "msapplication-navbutton-color",
-        content: "#08193d",
-      },
-    ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 });
