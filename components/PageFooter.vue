@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <span>—— Olayiwola Odunsi {{year}} &copy</span>
+          <span>—— Olayiwola Odunsi {{ year }} &copy</span>
         </div>
         <div class="col-6 text-right">
           <a href="hhtps://github.com/olaysco">
@@ -16,23 +16,24 @@
 </template>
 <script>
 export default {
-	computed: {
-		year() {
-			return new Date().getFullYear()
-		}
-	}
-}
+  computed: {
+    year() {
+      return new Date().getFullYear();
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .footer {
-	box-shadow: -2px -4px 7px 1px #0a1835;
-	margin-top: 2rem;
-	a,
-	span {
-		color: var(--color__white);
-	}
+  box-shadow: -2px -4px 7px 1px #0a1835;
+  margin-top: 2rem;
+  a,
+  span {
+    color: var(--color__white);
+    text-decoration: none;
+  }
 }
 .footer > div {
-	padding: 1em;
+  padding: 1em;
 }
 </style>
