@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Portfolio Site
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+As seen on [Olaysco](https://www.olays.co) Portfolio
 
 ## Setup
 
@@ -30,13 +30,5 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run build
+npm run generate
 ```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
