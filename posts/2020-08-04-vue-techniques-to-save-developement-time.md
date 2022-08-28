@@ -1,5 +1,5 @@
 ---
-title: Vue.js techniques to save you development time
+title: Vue.JS Techniques to Save You Development Time
 date: 2020-08-04
 description: Vue.js have some intrinsic parts that are not widely known, and not even mentioned in the documentation, knowing some of these can save you time.
 tags: [Vue.js, JavaScript]

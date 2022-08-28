@@ -1,5 +1,5 @@
 ---
-title: Create a CRUD application with Golang and PostgreSQL
+title: Create a Crud Application With Golang and PostgreSQL
 date: 2022-07-27
 description: Learn how to create a RESTful API using GoLang and PostgreSQL.
 tags: [golang, PostgreSQL, API]

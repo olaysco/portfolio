@@ -1,5 +1,5 @@
 ---
-title: How to add retries to external API calls in PHP
+title: How to Add Retries to External API Calls in PHP
 date: 2021-04-24
 description: When making HTTP API calls to external or third-party systems and failures, the failure could a problem with the connection to the server or other hops in-between.
 tags: [Laravel, PHP, API, Best Practices]

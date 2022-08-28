@@ -1,12 +1,14 @@
 ---
-title: Simple way to run multiple long-running processes in PHP asynchronously
+title: Simple Way to Run Multiple Long-Running Processes in PHP Asynchronously
 date: 2021-04-29
 description: Learn how you can run multiple long-running processes in PHP asynchronously
 tags: [Go]
 cover: asynchronous-php.gif
 published: true
 ---
+
 A task that prevents other tasks from being executed until completion is known as a **synchronous operation** whereas a task that does not block other tasks from being executed even while it is yet to be completed is known as an **asynchronous operation**. There are several scenarios during development when there's the need to perform an I/O task that executes for a very long time asynchronously, some of these are when you need to, maybe:
+
 1. Send out 300k+ emails at once to customers and probably include each customer's cumulative spending from another API.
 2. Process 1m+ CSV rows, clean up and save into database
 3. Send subscription reminders to 1m+ users
@@ -57,7 +59,7 @@ Another mechanism to run process asynchronously in PHP is using the [parallel fu
 
 use \parallel\{Runtime, Future, Channel, Events};
 
-$sender = function ($email) 
+$sender = function ($email)
 {
         echo "started processing $email";
         sleep(mt_rand(1,10));
@@ -73,45 +75,55 @@ array_walk($emails, function($email, $index) use ($workers) {
 ```
 
 Setting up any of the two mechanisms mentioned above might not come easy, especially on servers with restricted access where the developer is not authorized to install extensions, this is where the [Symfony Process](https://symfony.com/doc/current/components/process.html) package comes in
-> The Symfony\Component\Process\Process class executes a command in a sub-process, taking care of the differences between operating systems and escaping arguments to prevent security issues. 
 
-all that needs to be done is 
+> The Symfony\Component\Process\Process class executes a command in a sub-process, taking care of the differences between operating systems and escaping arguments to prevent security issues.
+
+all that needs to be done is
+
 ```
 composer require symfony/process
 ```
+
 and we're good to go, Laravel users need not run this command as it comes preinstalled.
 
 Before we dive into using the **Process Component** below are some things to note:
 
 1. The Process Component is for executing commands, this implies that the task we intend to run asynchronously must be in form of a command.
-2. The Process Component executes the command in a child process, which means that once the Process that spawned the child process finishes execution all its child processes will be terminated as well, even if they are still running. 
+2. The Process Component executes the command in a child process, which means that once the Process that spawned the child process finishes execution all its child processes will be terminated as well, even if they are still running.
 3. The Process Component has two commands that are used to begin the execution of a sub-process
-    - run() - run is synchronous and blocking.
-        ```php
-        <?php
 
-        use Symfony\Component\Process\Process;
+   - run() - run is synchronous and blocking.
 
-        $process = new Process(['/usr/bin/php', 'worker.php']);
-        $process->run();
-        //block until worker is completed
-        echo 'completed';
-        ```
-    - start() - start is asynchronous and non-blocking.
-        ```php
-        <?php
+     ```php
+     <?php
 
-        use Symfony\Component\Process\Process;
+     use Symfony\Component\Process\Process;
 
-        $process = new Process(['/usr/bin/php', 'worker.php']);
-        $process->start();
-        //continue doing other things while worker is running
-        echo 'process started, doing other things';
-        ```
+     $process = new Process(['/usr/bin/php', 'worker.php']);
+     $process->run();
+     //block until worker is completed
+     echo 'completed';
+     ```
+
+   - start() - start is asynchronous and non-blocking.
+
+     ```php
+     <?php
+
+     use Symfony\Component\Process\Process;
+
+     $process = new Process(['/usr/bin/php', 'worker.php']);
+     $process->start();
+     //continue doing other things while worker is running
+     echo 'process started, doing other things';
+     ```
+
 ### **Symfony Process Component in action**
+
 In this section, we would look at an example of using the Process component to break a task into multiple processes and have them run asynchronously.
 
 > task.php // this is the code that performs the main operation, and would be run multiple times
+
 ```php
 <?php
 
@@ -122,7 +134,7 @@ In this section, we would look at an example of using the Process component to b
 */
 $email = $argv[1] ?? null;
 
-$sender = function ($email) 
+$sender = function ($email)
 {
         echo "started processing $email";
         sleep(mt_rand(1,10));
@@ -134,7 +146,8 @@ if (!empty($email)) {
 }
 ```
 
-> worker.php // this is the main process that would spawn and manage multiple *Task.php* sub-processes.
+> worker.php // this is the main process that would spawn and manage multiple _Task.php_ sub-processes.
+
 ```php
 <?php
 
@@ -154,7 +167,7 @@ public function handle()
 
     /**
     * Immediately after starting the task as child processes, if we do not
-    * have the subsequent code below, this process will terminate and 
+    * have the subsequent code below, this process will terminate and
     * terminate the child processes as well, as they become orphans 😌
     */
     while (count($tasks) > 0) {
@@ -175,6 +188,7 @@ handle();
 ```
 
 The code above is sufficient for a small number of tasks, but what about in a case where it's necessary to limit the number of sub-process that can be can be in running state at a time.
+
 ```php
 
 <?php
@@ -195,7 +209,7 @@ public function handle()
         $tasks[] = $task;
 
         /**
-        * This will keep the child processes balance between the maximum and 
+        * This will keep the child processes balance between the maximum and
         * minimum, we can tweak this as per needs and system resource
         */
         if (count($tasks) >= $max_child_proces) {
@@ -207,7 +221,7 @@ public function handle()
 
     /**
     * Immediately after starting the task as child processes, if we do not
-    * have the subsequent code below, this process will terminate and 
+    * have the subsequent code below, this process will terminate and
     * terminate the child processes as well, as they become orphans 😌
     */
     while (count($tasks) > 0) {
@@ -247,9 +261,5 @@ you would notice that I used `run()` and not `start()` this is to prevent the pr
 > The Symfony Process method described above has been used to process a CSV file with thousand of thousands of rows, calling another API service to get a distinct URL for each row, and sending them individually to another service via its API within minutes.
 
 ---
+
 _PS: if you have any questions, or notice any wrong assumptions, feel free to reach out on Twitter [@horllaysco](https://twitter.com/horllaysco)_
-
-
-
-
-

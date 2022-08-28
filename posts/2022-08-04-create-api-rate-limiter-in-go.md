@@ -1,5 +1,5 @@
 ---
-title: Create an API Rate Limiter in GoLang
+title: Create an API Rate Limiter in Golang
 date: 2022-08-04
 description: Learn how to create an API Rate Limiter in GoLang.
 tags: [golang, Security, API]
