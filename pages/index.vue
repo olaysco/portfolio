@@ -62,7 +62,6 @@ useHead({
   title: "Olayiwola Odunsi - Software Engineer",
 });
 
-let search: Ref<string> = ref("");
 let articles: Ref<ParsedContent[]> = ref();
 let articlesCache: Ref<ParsedContent[]> = ref();
 
