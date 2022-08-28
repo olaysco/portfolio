@@ -25,7 +25,11 @@
 <script setup>
 import siteMeta from "~/utils/meta";
 
-const { path } = useRoute();
+let { path } = useRoute();
+
+if (path.slice(-1) === "/") {
+  path = path.slice(0, -1);
+}
 const { data } = await useAsyncData(`content-${path}`, async () => {
   let article = queryContent().where({ _path: path }).findOne();
   let surround = queryContent()
@@ -38,15 +42,17 @@ const { data } = await useAsyncData(`content-${path}`, async () => {
   };
 });
 
-// set the meta
-useHead({
-  title: data.value.article.title,
-  meta: siteMeta({
+if (data.value && data.value.article) {
+  // set the meta
+  useHead({
     title: data.value.article.title,
-    description: data.value.article.description,
-    mainImage: `\/${data.value.article.cover}`,
-  }),
-});
+    meta: siteMeta({
+      title: data.value.article.title,
+      description: data.value.article.description,
+      mainImage: `\/${data.value.article.cover}`,
+    }),
+  });
+}
 </script>
 <style lang="scss" scoped>
 @media only screen and (max-width: 640px) {

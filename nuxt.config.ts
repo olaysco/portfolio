@@ -29,6 +29,9 @@ export default defineNuxtConfig({
   target: "static",
 
   mode: "universal",
+  router: {
+    trailingSlash: false,
+  },
   /*
    ** Headers of the page
    */
