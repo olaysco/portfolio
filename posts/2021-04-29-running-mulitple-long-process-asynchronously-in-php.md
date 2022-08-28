@@ -15,7 +15,7 @@ A task that prevents other tasks from being executed until completion is known a
 
 Looking at each example case above, we can easily see the need for asynchronous processing, In this article we would look at a simple way to implement asynchronous processing in PHP.
 
-Though most developers (especially PHP haters 😂) acknowledge PHP as being single-threaded which is not the absolute truth as PHP supports multi-threading but this is not widely known because the default installation of PHP does not come compiled with the [pThreads extension](https://www.php.net/manual/en/class.thread.php) that allows tasks to be run on separate Threads.
+Most developers acknwoledges PHP as being single-threaded which is not the truth as PHP supports multi-threading but this is not widely known because the default installation of PHP does not come compiled with the [pThreads extension](https://www.php.net/manual/en/class.thread.php) that allows tasks to be run on separate Threads.
 
 We won't be using the Thread class for asynchronous processing in this article, but here is a sample code of what a code using Thread would look like.
 
