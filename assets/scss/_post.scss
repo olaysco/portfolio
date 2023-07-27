@@ -79,4 +79,7 @@
       text-decoration: none;
     }
   }
+  pre code {
+    color: var(--bs-code-color);
+  }
 }

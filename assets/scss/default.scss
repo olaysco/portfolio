@@ -1,9 +1,8 @@
+@import 'bootstrap/scss/bootstrap';
 @import "variables";
 @import "typography";
 @import "highlight";
 @import "post";
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-vue-3/src/styles/styles.scss';
 
 body {
   @include font__body;

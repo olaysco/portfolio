@@ -1,14 +1,19 @@
-import { defineNuxtConfig } from "nuxt";
-import { Theme } from "shiki-es";
+import { defineNuxtConfig } from "nuxt/config";
+import { resolve } from "path";
 import siteMeta from "./utils/meta";
 
 const meta = siteMeta({});
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "bootstrap-vue-3/nuxt"],
+  modules: ["@nuxt/content", "@bootstrap-vue-next/nuxt"],
   content: {
-    sources: ["posts"],
+    sources: {
+      content: {
+        driver: "fs",
+        base: resolve(__dirname, "posts"),
+      },
+    },
     // https://content.nuxtjs.org/api/configuration
     highlight: {
       theme: "monokai",
@@ -29,9 +34,9 @@ export default defineNuxtConfig({
   target: "static",
 
   mode: "universal",
-  router: {
-    trailingSlash: false,
-  },
+  // router: {
+  //   trailingSlash: false,
+  // },
   /*
    ** Headers of the page
    */
