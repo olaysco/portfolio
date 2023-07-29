@@ -80,8 +80,8 @@ Setting up any of the two mechanisms mentioned above might not come easy, especi
 
 all that needs to be done is
 
-```
-composer require symfony/process
+```bash
+$ composer require symfony/process
 ```
 
 and we're good to go, Laravel users need not run this command as it comes preinstalled.
