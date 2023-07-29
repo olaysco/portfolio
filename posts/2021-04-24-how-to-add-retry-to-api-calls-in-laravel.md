@@ -1,7 +1,7 @@
 ---
 title: How to Add Retries to External API Calls in PHP
 date: 2021-04-24
-description: When making HTTP API calls to external or third-party systems and failures, the failure could a problem with the connection to the server or other hops in-between.
+description: When making HTTP API calls to external or third-party systems, failures may occur due to issues with the server connection or any intermediate hops in-between, this article explains how to implement custom Retry logic using the Exponential Back-off Algorithm.
 tags: [Laravel, PHP, API, Best Practices]
 cover: http-give-up.gif
 published: true
