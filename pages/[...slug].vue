@@ -69,7 +69,7 @@ if (data.value && data.value.article) {
     meta: siteMeta({
       title: article.title,
       description: article.description,
-      mainImage: `https:\/\/olaysco.netlify.app\/cover\/${article.cover}`,
+      mainImage: `https:\/\/olaysco.netlify.app\/cover\/cover-${article.cover}`,
     }),
   });
 
