@@ -5,6 +5,14 @@
         <div class="col-md-12">
           <div class="post-head">
             <h1>{{ doc.title }}</h1>
+            <span class="meta">
+              <i class="far fa-calendar-alt"></i>
+              {{ datePublished }}
+            </span>
+            <span class="meta">
+              <i class="far fa-clock"></i>
+              {{ length }} min read
+            </span>
           </div>
         </div>
       </div>
@@ -22,36 +30,61 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
+import { Ref } from "vue";
 import siteMeta from "~/utils/meta";
 
 let { path } = useRoute();
+let length: Ref<number> = ref(1);
+let datePublished: Ref<string> = ref("");
 
 if (path.slice(-1) === "/") {
   path = path.slice(0, -1);
 }
+
 const { data } = await useAsyncData(`content-${path}`, async () => {
-  let article = queryContent().where({ _path: path }).findOne();
-  let surround = queryContent()
-    .only(["_path", "title", "description"])
-    .sort({ date: 1 })
-    .findSurround(path);
+  let article = await queryContent().where({ _path: path }).findOne();
+  let surround = null;
+  try {
+    surround = await queryContent()
+      .only(["_path", "title", "description"])
+      .sort({ date: 1 })
+      .findSurround(path);
+  } catch (error) {
+    surround = null;
+  }
+
   return {
-    article: await article,
-    surround: await surround,
+    article: article,
+    surround: surround,
   };
 });
 
 if (data.value && data.value.article) {
+  const article = data.value.article;
+
   // set the meta
   useHead({
-    title: data.value.article.title,
+    title: article.title,
     meta: siteMeta({
-      title: data.value.article.title,
-      description: data.value.article.description,
-      mainImage: `\/${data.value.article.cover}`,
+      title: article.title,
+      description: article.description,
+      mainImage: `\/${article.cover}`,
     }),
   });
+
+  try {
+    // set content length in minutes
+    length.value = Math.round(article.body.length / 4000) || 1;
+
+    // set date article was published
+    datePublished.value = new Date(article.date).toLocaleString("en-NG", {
+      month: "long",
+      year: "numeric",
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
 </script>
 <style lang="scss" scoped>

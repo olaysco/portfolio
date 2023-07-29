@@ -25,15 +25,6 @@ export default defineNuxtConfig({
     "~/assets/scss/default.scss",
     "@fortawesome/fontawesome-free/css/all.css",
   ],
-  markdown: {
-    toc: {
-      depth: 5,
-      searchDepth: 5,
-    },
-  },
-  target: "static",
-
-  mode: "universal",
   // router: {
   //   trailingSlash: false,
   // },
