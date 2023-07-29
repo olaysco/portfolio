@@ -1,6 +1,6 @@
 # Portfolio Site
 
-As seen on [Olaysco](https://www.olays.co) Portfolio
+As seen on [Olaysco](https://www.olaysco.netlify.app) Portfolio
 
 ## Setup
 
@@ -22,7 +22,7 @@ pnpm install --shamefully-hoist
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ## Production
@@ -30,5 +30,5 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run generate
+yarn generate
 ```

@@ -8,7 +8,7 @@ type siteMeta = {
 
 const defaultMeta: siteMeta = {
   type: "website",
-  url: "https://www.olays.co/",
+  url: "https://www.olaysco.netlify.app/",
   title: "Olayiwola Odunsi - Software Engineer",
   mainImage: "/olayiwola.jpg",
   description:
@@ -55,7 +55,7 @@ export default (meta: siteMeta): Array<{}> => {
     {
       hid: "twitter:domain",
       property: "twitter:domain",
-      content: "olays.co",
+      content: "olaysco.netlify.app",
     },
     {
       hid: "twitter:url",
