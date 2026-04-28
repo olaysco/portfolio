@@ -7,6 +7,8 @@ cover: advanced-vue.png
 published: true
 ---
 
+> The expectations of life depend upon diligence; the mechanic that would perfect his work must first sharpen his tools. <p><b>Confucius</b></p>
+
 So, you've started to use Vue.js as your desired JavaScript framework for front-end development and you're enjoying it, but now wondering what else is it to know or how to boost your productivity.
 In this article, we will take a look at some of the secret Vue techniques that can increase your productivity and boost your development flow while following best practices.
 

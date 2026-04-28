@@ -7,7 +7,7 @@ cover: http-give-up.gif
 published: true
 ---
 
-> Life is full of mountains, Some are big and some are small, But if you don’t give up, you will overcome all. - Anonymous
+> Life is full of mountains, Some are big and some are small, But if you don’t give up, you will overcome all. <p><b>Anonymous</b></p>
 
 API calls to external endpoints are one of the integral parts of web applications, and this comes at a cost as they can fail at any point of the transmission. the failure can be caused by downtime in the receiving server end, invalid client request or even the most popular one when sending data to a public API that is exceeding the rate limit or just some random errors, at any point these failures occur during API communication, being aware or handling this errors is not enough, a more proactive action might just be to retry the request.
 

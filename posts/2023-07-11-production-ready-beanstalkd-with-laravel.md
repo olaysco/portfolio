@@ -1,13 +1,13 @@
 ---
 title: Production-Ready Beanstalkd with Laravel Queues
 date: 2023-07-11
-description: Queues are one of the integral parts of a scalable system, this article introduces the users to Queues and how they can integrate it into their Laravel application to improve the system performance.
+description: Queues are one of the integral parts of a scalable system, this article introduces the users to Queues and how they can integrate them into their Laravel application to improve the system performance.
 tags: [PHP, Distributed-Systems, Laravel, Queue]
 cover: queue-blog.png
 published: true
 ---
 
-> Great works are performed not by strength but by perseverance. - Samuel Johnson
+> Great works are performed not by strength but by perseverance. <p><b>Samuel Johnson</b></p>
 
 In the world of software engineering, queues assume a crucial role in guaranteeing the seamless and efficient operation of complex systems. Tasks such as sending emails, deleting accounts, and processing images often require significant processing time or consume considerable memory. Such tasks are ideal candidates to be offloaded to a queue, where they can be managed and processed asynchronously, freeing up system resources and enhancing overall performance.
 

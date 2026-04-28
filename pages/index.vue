@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-4 position-relative">
     <search-box @filter="filterPost"></search-box>
-    <div class="row mb-4">
+    <!-- <div class="row mb-4">
       <div class="col-md-12 text-center">
         <blockquote>
           <span class="quote"
@@ -9,6 +9,14 @@
           >
           <b class="ml-3">Dalai Lama</b>
         </blockquote>
+      </div>
+    </div> -->
+
+    <div class="row info-row">
+      <div class="col-md-8 mb-8">
+        <h1>
+          Hello there! I'm <span>Oláyíwolá Odunsi</span> a software engineer @Google.
+        </h1>
       </div>
     </div>
 

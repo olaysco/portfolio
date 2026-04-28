@@ -7,6 +7,8 @@ cover: asynchronous-php.gif
 published: true
 ---
 
+> Don’t fear moving slowly forward…fear standing still. <p><b>Kathleen Harris</b></p>
+
 A task that prevents other tasks from being executed until completion is known as a **synchronous operation** whereas a task that does not block other tasks from being executed even while it is yet to be completed is known as an **asynchronous operation**. There are several scenarios during development when there's the need to perform an I/O task that executes for a very long time asynchronously, some of these are when you need to, maybe:
 
 1. Send out 300k+ emails at once to customers and probably include each customer's cumulative spending from another API.

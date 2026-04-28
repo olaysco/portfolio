@@ -3,6 +3,7 @@
 @import "typography";
 @import "highlight";
 @import "post";
+@import "page";
 
 body {
   @include font__body;

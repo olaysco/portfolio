@@ -1,0 +1,10 @@
+.info-row {
+    & h1 {
+        margin-bottom: 4em;
+
+        &>span {
+            font-weight: bold;
+            color: #9ccdc6;
+        }
+    }
+}

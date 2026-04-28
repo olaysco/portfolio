@@ -20,7 +20,7 @@ goal: At the end of the tutorial readers should be very confident in creating an
 published: true
 ---
 
-> I am not a politician. I am just a simple person who has come to break down this system. - Volodymyr Zelensky
+> I am not a politician. I am just a simple person who has come to break down this system. <p><b>Volodymyr Zelensky</b></p>
 
 Golang is a modern programming language that allows us to create advanced software applications that are fast, scalable, and easy to learn. On the other hand, PostgreSQL is a free and open-source object-relational database system that is renowned for its dependability, feature robustness, and performance.
 
