@@ -8,11 +8,11 @@ type siteMeta = {
 
 const defaultMeta: siteMeta = {
   type: "website",
-  url: "https://www.olaysco.netlify.app/",
-  title: "Olayiwola Odunsi - Software Engineer",
+  url: "https://capeodev.com/",
+  title: "Olayiwola Odunsi - Backend & Cloud Engineer",
   mainImage: "/olayiwola.jpg",
   description:
-    "Olayiwola Odunsi is a software engineer with love for web❤️ and distributed systems.",
+    "Olayiwola Odunsi is a backend & cloud engineer building scalable systems in Go, on Kubernetes, across the cloud.",
 };
 
 export default (meta: siteMeta): Array<{}> => {
@@ -55,7 +55,7 @@ export default (meta: siteMeta): Array<{}> => {
     {
       hid: "twitter:domain",
       property: "twitter:domain",
-      content: "olaysco.netlify.app",
+      content: "capeodev.com",
     },
     {
       hid: "twitter:url",
