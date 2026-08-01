@@ -19,6 +19,7 @@
     "@nuxt/content": "^2.7.2",
     "@popperjs/core": "^2.11.6",
     "animate.css": "^4.1.1",
+    "playwright-core": "^1.62.1",
     "sass": "^1.54.5"
   }
 }

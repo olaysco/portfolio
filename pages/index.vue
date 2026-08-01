@@ -2,48 +2,55 @@
   <div class="container mt-4 position-relative">
     <!-- Hero -->
     <header class="hero">
-      <p class="hero-eyebrow">Hi, I'm</p>
-      <h1 class="hero-name">Oláyíwolá Odunsi</h1>
-      <p class="hero-role">Backend &amp; Cloud Engineer</p>
-      <p class="hero-intro">
-        I build solutions that scale and give users a seamless experience —
-        mostly in <span>Go</span>, on <span>Kubernetes</span>, across the
-        <span>cloud</span>. I care about distributed systems, clean APIs and
-        shipping things that work.
-      </p>
+      <div class="hero-text">
+        <p class="hero-eyebrow">Hi, I'm</p>
+        <h1 class="hero-name">Oláyíwolá Odunsi</h1>
+        <p class="hero-role">Backend &amp; Cloud Engineer</p>
+        <p class="hero-intro">
+          I build solutions that scale and give users a seamless experience —
+          mostly in <span>Go</span>, on <span>Kubernetes</span>, across the
+          <span>cloud</span>. I care about distributed systems, clean APIs and
+          shipping things that work.
+        </p>
 
-      <div class="hero-actions">
-        <a href="#work" class="btn-cta primary-btn"><span>View my work</span></a>
-        <a
-          href="https://github.com/olaysco"
-          target="_blank"
-          rel="noopener"
-          class="btn-ghost"
-          >GitHub</a
-        >
+        <div class="hero-actions">
+          <a href="#work" class="btn-cta primary-btn"><span>View my work</span></a>
+          <a
+            href="https://github.com/olaysco"
+            target="_blank"
+            rel="noopener"
+            class="btn-ghost"
+            >GitHub</a
+          >
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/olaysco" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://twitter.com/olaysco" target="_blank" rel="noopener" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="mailto:olayiwolaodunsi@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       </div>
 
-      <div class="hero-socials">
-        <a href="https://github.com/olaysco" target="_blank" rel="noopener" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://twitter.com/olaysco" target="_blank" rel="noopener" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="mailto:olayiwolaodunsi@gmail.com" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
+      <div class="hero-photo-wrap">
+        <img src="/olayiwola.jpg" alt="Olayiwola Odunsi" class="hero-photo" />
+        <span class="hero-photo-glow"></span>
       </div>
     </header>
 
     <!-- Skills -->
-    <Skills />
+    <div class="reveal"><Skills /></div>
 
     <!-- Selected Work -->
-    <SelectedWork />
+    <div class="reveal"><SelectedWork /></div>
 
     <!-- Writing -->
-    <section class="writing" id="writing">
+    <section class="writing reveal" id="writing">
       <div class="section-head d-flex flex-wrap align-items-center justify-content-between">
         <div>
           <h4 class="section-title">Writing</h4>
@@ -94,6 +101,27 @@
         </template>
       </div>
     </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta reveal" id="contact">
+      <h3>Let's build something.</h3>
+      <p>
+        Have a role, a project or an idea worth shipping? I'm open to backend and
+        cloud engineering work.
+      </p>
+      <div class="cta-actions">
+        <a href="mailto:olayiwolaodunsi@gmail.com" class="btn-cta primary-btn">
+          <span>Get in touch</span>
+        </a>
+        <a
+          href="https://twitter.com/olaysco"
+          target="_blank"
+          rel="noopener"
+          class="btn-ghost"
+          >Message on X</a
+        >
+      </div>
+    </section>
   </div>
 </template>
 
@@ -137,12 +165,99 @@ function filterPost(text) {
     return t.toLowerCase().search(text.toLowerCase()) > -1;
   });
 }
+
+// Reveal sections on scroll (progressive enhancement, client-only)
+onMounted(() => {
+  const els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    els.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  els.forEach((el) => io.observe(el));
+});
 </script>
 <style lang="scss" scoped>
+/* ---------- Reveal on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 /* ---------- Hero ---------- */
 .hero {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
   padding: 3rem 0 4rem;
-  max-width: 760px;
+}
+.hero-text {
+  flex: 1 1 auto;
+  max-width: 640px;
+  animation: heroIn 0.7s ease both;
+}
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-photo-wrap {
+  position: relative;
+  flex: 0 0 auto;
+  animation: heroIn 0.7s ease 0.15s both;
+}
+.hero-photo {
+  position: relative;
+  z-index: 1;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(156, 205, 198, 0.3);
+  box-shadow: 0 30px 60px -20px rgba(5, 16, 40, 0.9);
+}
+.hero-photo-glow {
+  position: absolute;
+  inset: -20% -15% -20% -15%;
+  z-index: 0;
+  background: radial-gradient(
+    closest-side,
+    rgba(133, 79, 238, 0.35),
+    transparent
+  );
+  filter: blur(20px);
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .hero-photo {
+    width: 150px;
+    height: 150px;
+  }
 }
 .hero-eyebrow {
   color: #9ccdc6;
@@ -235,6 +350,36 @@ function filterPost(text) {
 }
 .writing {
   padding: 2rem 0 3rem;
+}
+
+/* ---------- Contact CTA ---------- */
+.contact-cta {
+  margin: 3rem 0 4rem;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(68, 88, 220, 0.18),
+    rgba(133, 79, 238, 0.18)
+  );
+  border: 1px solid rgba(156, 205, 198, 0.18);
+}
+.contact-cta h3 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.contact-cta p {
+  color: var(--color__white--muted);
+  max-width: 48ch;
+  margin: 0 auto 2rem;
+}
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 /* ---------- Post list ---------- */

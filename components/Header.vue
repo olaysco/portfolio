@@ -5,6 +5,12 @@
         <Logo />
       </b-navbar-brand>
       <b-navbar-nav class="ml-auto align-items-center">
+        <b-nav-item href="/#work">
+          <span class="nav-text">Work</span>
+        </b-nav-item>
+        <b-nav-item href="/#writing">
+          <span class="nav-text">Writing</span>
+        </b-nav-item>
         <b-nav-item to="/about">
           <span class="nav-text">About</span>
         </b-nav-item>
