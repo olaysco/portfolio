@@ -56,6 +56,9 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Use yarn — never commit an npm lockfile (mixing managers breaks CI)
+package-lock.json
+
 # dotenv environment variables file
 .env
 

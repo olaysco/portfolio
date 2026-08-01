@@ -38,7 +38,7 @@
       </div>
 
       <div class="hero-photo-wrap">
-        <img src="/olayiwola.jpg" alt="Olayiwola Odunsi" class="hero-photo" />
+        <img src="/olayiwola.jpeg" alt="Olayiwola Odunsi" class="hero-photo" />
         <span class="hero-photo-glow"></span>
       </div>
     </header>

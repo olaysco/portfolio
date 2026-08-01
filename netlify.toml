@@ -1,0 +1,11 @@
+# Nuxt 3 static deploy on Netlify.
+# NITRO_PRESET=static forces Nuxt to output a static site to .output/public.
+# Without it, Netlify auto-injects NITRO_PRESET=netlify, which writes output
+# elsewhere and makes the publish directory ".output/public" nonexistent.
+[build]
+  command = "yarn generate"
+  publish = ".output/public"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NITRO_PRESET = "static"

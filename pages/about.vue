@@ -46,7 +46,7 @@
       </div>
 
       <div class="col-12 col-md-4 text-center mt-4 mt-md-0">
-        <img src="/olayiwola.jpg" alt="Olayiwola Odunsi" class="about-photo" />
+        <img src="/olayiwola.jpeg" alt="Olayiwola Odunsi" class="about-photo" />
       </div>
     </div>
   </div>
