@@ -10,7 +10,7 @@ const defaultMeta: siteMeta = {
   type: "website",
   url: "https://capeodev.com/",
   title: "Olayiwola Odunsi - Backend & Cloud Engineer",
-  mainImage: "/olayiwola.jpg",
+  mainImage: "/olayiwola.jpeg",
   description:
     "Olayiwola Odunsi is a backend & cloud engineer building scalable systems in Go, on Kubernetes, across the cloud.",
 };
