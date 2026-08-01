@@ -4,12 +4,24 @@
       <b-navbar-brand to="/" aria-label="olayiwola odunsi logo">
         <Logo />
       </b-navbar-brand>
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item href="https://github.com/olaysco" target="__blank">
+      <b-navbar-nav class="ml-auto align-items-center">
+        <b-nav-item href="/#work">
+          <span class="nav-text">Work</span>
+        </b-nav-item>
+        <b-nav-item href="/#writing">
+          <span class="nav-text">Writing</span>
+        </b-nav-item>
+        <b-nav-item to="/about">
+          <span class="nav-text">About</span>
+        </b-nav-item>
+        <b-nav-item href="https://github.com/olaysco" target="_blank" rel="noopener">
           <i class="fab fa-github fa-2x" title="Github profile"></i>
         </b-nav-item>
-        <b-nav-item href="https://twitter.com/horllaysco" target="__blank">
+        <b-nav-item href="https://twitter.com/olaysco" target="_blank" rel="noopener">
           <i class="fab fa-twitter fa-2x" title="on Twitter"></i>
+        </b-nav-item>
+        <b-nav-item href="mailto:olayiwolaodunsi@gmail.com">
+          <i class="fas fa-envelope fa-2x" title="Email"></i>
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
@@ -21,4 +33,12 @@ export default {
   components: { Logo },
 };
 </script>
-<style scoped></style>
+<style scoped>
+.nav-text {
+  color: #fff;
+  font-size: 1rem;
+}
+.nav-text:hover {
+  color: #9ccdc6;
+}
+</style>

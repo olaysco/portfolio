@@ -36,7 +36,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
-      title: "Olayiwola Odunsi - Software Engineer",
+      title: "Olayiwola Odunsi - Backend & Cloud Engineer",
       meta: [
         ...meta,
         { charset: "utf-8" },
