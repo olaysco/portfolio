@@ -1,6 +1,5 @@
-[build]
-  command = "yarn generate"
-  publish = ".output/public"
-
+# Only pin the Node version. Build command and publish directory stay in the
+# Netlify UI (they already worked before this file existed). Nuxt 3 needs
+# Node >= 18; Netlify was defaulting to Node 16.
 [build.environment]
   NODE_VERSION = "20"
