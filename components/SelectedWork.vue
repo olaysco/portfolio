@@ -3,7 +3,7 @@
     <div class="section-head">
       <h4 class="section-title">Selected Work</h4>
       <p class="section-sub">
-        A few things I've designed, built and shipped — from AI agents to
+        A few things I've designed, built and shipped, from AI agents to
         distributed backends.
       </p>
     </div>
@@ -79,7 +79,7 @@ const works = [
   },
   {
     title: "ChefGo",
-    desc: "A Nigerian chef-hiring platform — book verified local chefs to cook in your home or deliver fresh meals. “Airbnb for private chefs.”",
+    desc: "A Nigerian chef-hiring platform. Book verified local chefs to cook in your home or deliver fresh meals. “Airbnb for private chefs.”",
     stack: ["Go", "Vue", "Ionic"],
     repo: "https://github.com/olaysco/cheffie-fe",
     live: "",

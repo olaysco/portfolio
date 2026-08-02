@@ -7,7 +7,7 @@
         <h1 class="hero-name">Oláyíwolá Odunsi</h1>
         <p class="hero-role">Backend &amp; Cloud Engineer</p>
         <p class="hero-intro">
-          I build solutions that scale and give users a seamless experience —
+          I build solutions that scale and give users a seamless experience,
           mostly in <span>Go</span>, on <span>Kubernetes</span>, across the
           <span>cloud</span>. I care about distributed systems, clean APIs and
           shipping things that work.

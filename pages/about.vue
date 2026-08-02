@@ -18,7 +18,7 @@
           and machine-learning tools.
         </p>
         <p>
-          I enjoy the whole path from idea to production — architecture,
+          I enjoy the whole path from idea to production: architecture,
           implementation, and the operational work that keeps things reliable.
           I've got the interpersonal skills to plug into and scale any
           distributed team, and I write about what I learn along the way.
@@ -54,7 +54,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: "About — Olayiwola Odunsi",
+  title: "About - Olayiwola Odunsi",
 });
 </script>
 

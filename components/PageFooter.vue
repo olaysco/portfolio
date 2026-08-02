@@ -3,11 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <span>—— Olayiwola Odunsi {{ year }} &copy</span>
+          <span>&copy; Olayiwola Odunsi {{ year }}</span>
         </div>
         <div class="col-6 text-right">
           <a href="https://github.com/olaysco" target="_blank" rel="noopener">
-            <i class="fab fa-github"></i> Check on github ——
+            <i class="fab fa-github"></i> Check on github
           </a>
         </div>
       </div>
