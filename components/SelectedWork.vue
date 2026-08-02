@@ -78,11 +78,11 @@ const works = [
     live: "https://domain-search-llm.onrender.com/",
   },
   {
-    title: "ChefGo",
+    title: "HomeOS",
     desc: "A Nigerian chef-hiring platform. Book verified local chefs to cook in your home or deliver fresh meals. “Airbnb for private chefs.”",
     stack: ["Go", "Vue", "Ionic"],
     repo: "https://github.com/olaysco/cheffie-fe",
-    live: "",
+    live: "https://homeos.ng/home",
   },
   {
     title: "Timetable Generator",
