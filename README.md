@@ -1,6 +1,6 @@
 # Portfolio Site
 
-As seen on [Olaysco](https://www.olaysco.netlify.app) Portfolio
+As seen on [Olaysco](https://www.olaysco.github.io) Portfolio
 
 ## Setup
 
