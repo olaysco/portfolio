@@ -8,7 +8,7 @@ type siteMeta = {
 
 const defaultMeta: siteMeta = {
   type: "website",
-  url: "https://capeodev.com/",
+  url: "https://olaysco.github.io/",
   title: "Olayiwola Odunsi - Backend & Cloud Engineer",
   mainImage: "/olayiwola.jpeg",
   description:
@@ -55,7 +55,7 @@ export default (meta: siteMeta): Array<{}> => {
     {
       hid: "twitter:domain",
       property: "twitter:domain",
-      content: "capeodev.com",
+      content: "olaysco.github.io",
     },
     {
       hid: "twitter:url",
