@@ -8,18 +8,16 @@
             Oláyíwolá Odunsi · senior backend &amp; cloud
           </p>
 
-          <h1 class="hero__title">I keep Go services alive under load.</h1>
+          <h1 class="hero__title">I design & build infrastructure that scales.</h1>
 
           <p class="hero__lede">
-            Currently the core domain infrastructure at
-            <strong>Openprovider</strong>: pricing, availability, DNS, RDAP and
-            authentication, on a 99.99% uptime SLA across 4M+ domains. Before Go
-            it was PHP and Laravel, the years the habits around queues, retries
-            and long-running jobs came from.
+            Currently working on core domain infrastructure at
+            <strong>Openprovider</strong> across pricing, availability, DNS,
+            RDAP and authentication, ensuring a 99.99% uptime SLA across 4M+
+            domains.
           </p>
           <p class="hero__lede">
-            I write about queues, rate limiting, and the parts of distributed
-            systems that fail quietly.
+            I write about systems and anything that interests me.
           </p>
 
           <div class="hero__actions">
@@ -30,7 +28,7 @@
 
         <aside class="panel hero__panel" aria-label="Profile at a glance">
           <div class="hero__panel-head">
-            <span>SERVICE / odunsi</span>
+            <span>SERVICE / Olaysco</span>
             <span class="hero__panel-state">HEALTHY</span>
           </div>
 
@@ -46,11 +44,15 @@
               <p class="spark__label">Requests / 24h</p>
               <div class="spark__bars" aria-hidden="true">
                 <span
-                  v-for="(height, i) in sparkline"
+                  v-for="(bar, i) in sparkBars"
                   :key="i"
                   class="spark__bar"
-                  :class="{ 'is-peak': height === peak }"
-                  :style="{ height: `${height}%` }"
+                  :class="{ 'is-peak': bar.height === peak }"
+                  :style="{
+                    height: `${bar.height}%`,
+                    animationDelay: `${bar.delay}ms`,
+                    '--overshoot': bar.overshoot,
+                  }"
                 ></span>
               </div>
             </div>
@@ -142,8 +144,7 @@
           Also shipped: ZapZap (Go logistics backend, zapzap.ng), Go-OTS
           (one-time secret CLI), Timetable Generator (conflict-free timetables
           via a genetic algorithm), Verifiland (Solidity land registry), Stroke
-          Prediction System (91% accurate, GPT explainer). Smaller experiments,
-          kept out of the way.
+          Prediction System (91% accurate, GPT explainer).
         </p>
       </section>
 
@@ -274,6 +275,19 @@ const sparkline = [
   62, 39, 71, 50, 33,
 ];
 const peak = Math.max(...sparkline);
+
+// Deterministic jitter: the entrance has to be identical on server and client,
+// so the "randomness" is derived from the bar's index rather than Math.random.
+function jitter(i: number, salt: number) {
+  const x = Math.sin((i + 1) * salt) * 10000;
+  return x - Math.floor(x);
+}
+
+const sparkBars = sparkline.map((height, i) => ({
+  height,
+  delay: Math.round(jitter(i, 12.9898) * 520),
+  overshoot: (1.05 + jitter(i, 78.233) * 0.17).toFixed(3),
+}));
 
 /* ── Private projects ─────────────────────────────────────── */
 
@@ -436,11 +450,31 @@ const alsoStack = [
   height: 54px;
 }
 
+@keyframes spark-rise {
+  0% {
+    transform: scaleY(0);
+  }
+  62% {
+    transform: scaleY(var(--overshoot, 1.12));
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spark__bar {
+    animation: none;
+  }
+}
+
 .spark__bar {
   flex: 1;
   min-width: 3px;
   background: rgba(245, 165, 36, 0.45);
   transition: background-color 140ms ease;
+  transform-origin: bottom;
+  animation: spark-rise 980ms cubic-bezier(0.33, 0.9, 0.4, 1) backwards;
 
   &.is-peak {
     background: rgba(245, 165, 36, 0.7);

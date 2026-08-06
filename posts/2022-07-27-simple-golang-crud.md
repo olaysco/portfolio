@@ -61,7 +61,7 @@ Run the following command to install Viper
 go get github.com/spf13/viper
 ```
 
-Install [Gorilla mux](github.com/gorilla/mux), Gorilla Mux is an extension of Go standard ServeMux, it implements the http.Handler interface, and used for request routing and dispatching.
+Install [Gorilla mux](https://github.com/gorilla/mux), Gorilla Mux is an extension of Go standard ServeMux, it implements the http.Handler interface, and used for request routing and dispatching.
 
 Run the following command to install Gorilla mux
 
@@ -69,7 +69,7 @@ Run the following command to install Gorilla mux
 go get github.com/gorilla/mux
 ```
 
-Install [pgx](github.com/jackc/pgx), pgx is a fast, low-level, and performant Go driver for PostgreSQL.
+Install [pgx](https://github.com/jackc/pgx), pgx is a fast, low-level, and performant Go driver for PostgreSQL.
 
 Run the following command to install pgx
 

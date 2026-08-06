@@ -4,11 +4,6 @@
       <h2 class="eyebrow">trace / career</h2>
       <span class="sect__note">click a span to inspect</span>
     </div>
-    <p class="sect__lede trace__lede">
-      Roles as parent spans, shipped work nested underneath. The same view a
-      trace gives you of a request, applied to seven years.
-    </p>
-
     <div class="trace__ruler" aria-hidden="true">
       <div class="trace__ruler-label">SPAN</div>
       <div class="trace__years">
@@ -84,19 +79,19 @@ const spans = [
     label: "Software Engineer · PencilEdge",
     title: "Software Engineer · PencilEdge",
     range: "Aug 2019 → Jun 2020 · Lagos",
-    body: "A cloud-based learning management system for an aviation company, on AWS S3 and SQS. Led the migration to AWS that cut infrastructure overhead by 40%, and acted as de facto Scrum Master across five concurrent client projects.",
+    body: "Cloud and web work for an aviation client, plus mentoring interns and acting as de facto Scrum Master across five concurrent client projects.",
     stack: "PHP · Laravel · Vue · AWS S3 · SQS",
   },
   {
-    key: "timetable",
+    key: "pe-lms",
     kind: "child",
     tone: "slate-light",
-    ...bar(at(2019, 1), at(2019, 12)),
-    label: "Timetable Generator",
-    title: "Timetable Generator",
-    range: "2019",
-    body: "A Laravel app that generates conflict-free college timetables with a genetic algorithm, running the heavy computation on background job queues. Still the most-starred repo on my GitHub.",
-    stack: "Laravel · PHP · genetic algorithms",
+    ...bar(at(2019, 8), at(2020, 6)),
+    label: "Aviation LMS on AWS",
+    title: "Aviation LMS on AWS",
+    range: "PencilEdge",
+    body: "Shipped an aviation company's training platform end to end and led its move to AWS, cutting infrastructure overhead by 40%. Course delivery ran on S3 with media processing queued through SQS, so uploads never blocked a lesson.",
+    stack: "PHP · Laravel · Vue · AWS S3 · SQS",
   },
   {
     key: "reliancehealth",
@@ -106,8 +101,30 @@ const spans = [
     label: "Software Engineer · RelianceHealth",
     title: "Software Engineer · RelianceHealth",
     range: "Jun 2020 → Jun 2021 · Lagos",
-    body: "Backend systems for a health-insurance platform, owning the growth and marketing-engineering stack. The affiliate and referral engine I shipped cut customer acquisition cost by 60%.",
-    stack: "PHP · MySQL · MS Teams bots · marketing automation",
+    body: "Backend systems for a health-insurance platform, owning the growth and marketing-engineering stack.",
+    stack: "PHP · MySQL · marketing automation",
+  },
+  {
+    key: "rh-affiliate",
+    kind: "child",
+    tone: "slate-light",
+    ...bar(at(2020, 8), at(2021, 3)),
+    label: "Affiliate & referral engine",
+    title: "Affiliate & referral engine",
+    range: "RelianceHealth",
+    body: "Shipped the affiliate and referral engine that turned existing members into an acquisition channel, cutting customer acquisition cost by 60%.",
+    stack: "PHP · MySQL",
+  },
+  {
+    key: "rh-dashboards",
+    kind: "child",
+    tone: "slate-light",
+    ...bar(at(2021, 1), at(2021, 6)),
+    label: "Growth dashboards & bots",
+    title: "Growth dashboards & bots",
+    range: "RelianceHealth",
+    body: "Built the real-time MS Teams bots and performance dashboards that gave growth and ops teams live visibility, wired into ActiveCampaign, Zapier and the Facebook Conversion API.",
+    stack: "MS Teams API · ActiveCampaign · Zapier",
   },
   {
     key: "compuco",
@@ -117,19 +134,30 @@ const spans = [
     label: "Senior Software Engineer · Compuco",
     title: "Senior Software Engineer · Compuco",
     range: "Jun 2021 → Sep 2023 · London, remote",
-    body: "PHP platforms for the NGO sector on the open-source CiviCRM ecosystem: CRM, payments, membership and authentication. Multi-currency Stripe integration across the EU, US and UK, and a SQL refactor with CTEs that took CRM API latency from four minutes to two seconds.",
-    stack: "PHP · CiviCRM · Stripe · AWS Cognito · OpenID Connect",
+    body: "PHP platforms for the NGO sector on the open-source CiviCRM ecosystem: CRM, payments, membership and authentication. A SQL refactor with CTEs took CRM API latency from four minutes to two seconds.",
+    stack: "PHP · CiviCRM · Stripe · AWS Cognito",
   },
   {
-    key: "verifiland",
+    key: "cc-stripe",
     kind: "child",
     tone: "slate-light",
-    ...bar(at(2022, 1), at(2022, 12)),
-    label: "Verifiland",
-    title: "Verifiland",
-    range: "2022",
-    body: "Blockchain-based land registration, with smart contracts holding tamper-proof ownership records.",
-    stack: "Solidity · NestJS · Vue",
+    ...bar(at(2021, 10), at(2022, 8)),
+    label: "Multi-currency Stripe payments",
+    title: "Multi-currency Stripe payments",
+    range: "Compuco",
+    body: "Led the multi-currency Stripe integration that opened donations across the EU, US and UK, letting donors give in their own currency and keeping the whole flow PCI-compliant.",
+    stack: "PHP · Stripe · PCI",
+  },
+  {
+    key: "cc-civicrm",
+    kind: "child",
+    tone: "slate-light",
+    ...bar(at(2022, 5), at(2023, 10)),
+    label: "CiviCRM extensions & SSO",
+    title: "CiviCRM extensions & SSO",
+    range: "Compuco",
+    body: "Built open-source CiviCRM extensions now running across thousands of NGOs: federated SSO through AWS Cognito and OpenID Connect, and a multi-year membership engine whose fixed and rolling renewal logic lifted subscription retention.",
+    stack: "PHP · CiviCRM · AWS Cognito · OpenID Connect",
   },
   {
     key: "openprovider",
@@ -139,47 +167,59 @@ const spans = [
     label: "Senior Software Engineer · Openprovider",
     title: "Senior Software Engineer · Openprovider",
     range: "Oct 2023 → now · Rotterdam, remote",
-    body: "Core domain infrastructure as Go services on Kubernetes: pricing, availability, DNS, RDAP and authentication, holding a 99.99% uptime SLA across 4M+ domains. Rebuilt the domain-check service from 700ms–2s down to ~10ms, scaled the gRPC auth service to 100k+ concurrent sessions, and wrote the OpenTelemetry tracing library the Go and PHP services now share.",
+    body: "Core domain infrastructure as Go services on Kubernetes: pricing, availability, DNS, RDAP and authentication, holding a 99.99% uptime SLA across 4M+ domains. I own the architecture decisions the team builds on and mentor engineers on idiomatic Go.",
     stack: "Go · Kubernetes · MongoDB · Redis · MySQL · gRPC · OpenTelemetry",
   },
   {
-    key: "homeos",
+    key: "op-pricing",
     kind: "child",
     tone: "amber-light",
-    ...bar(at(2024, 1), NOW),
-    label: "HomeOS",
-    title: "HomeOS",
-    range: "2024 → now",
-    body: "Booking and payments backend for a Nigerian chef-hiring marketplace. Idempotent writes and queued payouts against an unreliable provider.",
-    stack: "Go · Postgres · Beanstalkd · Kubernetes",
+    ...bar(at(2024, 1), at(2024, 10)),
+    label: "Billing & pricing service",
+    title: "Billing & pricing service",
+    range: "Openprovider",
+    body: "Led the billing and pricing service for real-time prices and promotions, and drove its migration from flat-file storage to a database cached in Redis, which improved availability and cut pricing-related support tickets by 35%.",
+    stack: "Go · MongoDB · Redis",
   },
   {
-    key: "khanzuo",
+    key: "op-domaincheck",
     kind: "child",
     tone: "amber-light",
-    ...bar(at(2025, 1), NOW),
-    label: "Khanzuo",
-    title: "Khanzuo",
-    range: "2025 → now",
-    body: "An agent that reproduces user-reported issues by driving the app like a real user, then turns what breaks into fix-ready developer context.",
-    stack: "LLM agent · Vue",
+    ...bar(at(2024, 8), at(2025, 4)),
+    label: "Domain-check rebuild",
+    title: "Domain-check rebuild",
+    range: "Openprovider",
+    body: "Rebuilt the domain-check service, cutting response times from 700ms–2s to around 10ms with a mix of Redis and in-process Go caching, and fixing the out-of-memory failures it hit under peak load.",
+    stack: "Go · Redis · caching",
   },
   {
-    key: "itan",
+    key: "op-auth",
     kind: "child",
-    tone: "amber-dim",
-    ...bar(at(2026, 1), NOW),
-    label: "Ìtàn",
-    title: "Ìtàn",
-    range: "2026 → now",
-    body: "An agentic AI video editor built from scratch in Go, with ffmpeg, headless Chromium and LLM APIs behind a CLI, a browser UI and voice control. Drives media tools over a replayable edit ledger, hot-swaps models mid-session, and renders LLM-authored motion graphics frame-accurate.",
-    stack: "Go · ffmpeg · headless Chromium · LLM APIs",
+    tone: "amber-light",
+    ...bar(at(2025, 2), at(2025, 11)),
+    label: "gRPC authentication service",
+    title: "gRPC authentication service",
+    range: "Openprovider",
+    body: "Scaled the Go gRPC authentication service to 100k+ concurrent sessions at 99.99% uptime.",
+    stack: "Go · gRPC · Redis",
+  },
+  {
+    key: "op-tracing",
+    kind: "child",
+    tone: "amber-light",
+    ...bar(at(2025, 8), NOW),
+    label: "Distributed tracing",
+    title: "Distributed tracing",
+    range: "Openprovider",
+    body: "Implemented distributed tracing across the microservices and established a shared observability standard: one reusable OpenTelemetry and Elasticsearch APM library for the Go and PHP services, so any engineer can see where a failing request broke.",
+    stack: "Go · PHP · OpenTelemetry · Elasticsearch APM",
   },
 ];
 
+
 const selected = ref("openprovider");
 const active = computed(
-  () => spans.find((s) => s.key === selected.value) ?? spans[5]
+  () => spans.find((s) => s.key === selected.value) ?? spans[0]
 );
 </script>
 
@@ -191,14 +231,11 @@ $gap: 20px;
   padding-top: 24px;
 }
 
-.trace__lede {
-  margin-bottom: 30px;
-}
-
 .trace__ruler {
   display: grid;
   grid-template-columns: $grid;
   gap: $gap;
+  margin-top: 30px;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;
