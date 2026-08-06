@@ -4,6 +4,7 @@ date: 2026-08-05
 description: A highly concurrent Go service kept dying with exit code 137 in Kubernetes, but pprof showed no leak. The problem was that the Go runtime had no idea the pod had a memory limit. This is what GOMEMLIMIT fixes.
 tags: [Go, Kubernetes, Distributed-Systems, Performance]
 cover: gomemlimit.png
+level: warn
 published: true
 ---
 
@@ -14,14 +15,6 @@ A while back I was investigating a highly concurrent Go service that kept restar
 My first guess was the obvious one: a memory leak. But `pprof` didn't agree. Under heavy load the in-use heap was fairly small, and the `inuse_space` profile looked healthy. It was the `alloc_space` profile that showed what was actually going on — the service was churning through enormous volumes of short-lived allocations, and nothing was telling the runtime to slow down.
 
 There was no leak. The runtime was doing exactly what it had been told to do. The problem was what it hadn't been told.
-
-- [Two accountants, no shared ledger](#two-accountants-no-shared-ledger)
-- [Why tuning GOGC isn't the answer](#why-tuning-gogc-isnt-the-answer)
-- [GOMEMLIMIT: telling the runtime about the budget](#gomemlimit-telling-the-runtime-about-the-budget)
-- [Picking a value](#picking-a-value)
-- [Setting it](#setting-it)
-- [What it looked like](#what-it-looked-like)
-- [What GOMEMLIMIT does not cover](#what-gomemlimit-does-not-cover)
 
 ## Two accountants, no shared ledger
 
@@ -92,11 +85,11 @@ Better still, derive it from the cgroup at startup rather than hardcoding it in 
 
 Before, with no limit defined — the heap climbs until the cgroup ends the process. `HeapSys` peaks past 1200 MiB, and the flat line at the right edge is the pod dying:
 
-![Go heap growing unbounded until the pod is OOMKilled](/blog/gomemlimit-before.png)
+![Go heap growing unbounded until the pod is OOMKilled](https://res.cloudinary.com/function/image/upload/v1786020016/blog/gomemlimit-before.jpg)
 
 After, with `GOMEMLIMIT` set — same workload, same traffic. `HeapAlloc` still swings hard with the bursts, which is expected and fine. What changed is that `HeapSys` flattens out around 763 MiB instead of climbing forever:
 
-![Go heap staying within its budget once GOMEMLIMIT is set](/blog/gomemlimit-after.png)
+![Go heap staying within its budget once GOMEMLIMIT is set](https://res.cloudinary.com/function/image/upload/v1786020016/blog/gomemlimit-after.jpg)
 
 The service stopped restarting. Note that the sawtooth in `HeapAlloc` didn't go away, and it shouldn't — the allocation pattern was never the problem. The ceiling was.
 

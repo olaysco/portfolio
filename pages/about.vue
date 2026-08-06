@@ -85,7 +85,7 @@ useHead({
   margin-top: 2rem;
 }
 .about-link {
-  color: #9ccdc6;
+  color: var(--accent);
   text-decoration: none;
   font-weight: 500;
   transition: opacity 140ms ease;

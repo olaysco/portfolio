@@ -15,12 +15,7 @@ Let's consider a hypothetical scenario in which our system involves users upload
 
 ![Queue Work](https://res.cloudinary.com/function/image/upload/v1690607250/blog/queueue-work.png)
 
-In this article, we will look into setting up a Laravel Application with Beanstalkd in a production environment, under the following headings
-
-- [What is a Queue?](#what-is-a-queue)
-- [Setting up Beanstalkd on the server](Beanstalkd)
-- [Connecting Beanstalkd to Laravel Application](#connecting-beanstalkd-to-laravel-application)
-- [Optimizing for Production](#optimizing-for-production)
+In this article, we will look into setting up a Laravel Application with Beanstalkd in a production environment.
 
 ## What is a Queue?
 
