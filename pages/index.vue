@@ -77,10 +77,7 @@
           decision="Idempotency keys on every write and a Beanstalkd queue with exponential back-off, instead of confirming synchronously against the provider."
           :result="homeosResult"
           :metrics="homeosMetrics"
-          :links="[
-            { href: 'https://homeos.ng/home', label: 'Live product' },
-            { href: 'https://github.com/olaysco/cheffie-fe', label: 'Source', muted: true },
-          ]"
+          :links="[{ href: 'https://homeos.ng/home', label: 'Live product' }]"
         >
           <template #media>
             <div class="panel path">
