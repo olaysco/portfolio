@@ -66,7 +66,6 @@
       <section id="projects" class="sect">
         <div class="sect__head">
           <h2 class="eyebrow">private projects / 3</h2>
-          <span class="sect__note">problem → decision → result</span>
         </div>
 
         <ServiceCase
