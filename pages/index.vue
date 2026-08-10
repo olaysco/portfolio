@@ -80,24 +80,7 @@
           :links="[{ href: 'https://homeos.ng/home', label: 'Live product' }]"
         >
           <template #media>
-            <div class="panel path">
-              <p class="path__label">Request path / booking</p>
-              <ol class="path__steps">
-                <li class="path__node">Client: Ionic / Vue</li>
-                <li class="path__edge" aria-hidden="true"></li>
-                <li class="path__node path__node--hot">API: Go · idempotency key</li>
-                <li class="path__edge" aria-hidden="true"></li>
-                <li class="path__node">Postgres: booking, ledger</li>
-                <li class="path__edge" aria-hidden="true"></li>
-                <li class="path__node">Beanstalkd: payout job</li>
-                <li class="path__edge path__edge--noted">
-                  <span>↺ retry, exponential back-off</span>
-                </li>
-                <li class="path__node path__node--unreliable">
-                  Payment provider: webhooks, unreliable
-                </li>
-              </ol>
-            </div>
+            <MediaSlot :src="media.homeos" alt="HomeOS booking flow" />
           </template>
         </ServiceCase>
 
@@ -110,11 +93,7 @@
           stack="Go · ffmpeg · headless Chromium · LLM APIs"
         >
           <template #media>
-            <MediaSlot
-              :src="media.itan"
-              alt="Ìtàn editor mid-render"
-              caption="A still from the editor: the agent assembling an edit, or the ledger replaying"
-            />
+            <MediaSlot :src="media.itan" alt="Ìtàn editor mid-render" />
           </template>
         </ServiceCase>
 
@@ -129,11 +108,7 @@
           :divider="false"
         >
           <template #media>
-            <MediaSlot
-              :src="media.khanzuo"
-              alt="Khanzuo agent mid-run"
-              caption="A still from the demo: the agent mid-run"
-            />
+            <MediaSlot :src="media.khanzuo" alt="Khanzuo agent mid-run" />
           </template>
         </ServiceCase>
 
@@ -479,75 +454,6 @@ const alsoStack = [
 
   &:hover {
     background: var(--accent);
-  }
-}
-
-.path {
-  padding: 20px;
-  height: 100%;
-}
-
-.path__label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-4);
-  margin: 0 0 20px;
-}
-
-.path__steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.path__node {
-  border: 1px solid var(--line--strong);
-  padding: 12px 14px;
-  font-family: var(--font-mono);
-  font-size: 13px;
-}
-
-.path__node--hot {
-  border-color: var(--accent);
-  background: rgba(245, 165, 36, 0.1);
-  color: var(--accent--soft);
-}
-
-.path__node--unreliable {
-  border-style: dashed;
-  border-color: rgba(238, 242, 249, 0.4);
-  color: var(--ink-3);
-}
-
-.path__edge {
-  height: 22px;
-  width: 1px;
-  background: var(--line--strong);
-  margin-left: 26px;
-}
-
-.path__edge--noted {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: auto;
-  background: none;
-
-  &::before {
-    content: "";
-    height: 22px;
-    width: 1px;
-    background: var(--line--strong);
-  }
-
-  span {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--accent);
   }
 }
 

@@ -17,9 +17,10 @@ export const metrics = {
 
 /**
  * Screenshots for the case studies. Drop files in `public/work/` and point at
- * them; until then each slot renders a labelled placeholder.
+ * them; until then each slot renders an empty placeholder.
  */
 export const media = {
+  homeos: "",
   itan: "",
   khanzuo: "",
 };
