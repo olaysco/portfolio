@@ -11,12 +11,10 @@
           <h1 class="hero__title">I design & build infrastructure that scales.</h1>
 
           <p class="hero__lede">
-            Currently working on core domain infrastructure across pricing,
-            availability, DNS, RDAP and authentication, ensuring a 99.99%
-            uptime SLA across 4M+ domains.
+            Currently focused on distributed systems, cloud-native architecture, backend engineering, and harness engineering.
           </p>
           <p class="hero__lede">
-            I write about systems and anything that interests me.
+            This is where I write about systems and anything that interests me.
           </p>
 
           <div class="hero__actions">
