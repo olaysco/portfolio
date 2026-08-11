@@ -164,7 +164,7 @@
           />
           <p class="about__creds">
             MSc Artificial Intelligence &amp; Human Factors, Coventry. BSc
-            Computer Science, First Class, Hertfordshire. Certified Kubernetes
+            Computer Science, Hertfordshire. Certified Kubernetes
             &amp; Cloud Native Associate. United Kingdom, remote across GMT and
             CET hours.
           </p>
