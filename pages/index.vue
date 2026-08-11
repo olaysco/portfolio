@@ -71,10 +71,10 @@
         <ServiceCase
           index="01"
           title="HomeOS"
-          problem="Bookings and chef payouts had to settle correctly while third-party payment webhooks arrived late, twice, or not at all."
-          decision="Idempotency keys on every write and a Beanstalkd queue with exponential back-off, instead of confirming synchronously against the provider."
-          :result="homeosResult"
-          :metrics="homeosMetrics"
+          problem="Ensure Bookings and chef payouts settle correctly, while handling inconsistent third-party payment webhooks, Also ensure the booking endpoint can handle peak load without dropping requests."
+          decision="Implemented a webhook replay system that can reprocess the same booking multiple times without creating duplicates, and add cache layers to the booking endpoint to handle peak load."
+          result="The booking endpoint can handle 4M+ domains with a 99.99% uptime SLA, and the webhook replay system ensures that duplicate payouts are avoided."
+          stack="Go, Docker, Redis, Postgres, Elasticache"
           :links="[{ href: 'https://homeos.ng/home', label: 'Live product' }]"
         >
           <template #media>
@@ -88,7 +88,7 @@
           problem="An LLM can describe an edit but cannot execute one, and a video agent that mutates state as it goes leaves nothing you can inspect, resume or trust twice."
           decision="Built from scratch in Go around a replayable edit ledger, where every agent action is an appended operation rather than a mutation, with ffmpeg and headless Chromium doing the work and models hot-swappable mid-session behind one interface."
           result="LLM-authored HTML/CSS/GSAP motion graphics render frame-accurate, and the same agent is drivable from a CLI, a browser UI or by voice."
-          stack="Go · ffmpeg · headless Chromium · LLM APIs"
+          stack="Go, ffmpeg, headless Chromium, OpenRouter LLM APIs"
         >
           <template #media>
             <MediaSlot :src="media.itan" alt="Ìtàn editor mid-render" />
@@ -98,11 +98,11 @@
         <ServiceCase
           index="03"
           title="Khanzuo"
-          problem="Bug reports arrive as prose. Reproducing them by hand is the slowest part of a fix, and the part nobody wants."
-          decision="An agent that drives the real app like a user, then hands back fix-ready context. Traded deterministic scripted steps for an agent that can improvise around a vague report."
-          result="Reports land as a replayed session with the failing step, console output and network trail attached, so the fix starts at the cause rather than the retelling."
+          problem="Bug reports arrive as prose on tickets which makes reproducing them by hand slow."
+          decision="An agent that drives the real app like a user, then hands back fix-ready context."
+          result="Reports shows as a replayed session with the failing step, console output and network trail attached, so the fix starts at the cause rather than the retelling."
           :links="[{ href: 'https://github.com/olaysco/khanzuo', label: 'Source' }]"
-          stack="LLM agent · Vue"
+          stack="LLM agent, Go"
           :divider="false"
         >
           <template #media>
@@ -110,12 +110,12 @@
           </template>
         </ServiceCase>
 
-        <p class="projects__also">
+        <!-- <p class="projects__also">
           Also shipped: ZapZap (Go logistics backend, zapzap.ng), Go-OTS
           (one-time secret CLI), Timetable Generator (conflict-free timetables
           via a genetic algorithm), Verifiland (Solidity land registry), Stroke
           Prediction System (91% accurate, GPT explainer).
-        </p>
+        </p> -->
       </section>
 
       <!-- ── Log ──────────────────────────────────────────────── -->
