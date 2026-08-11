@@ -20,7 +20,7 @@ export const metrics = {
  * them; until then each slot renders an empty placeholder.
  */
 export const media = {
-  homeos: "",
-  itan: "",
-  khanzuo: "",
+  homeos: "/homeos.png",
+  itan: "/itan.png",
+  khanzuo: "/khnazuo.png",
 };
