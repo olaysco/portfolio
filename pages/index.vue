@@ -17,10 +17,10 @@
             This is where I write about systems and anything that interests me.
           </p>
 
-          <div class="hero__actions">
+          <!-- <div class="hero__actions">
             <a href="#projects" class="btn btn--solid">See the projects</a>
             <a href="#trace" class="btn btn--ghost">Read the trace</a>
-          </div>
+          </div> -->
         </div>
 
         <aside class="panel hero__panel" aria-label="Profile at a glance">
