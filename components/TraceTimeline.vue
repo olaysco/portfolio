@@ -237,7 +237,7 @@ $gap: 20px;
   gap: $gap;
   margin-top: 30px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   color: var(--ink-4);
   padding-bottom: 10px;
@@ -281,7 +281,7 @@ $gap: 20px;
   padding: 13px 0;
 
   .trace__label {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: -0.01em;
     color: var(--ink);
@@ -294,7 +294,7 @@ $gap: 20px;
 
 .trace__row--child {
   .trace__label {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--ink-3);
     padding-left: 22px;
   }
@@ -361,7 +361,7 @@ $gap: 20px;
 
 .trace__detail-label {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   color: var(--ink-4);
   margin: 0;
@@ -395,7 +395,7 @@ $gap: 20px;
 
 .trace__detail-text {
   font-size: 17px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--ink-3);
   margin: 12px 0 0;
   max-width: 68ch;
