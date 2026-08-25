@@ -120,7 +120,7 @@ const shownMetrics = computed(() => props.metrics.filter((m) => m.value));
 
   dt {
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -129,8 +129,8 @@ const shownMetrics = computed(() => props.metrics.filter((m) => m.value));
   }
 
   dd {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.65;
     color: var(--ink-2);
     margin: 0;
   }
@@ -179,7 +179,7 @@ const shownMetrics = computed(() => props.metrics.filter((m) => m.value));
 
 .case__metric-label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-4);

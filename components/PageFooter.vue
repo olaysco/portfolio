@@ -4,18 +4,32 @@
       <p class="site-footer__eyebrow">contact / open</p>
 
       <h2 class="site-footer__title">
-        Hiring for a Go backend? I'm accepting connections.
+        Available for senior Go / backend and platform roles.
       </h2>
 
       <div class="site-footer__actions">
         <a class="site-footer__mail" href="mailto:olayiwolaodunsi@gmail.com">
           olayiwolaodunsi@gmail.com
         </a>
+        <a
+          v-if="links.resume"
+          class="site-footer__resume"
+          :href="links.resume"
+          download
+        >
+          Résumé (PDF) ↓
+        </a>
         <span class="site-footer__reply">Usually a reply within a day.</span>
       </div>
 
       <div class="site-footer__meta">
         <a href="https://github.com/olaysco" target="_blank" rel="noopener">GitHub</a>
+        <a
+          v-if="links.linkedin"
+          :href="links.linkedin"
+          target="_blank"
+          rel="noopener"
+        >LinkedIn</a>
         <a href="https://twitter.com/olaysco" target="_blank" rel="noopener">X</a>
         <span class="site-footer__copy">olaysco.github.io · © {{ year }}</span>
       </div>
@@ -24,6 +38,8 @@
 </template>
 
 <script setup lang="ts">
+import { links } from "~/utils/profile";
+
 const year = new Date().getFullYear();
 </script>
 
@@ -78,6 +94,22 @@ const year = new Date().getFullYear();
 
   &:hover {
     background: #0b2352;
+  }
+}
+
+.site-footer__resume {
+  border: 1px solid var(--bg);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: clamp(13px, 2.6vw, 15px);
+  font-weight: 500;
+  padding: 15px 24px;
+  text-decoration: none;
+  transition: background-color 140ms ease, color 140ms ease;
+
+  &:hover {
+    background: var(--bg);
+    color: var(--accent);
   }
 }
 

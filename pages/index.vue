@@ -11,7 +11,9 @@
           <h1 class="hero__title">I design & build infrastructure that scales.</h1>
 
           <p class="hero__lede">
-            Currently focused on distributed systems, cloud-native architecture, backend engineering, and harness engineering.
+            Backend systems, platform engineering and cloud infrastructure —
+            plus agent harnesses, the runtime scaffolding that lets LLM agents
+            do real work reliably.
           </p>
           <p class="hero__lede">
             This is where I write about systems and anything that interests me.
@@ -69,10 +71,11 @@
         <ServiceCase
           index="01"
           title="HomeOS"
-          problem="Ensure Bookings and chef payouts settle correctly, while handling inconsistent third-party payment webhooks, Also ensure the booking endpoint can handle peak load without dropping requests."
-          decision="Implemented a webhook replay system that can reprocess the same booking multiple times without creating duplicates, and add cache layers to the booking endpoint to handle peak load."
-          result="The booking endpoint can handle 4M+ domains with a 99.99% uptime SLA, and the webhook replay system ensures that duplicate payouts are avoided."
-          stack="Go, Docker, Redis, Postgres, Elasticache"
+          problem="Bookings and chef payouts have to settle correctly against inconsistent third-party payment webhooks, and the booking endpoint has to hold at peak load without dropping requests."
+          decision="Built an idempotent webhook replay system that can reprocess the same booking any number of times without creating duplicates, and put a caching layer in front of the booking endpoint for peak load."
+          :result="homeosResult"
+          :metrics="homeosMetrics"
+          stack="Go, Docker, Redis, Postgres, ElastiCache"
           :links="[{ href: 'https://homeos.ng/home', label: 'Live product' }]"
         >
           <template #media>
@@ -98,7 +101,7 @@
           title="Khanzuo"
           problem="Bug reports arrive as prose on tickets which makes reproducing them by hand slow."
           decision="An agent that drives the real app like a user, then hands back fix-ready context."
-          result="Reports shows as a replayed session with the failing step, console output and network trail attached, so the fix starts at the cause rather than the retelling."
+          result="Each report comes back as a replayed session with the failing step, console output and network trail attached, so the fix starts at the cause rather than the retelling."
           :links="[{ href: 'https://github.com/olaysco/khanzuo', label: 'Source' }]"
           stack="LLM agent, Go"
           :divider="false"
@@ -233,8 +236,8 @@ const facts = [
   { k: "ORCHESTRATOR", v: "Kubernetes" },
   { k: "DATA", v: "MongoDB · Redis · Postgres" },
   { k: "REGION", v: "United Kingdom · GMT" },
-  { k: "SCALE", v: "4M+ domains" },
-  { k: "UPTIME", v: "99.99%" },
+  { k: "SCALE", v: "4M+ domains @ Openprovider" },
+  { k: "UPTIME", v: "99.99% SLA @ Openprovider" },
 ];
 
 // Decorative load profile for the "service" conceit, not measured traffic.
@@ -506,7 +509,7 @@ const alsoStack = [
   gap: 16px;
   flex-wrap: wrap;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .log__stamp {
@@ -537,8 +540,8 @@ const alsoStack = [
 }
 
 .log__note {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.65;
   color: var(--ink-3);
   margin-top: 8px;
   max-width: 78ch;
