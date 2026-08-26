@@ -11,9 +11,7 @@
           <h1 class="hero__title">I design & build infrastructure that scales.</h1>
 
           <p class="hero__lede">
-            Backend systems, platform engineering and cloud infrastructure —
-            plus agent harnesses, the runtime scaffolding that lets LLM agents
-            do real work reliably.
+            My focus is on working on distributed systems and cloud infrastructure that can handle high traffic and complex workflows.  
           </p>
           <p class="hero__lede">
             This is where I write about systems and anything that interests me.
