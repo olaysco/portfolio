@@ -31,7 +31,7 @@
           rel="noopener"
         >LinkedIn</a>
         <a href="https://twitter.com/olaysco" target="_blank" rel="noopener">X</a>
-        <span class="site-footer__copy">olaysco.github.io · © {{ year }}</span>
+        <span class="site-footer__copy">olaysco.github.io © {{ year }}</span>
       </div>
     </div>
   </footer>

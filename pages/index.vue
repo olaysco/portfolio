@@ -5,7 +5,7 @@
       <section id="top" class="hero">
         <div class="hero__copy">
           <p class="eyebrow hero__eyebrow">
-            Oláyíwolá Odunsi · senior backend &amp; cloud
+            senior backend &amp; cloud engineer
           </p>
 
           <h1 class="hero__title">I design & build infrastructure that scales.</h1>
@@ -13,9 +13,9 @@
           <p class="hero__lede">
             My focus is on working on distributed systems and cloud infrastructure that can handle high traffic and complex workflows.  
           </p>
-          <p class="hero__lede">
+          <!-- <p class="hero__lede">
             This is where I write about systems and anything that interests me.
-          </p>
+          </p> -->
 
           <!-- <div class="hero__actions">
             <a href="#projects" class="btn btn--solid">See the projects</a>

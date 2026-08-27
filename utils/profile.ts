@@ -19,7 +19,7 @@ export const metrics = {
  */
 export const links = {
   /** e.g. "https://www.linkedin.com/in/your-handle" */
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/olaysco",
   /** Drop the PDF in `public/` and set this to e.g. "/olayiwola-odunsi-cv.pdf". */
   resume: "",
 };
