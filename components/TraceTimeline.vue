@@ -318,7 +318,7 @@ $gap: 20px;
   display: block;
   background: repeating-linear-gradient(
     90deg,
-    rgba(238, 242, 249, 0.07) 0 1px,
+    var(--grid-line) 0 1px,
     transparent 1px 12.5%
   );
 }

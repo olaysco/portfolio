@@ -42,7 +42,7 @@ const onPost = computed(() => !["/", "/about"].includes(route.path.replace(/\/$/
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(0, 4, 12, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line--rule);
 }

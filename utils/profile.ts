@@ -11,14 +11,8 @@ export const metrics = {
   bookingsPerMonth: "",
   /** e.g. "180ms": p99 on the HomeOS booking endpoint. */
   bookingP99: "",
-  /** Duplicate chef payouts since the idempotency work. Known: none. */
-  duplicatePayouts: "0",
 };
 
-/**
- * Screenshots for the case studies. Drop files in `public/work/` and point at
- * them; until then each slot renders an empty placeholder.
- */
 /**
  * Recruiter-facing links, same rule as `metrics`: an empty value means the
  * link simply isn't rendered, so nothing ships broken.
@@ -30,6 +24,10 @@ export const links = {
   resume: "",
 };
 
+/**
+ * Screenshots for the case studies. Drop files in `public/work/` and point at
+ * them; until then each slot renders an empty placeholder.
+ */
 export const media = {
   homeos: "/homeos.png",
   itan: "/itan.png",

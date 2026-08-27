@@ -63,17 +63,15 @@
       <!-- ── Private projects ─────────────────────────────────── -->
       <section id="projects" class="sect">
         <div class="sect__head">
-          <h2 class="eyebrow">private projects / 3</h2>
+          <h2 class="eyebrow">projects I'm currently working on</h2>
         </div>
 
         <ServiceCase
           index="01"
           title="HomeOS"
-          problem="Bookings and chef payouts have to settle correctly against inconsistent third-party payment webhooks, and the booking endpoint has to hold at peak load without dropping requests."
-          decision="Built an idempotent webhook replay system that can reprocess the same booking any number of times without creating duplicates, and put a caching layer in front of the booking endpoint for peak load."
-          :result="homeosResult"
+          :about="homeosAbout"
           :metrics="homeosMetrics"
-          stack="Go, Docker, Redis, Postgres, ElastiCache"
+          stack="Go, Postgres, Watermill, WebSocket, Docker, Redis, ElastiCache"
           :links="[{ href: 'https://homeos.ng/home', label: 'Live product' }]"
         >
           <template #media>
@@ -84,10 +82,9 @@
         <ServiceCase
           index="02"
           title="Ìtàn"
-          problem="An LLM can describe an edit but cannot execute one, and a video agent that mutates state as it goes leaves nothing you can inspect, resume or trust twice."
-          decision="Built from scratch in Go around a replayable edit ledger, where every agent action is an appended operation rather than a mutation, with ffmpeg and headless Chromium doing the work and models hot-swappable mid-session behind one interface."
-          result="LLM-authored HTML/CSS/GSAP motion graphics render frame-accurate, and the same agent is drivable from a CLI, a browser UI or by voice."
+          about="An LLM can describe an edit but cannot execute one, and a video agent that mutates state as it goes leaves nothing you can inspect, resume or trust twice. I built Ìtàn from scratch in Go around a replayable edit ledger, where every agent action is an appended operation rather than a mutation, with ffmpeg and headless Chromium doing the work and models hot-swappable mid-session behind one interface. LLM-authored HTML/CSS/GSAP motion graphics render frame-accurate, and the same agent is drivable from a CLI, a browser UI or by voice."
           stack="Go, ffmpeg, headless Chromium, OpenRouter LLM APIs"
+          :links="[{ href: 'https://itan-302e1.web.app/', label: 'Live product' }]"
         >
           <template #media>
             <MediaSlot :src="media.itan" alt="Ìtàn editor mid-render" />
@@ -97,9 +94,7 @@
         <ServiceCase
           index="03"
           title="Khanzuo"
-          problem="Bug reports arrive as prose on tickets which makes reproducing them by hand slow."
-          decision="An agent that drives the real app like a user, then hands back fix-ready context."
-          result="Each report comes back as a replayed session with the failing step, console output and network trail attached, so the fix starts at the cause rather than the retelling."
+          about="Bug reports arrive as prose on a ticket, so reproducing them by hand is slow, and by the time an engineer sits down to it the failing state is gone. I built Khanzuo, an agent that navigates the real app like a user would, clicking, filling forms, following the reported steps, while capturing console output, network calls and screen state as it goes. Each report comes back as a replayed session with the failing step, console output and network trail attached, so the fix starts at the cause rather than the retelling."
           :links="[{ href: 'https://github.com/olaysco/khanzuo', label: 'Source' }]"
           stack="LLM agent, Go"
           :divider="false"
@@ -266,19 +261,25 @@ const homeosResult = [
   .filter(Boolean)
   .join(" ");
 
+const homeosAbout =
+  "HomeOS is an AI-powered operating system for the home that also connects homeowners to vetted service professionals, handling bookings, scheduling and payouts end to end. " +
+  "I designed the backend in Go around an event-driven core, using Postgres as the message bus with Watermill for pub/sub and gorilla/websocket for delivery, so notifications and chat push to the browser in real time and the system scales past a single instance. " +
+  "On top of that I built an idempotent webhook replay system that can reprocess the same payment event any number of times without creating duplicate payouts, with a caching layer in front of the booking endpoint for peak load. " +
+  homeosResult;
+
 const homeosMetrics = [
   { value: metrics.bookingP99, label: "p99" },
   {
     value: metrics.bookingsPerMonth && `${metrics.bookingsPerMonth}/mo`,
     label: "Bookings",
   },
-  { value: metrics.duplicatePayouts, label: "Duplicates", tone: "ok" as const },
 ];
 
 /* ── About ────────────────────────────────────────────────── */
 
 const coreStack = [
   "Go",
+  "PHP",
   "Kubernetes",
   "MongoDB",
   "Postgres",
@@ -288,7 +289,6 @@ const coreStack = [
   "OpenTelemetry",
 ];
 const alsoStack = [
-  "PHP",
   "Laravel",
   "Vue",
   "Node.js",

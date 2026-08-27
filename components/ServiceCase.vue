@@ -8,16 +8,8 @@
 
       <dl class="case__pdr">
         <div class="case__pdr-row">
-          <dt>Problem</dt>
-          <dd>{{ problem }}</dd>
-        </div>
-        <div class="case__pdr-row">
-          <dt>Decision</dt>
-          <dd>{{ decision }}</dd>
-        </div>
-        <div class="case__pdr-row case__pdr-row--result">
-          <dt>Result</dt>
-          <dd>{{ result }}</dd>
+          <dt>About</dt>
+          <dd>{{ about }}</dd>
         </div>
       </dl>
 
@@ -60,9 +52,7 @@ const props = withDefaults(
   defineProps<{
     index: string;
     title: string;
-    problem: string;
-    decision: string;
-    result: string;
+    about: string;
     metrics?: Metric[];
     links?: Link[];
     stack?: string;
@@ -133,16 +123,6 @@ const shownMetrics = computed(() => props.metrics.filter((m) => m.value));
     line-height: 1.65;
     color: var(--ink-2);
     margin: 0;
-  }
-}
-
-.case__pdr-row--result {
-  dt {
-    color: var(--accent);
-  }
-
-  dd {
-    color: var(--ink);
   }
 }
 
