@@ -1,26 +1,31 @@
 :root {
-  --bg: #000000;
-  --panel: #000000;
-  --panel--hover: #020918;
+  --bg: #faf6ee;
+  --panel: #faf6ee;
+  --panel--hover: #f1ead9;
 
-  --line: rgba(238, 242, 249, 0.16);
-  --line--soft: rgba(238, 242, 249, 0.08);
-  --line--dashed: rgba(238, 242, 249, 0.12);
-  --line--strong: rgba(238, 242, 249, 0.3);
-  --line--rule: rgba(238, 242, 249, 0.14);
+  --line: rgba(15, 23, 42, 0.14);
+  --line--soft: rgba(15, 23, 42, 0.07);
+  --line--dashed: rgba(15, 23, 42, 0.12);
+  --line--strong: rgba(15, 23, 42, 0.3);
+  --line--rule: rgba(15, 23, 42, 0.14);
 
-  --ink: #eef2f9;
-  --ink-2: #d3def1;
-  --ink-3: #b8c9e6;
-  --ink-4: #9db1d4;
-  --ink-5: #8ba1c7;
+  --ink: #0b1220;
+  --ink-2: #29334a;
+  --ink-3: #4a5776;
+  --ink-4: #6b7793;
+  --ink-5: #7d8aa8;
 
-  --accent: #f5a524;
-  --accent--hi: #ffc35c;
-  --accent--soft: #ffd489;
+  --accent: #b45309;
+  --accent--hi: #d97706;
+  --accent--soft: #92400e;
 
-  --ok: #3dd68c;
-  --ok--soft: #6ee7b0;
+  --ok: #15803d;
+  --ok--soft: #16a34a;
+
+  /* Faint overlay for gridlines/hairlines that sit on --panel; tuned per
+     theme because it's the same technique on opposite grounds, not a tint
+     of --line (which is for solid borders). */
+  --grid-line: rgba(15, 23, 42, 0.06);
 
   --font-sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;

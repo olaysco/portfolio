@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     theme() {
-      return 'dark'
+      return 'light'
     }
   }
 }
