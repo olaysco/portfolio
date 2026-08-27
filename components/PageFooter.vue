@@ -4,7 +4,7 @@
       <p class="site-footer__eyebrow">contact / open</p>
 
       <h2 class="site-footer__title">
-        Available for senior Go / backend and platform roles.
+        Available for senior Go / PHP / backend and platform roles.
       </h2>
 
       <div class="site-footer__actions">

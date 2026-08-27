@@ -181,7 +181,7 @@
           <ul class="about__chips">
             <li v-for="skill in coreStack" :key="skill">{{ skill }}</li>
           </ul>
-          <p class="about__also">Also: {{ alsoStack.join(" · ") }}</p>
+          <p class="about__also">Also: {{ alsoStack.join(", ") }}</p>
         </div>
       </section>
     </div>
@@ -227,8 +227,8 @@ function level(article: any): string {
 const facts = [
   { k: "RUNTIME", v: "Go, PHP, Javascript" },
   { k: "ORCHESTRATOR", v: "Kubernetes" },
-  { k: "DATA", v: "MongoDB · Redis · Postgres" },
-  { k: "REGION", v: "United Kingdom · GMT" },
+  { k: "DATA", v: "MongoDB, Redis, Postgres" },
+  { k: "REGION", v: "United Kingdom, GMT" },
 ];
 
 // Decorative load profile for the "service" conceit, not measured traffic.

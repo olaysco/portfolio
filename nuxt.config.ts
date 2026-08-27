@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     },
     // https://content.nuxtjs.org/api/configuration
     highlight: {
-      theme: "monokai",
+      theme: "github-light",
       preload: ["c", "bash", "java", "go", "php", "js", "ts", "sql", "vue"],
     },
   },
