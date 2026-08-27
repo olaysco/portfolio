@@ -58,7 +58,7 @@
       </section>
 
       <!-- ── Trace ────────────────────────────────────────────── -->
-      <TraceTimeline />
+      <!-- <TraceTimeline /> -->
 
       <!-- ── Private projects ─────────────────────────────────── -->
       <section id="projects" class="sect">
