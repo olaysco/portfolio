@@ -230,12 +230,10 @@ function level(article: any): string {
 /* ── Hero ─────────────────────────────────────────────────── */
 
 const facts = [
-  { k: "RUNTIME", v: "Go" },
+  { k: "RUNTIME", v: "Go, PHP, Javascript" },
   { k: "ORCHESTRATOR", v: "Kubernetes" },
   { k: "DATA", v: "MongoDB · Redis · Postgres" },
   { k: "REGION", v: "United Kingdom · GMT" },
-  { k: "SCALE", v: "4M+ domains @ Openprovider" },
-  { k: "UPTIME", v: "99.99% SLA @ Openprovider" },
 ];
 
 // Decorative load profile for the "service" conceit, not measured traffic.
