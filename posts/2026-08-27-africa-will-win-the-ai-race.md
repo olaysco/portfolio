@@ -5,7 +5,7 @@ description: Africa won't win AI by training the next 500B-parameter model. It w
 tags: [AI, Africa, Applied-AI]
 cover: africa-ai-race.png
 level: info
-published: false
+published: true
 ---
 
 > In war, the way is to avoid what is strong and to strike at what is weak. <p><b>Sun Tzu</b></p>
