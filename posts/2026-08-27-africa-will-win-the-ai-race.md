@@ -8,7 +8,7 @@ level: info
 published: true
 ---
 
-> In war, the way is to avoid what is strong and to strike at what is weak. <p><b>Sun Tzu</b></p>
+> Military tactics are like unto water; for water in its natural course runs away from high places and hastens downwards. So in war, the way is to avoid what is strong and to strike at what is weak. <p><b>Sun Tzu</b></p>
 
 I'm a firm believer that Africa will be the unassuming winner of the AI race.
 
