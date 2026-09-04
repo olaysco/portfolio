@@ -15,9 +15,6 @@
         >
           {{ item.label }}
         </a>
-        <!-- <span class="site-nav__status">
-          <span class="site-nav__dot" aria-hidden="true"></span>Open to work
-        </span> -->
       </nav>
     </div>
   </header>
@@ -98,27 +95,6 @@ const onPost = computed(() => !["/", "/about"].includes(route.path.replace(/\/$/
   }
 }
 
-.site-nav__status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid rgba(61, 214, 140, 0.5);
-  background: rgba(61, 214, 140, 0.1);
-  color: var(--ok--soft);
-  padding: 6px 11px;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-}
-
-.site-nav__dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--ok);
-  display: block;
-}
-
 @media screen and (max-width: 860px) {
   .site-nav__inner {
     gap: 16px;
@@ -126,10 +102,6 @@ const onPost = computed(() => !["/", "/about"].includes(route.path.replace(/\/$/
 
   .site-nav__nav {
     gap: 18px;
-  }
-
-  .site-nav__status {
-    display: none;
   }
 }
 
