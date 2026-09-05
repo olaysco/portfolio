@@ -3,10 +3,6 @@
     <div class="shell site-footer__inner">
       <p class="site-footer__eyebrow">contact / open</p>
 
-      <h2 class="site-footer__title">
-        Available for senior Go / PHP / backend and platform roles.
-      </h2>
-
       <div class="site-footer__actions">
         <a class="site-footer__mail" href="mailto:olayiwolaodunsi@gmail.com">
           olayiwolaodunsi@gmail.com
@@ -61,16 +57,6 @@ const year = new Date().getFullYear();
   letter-spacing: 0.16em;
   text-transform: uppercase;
   margin: 0 0 26px;
-}
-
-.site-footer__title {
-  font-size: clamp(32px, 5vw, 54px);
-  line-height: 1.02;
-  letter-spacing: -0.035em;
-  font-weight: 600;
-  margin: 0;
-  max-width: 22ch;
-  text-wrap: pretty;
 }
 
 .site-footer__actions {
