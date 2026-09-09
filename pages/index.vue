@@ -54,7 +54,7 @@
           title="HomeOS"
           :about="homeosAbout"
           :metrics="homeosMetrics"
-          stack="Go, Postgres, Watermill, WebSocket, Docker, Redis, ElastiCache"
+          stack="Go, Vue, Postgres, Watermill, WebSocket, Docker, Redis, ElastiCache"
           :links="[{ href: 'https://homeos.ng/home', label: 'Live product' }]"
         >
           <template #media>
@@ -87,7 +87,7 @@
           title="Khanzuo"
           about="Khanzuo is an AI agent I built for my QA team (haha), it navigates the real app like a user would, following the reported steps while capturing console output, network calls and screen state. Bugs come back as a replayable session with the failing step and full trail attached."
           :links="[{ href: 'https://github.com/olaysco/khanzuo', label: 'Source' }]"
-          stack="Go"
+          stack="Go, Vue"
         >
           <template #media>
             <MediaSlot
