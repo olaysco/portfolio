@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer" id="contact">
     <div class="shell site-footer__inner">
-      <p class="site-footer__eyebrow">contact / open</p>
+      <p class="site-footer__eyebrow">contact</p>
 
       <div class="site-footer__actions">
         <a class="site-footer__mail" href="mailto:olayiwolaodunsi@gmail.com">

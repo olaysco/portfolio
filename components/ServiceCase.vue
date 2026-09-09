@@ -69,7 +69,7 @@ const shownMetrics = computed(() => props.metrics.filter((m) => m.value));
 <style lang="scss" scoped>
 .case {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.9fr);
   gap: 56px;
   padding: 40px 0 44px;
 }

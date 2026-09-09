@@ -8,10 +8,10 @@
             senior backend &amp; cloud engineer
           </p>
 
-          <h1 class="hero__title">I design & build infrastructure that scales.</h1>
+          <!-- <h1 class="hero__title">I design & build infrastructure that scales.</h1> -->
 
           <p class="hero__lede">
-            My focus is on working on distributed systems and cloud infrastructure that can handle high traffic and complex workflows.  
+            My focus is on working on distributed systems, researching small LLM models, and studying philosophy in my free time. 
           </p>
           <!-- <p class="hero__lede">
             This is where I write about systems and anything that interests me.
@@ -23,7 +23,7 @@
           </div> -->
         </div>
 
-        <aside class="panel hero__panel" aria-label="Profile at a glance">
+        <!-- <aside class="panel hero__panel" aria-label="Profile at a glance">
           <div class="hero__panel-head">
             <span>SERVICE / Olaysco</span>
             <span class="hero__panel-state">HEALTHY</span>
@@ -36,25 +36,8 @@
                 <dd>{{ fact.v }}</dd>
               </div>
             </dl>
-
-            <div class="spark">
-              <p class="spark__label">Requests / 24h</p>
-              <div class="spark__bars" aria-hidden="true">
-                <span
-                  v-for="(bar, i) in sparkBars"
-                  :key="i"
-                  class="spark__bar"
-                  :class="{ 'is-peak': bar.height === peak }"
-                  :style="{
-                    height: `${bar.height}%`,
-                    animationDelay: `${bar.delay}ms`,
-                    '--overshoot': bar.overshoot,
-                  }"
-                ></span>
-              </div>
-            </div>
           </div>
-        </aside>
+        </aside> -->
       </section>
 
       <!-- ── Trace ────────────────────────────────────────────── -->
@@ -63,7 +46,7 @@
       <!-- ── Private projects ─────────────────────────────────── -->
       <section id="projects" class="sect">
         <div class="sect__head">
-          <h2 class="eyebrow">projects I'm currently working on</h2>
+          <h2 class="eyebrow">projects I'm currently working on in my free time</h2>
         </div>
 
         <ServiceCase
@@ -75,32 +58,44 @@
           :links="[{ href: 'https://homeos.ng/home', label: 'Live product' }]"
         >
           <template #media>
-            <MediaSlot :src="media.homeos" alt="HomeOS booking flow" />
+            <MediaSlot
+              :src="media.homeos"
+              alt="HomeOS booking flow"
+              href="https://homeos.ng/home"
+            />
           </template>
         </ServiceCase>
 
         <ServiceCase
           index="02"
           title="Ìtàn"
-          about="An LLM can describe an edit but cannot execute one, and a video agent that mutates state as it goes leaves nothing you can inspect, resume or trust twice. I built Ìtàn from scratch in Go around a replayable edit ledger, where every agent action is an appended operation rather than a mutation, with ffmpeg and headless Chromium doing the work and models hot-swappable mid-session behind one interface. LLM-authored HTML/CSS/GSAP motion graphics render frame-accurate, and the same agent is drivable from a CLI, a browser UI or by voice."
+          about="Building Ìtàn from scratch in Go around a replayable video edit ledger, where every agent action is an appended operation rather than a mutation."
           stack="Go, ffmpeg, headless Chromium, OpenRouter LLM APIs"
           :links="[{ href: 'https://itan-302e1.web.app/', label: 'Live product' }]"
         >
           <template #media>
-            <MediaSlot :src="media.itan" alt="Ìtàn editor mid-render" />
+            <MediaSlot
+              :src="media.itan"
+              alt="Ìtàn editor mid-render"
+              href="https://itan-302e1.web.app/"
+            />
           </template>
         </ServiceCase>
 
         <ServiceCase
           index="03"
           title="Khanzuo"
-          about="Bug reports arrive as prose on a ticket, so reproducing them by hand is slow, and by the time an engineer sits down to it the failing state is gone. I built Khanzuo, an agent that navigates the real app like a user would, clicking, filling forms, following the reported steps, while capturing console output, network calls and screen state as it goes. Each report comes back as a replayed session with the failing step, console output and network trail attached, so the fix starts at the cause rather than the retelling."
+          about="Khanzuo is an AI agent I built for my QA team (haha), it navigates the real app like a user would, following the reported steps while capturing console output, network calls and screen state. Bugs come back as a replayable session with the failing step and full trail attached."
           :links="[{ href: 'https://github.com/olaysco/khanzuo', label: 'Source' }]"
-          stack="LLM agent, Go"
+          stack="Go"
           :divider="false"
         >
           <template #media>
-            <MediaSlot :src="media.khanzuo" alt="Khanzuo agent mid-run" />
+            <MediaSlot
+              :src="media.khanzuo"
+              alt="Khanzuo agent mid-run"
+              href="https://github.com/olaysco/khanzuo"
+            />
           </template>
         </ServiceCase>
 
@@ -159,19 +154,18 @@
             loading="lazy"
           />
           <p class="about__creds">
-            MSc Artificial Intelligence &amp; Human Factors, Coventry. BSc
-            Computer Science, Hertfordshire. Certified Kubernetes
-            &amp; Cloud Native Associate. United Kingdom, remote across GMT and
-            CET hours.
+            MSc Artificial Intelligence &amp; Human Factors. BSc
+            Computer Science. Certified Kubernetes
+            &amp; Cloud Native Associate.
           </p>
         </div>
 
         <div class="about__main">
-          <p class="about__pull">
+          <!-- <p class="about__pull">
             I work on the unglamorous half of a product: the queue that has to
             drain, the endpoint that has to hold at peak, the migration that
             cannot lose a row.
-          </p>
+          </p> -->
           <p class="about__body">
             Most of what I know came from things breaking in production and
             having to explain why. That's also most of what I write about.
@@ -231,26 +225,6 @@ const facts = [
   { k: "REGION", v: "United Kingdom, GMT" },
 ];
 
-// Decorative load profile for the "service" conceit, not measured traffic.
-const sparkline = [
-  38, 52, 30, 44, 61, 48, 35, 70, 55, 42, 88, 66, 51, 74, 43, 59, 96, 68, 47,
-  62, 39, 71, 50, 33,
-];
-const peak = Math.max(...sparkline);
-
-// Deterministic jitter: the entrance has to be identical on server and client,
-// so the "randomness" is derived from the bar's index rather than Math.random.
-function jitter(i: number, salt: number) {
-  const x = Math.sin((i + 1) * salt) * 10000;
-  return x - Math.floor(x);
-}
-
-const sparkBars = sparkline.map((height, i) => ({
-  height,
-  delay: Math.round(jitter(i, 12.9898) * 520),
-  overshoot: (1.05 + jitter(i, 78.233) * 0.17).toFixed(3),
-}));
-
 /* ── Private projects ─────────────────────────────────────── */
 
 const homeosResult = [
@@ -262,9 +236,7 @@ const homeosResult = [
   .join(" ");
 
 const homeosAbout =
-  "HomeOS is an AI-powered operating system for the home that also connects homeowners to vetted service professionals, handling bookings, scheduling and payouts end to end. " +
-  "I designed the backend in Go around an event-driven core, using Postgres as the message bus with Watermill for pub/sub and gorilla/websocket for delivery, so notifications and chat push to the browser in real time and the system scales past a single instance. " +
-  "On top of that I built an idempotent webhook replay system that can reprocess the same payment event any number of times without creating duplicate payouts, with a caching layer in front of the booking endpoint for peak load. " +
+  "HomeOS is an AI-powered operating system for the home, connecting homeowners to vetted service professionals for bookings, scheduling and payouts. " +
   homeosResult;
 
 const homeosMetrics = [
@@ -394,61 +366,6 @@ const alsoStack = [
     font-weight: 500;
     text-align: right;
     margin: 0;
-  }
-}
-
-.spark {
-  padding: 18px 0 6px;
-}
-
-.spark__label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-4);
-  margin: 0 0 10px;
-}
-
-.spark__bars {
-  display: flex;
-  align-items: flex-end;
-  gap: 3px;
-  height: 54px;
-}
-
-@keyframes spark-rise {
-  0% {
-    transform: scaleY(0);
-  }
-  62% {
-    transform: scaleY(var(--overshoot, 1.12));
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .spark__bar {
-    animation: none;
-  }
-}
-
-.spark__bar {
-  flex: 1;
-  min-width: 3px;
-  background: rgba(245, 165, 36, 0.45);
-  transition: background-color 140ms ease;
-  transform-origin: bottom;
-  animation: spark-rise 980ms cubic-bezier(0.33, 0.9, 0.4, 1) backwards;
-
-  &.is-peak {
-    background: rgba(245, 165, 36, 0.7);
-  }
-
-  &:hover {
-    background: var(--accent);
   }
 }
 

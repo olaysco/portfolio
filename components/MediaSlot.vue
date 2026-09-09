@@ -1,6 +1,15 @@
 <template>
   <figure class="slot" :style="{ minHeight: `${minHeight}px` }">
-    <img v-if="src" class="slot__img" :src="src" :alt="alt" loading="lazy" />
+    <a
+      v-if="src && href"
+      class="slot__link"
+      :href="href"
+      target="_blank"
+      rel="noopener"
+    >
+      <img class="slot__img" :src="src" :alt="alt" loading="lazy" />
+    </a>
+    <img v-else-if="src" class="slot__img" :src="src" :alt="alt" loading="lazy" />
     <figcaption v-else class="slot__empty">
       <span class="slot__mark" aria-hidden="true">[ ]</span>
       <span class="slot__text">{{ caption }}</span>
@@ -15,8 +24,9 @@ withDefaults(
     alt?: string;
     caption?: string;
     minHeight?: number;
+    href?: string;
   }>(),
-  { src: "", alt: "", caption: "", minHeight: 300 }
+  { src: "", alt: "", caption: "", minHeight: 220, href: "" }
 );
 </script>
 
@@ -29,6 +39,12 @@ withDefaults(
   height: 100%;
   border: 1px solid var(--line);
   overflow: hidden;
+}
+
+.slot__link {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .slot__img {
