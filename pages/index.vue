@@ -88,13 +88,32 @@
           about="Khanzuo is an AI agent I built for my QA team (haha), it navigates the real app like a user would, following the reported steps while capturing console output, network calls and screen state. Bugs come back as a replayable session with the failing step and full trail attached."
           :links="[{ href: 'https://github.com/olaysco/khanzuo', label: 'Source' }]"
           stack="Go"
-          :divider="false"
         >
           <template #media>
             <MediaSlot
               :src="media.khanzuo"
               alt="Khanzuo agent mid-run"
               href="https://github.com/olaysco/khanzuo"
+            />
+          </template>
+        </ServiceCase>
+
+        <ServiceCase
+          index="04"
+          title="Akitekt"
+          about="Akitekt is a visual architecture workspace built around a single source-of-truth document, where the canvas and an AI assistant that proposes changes both operate through the same document-operation pipeline."
+          :links="[
+            { href: 'https://akitekt-309800167736.europe-west1.run.app/', label: 'Live product' },
+            { href: 'https://github.com/olaysco/akitekt', label: 'Source' },
+          ]"
+          stack="Go, TypeScript, Vue"
+          :divider="false"
+        >
+          <template #media>
+            <MediaSlot
+              :src="media.akitekt"
+              alt="Akitekt architecture canvas"
+              href="https://akitekt-309800167736.europe-west1.run.app/"
             />
           </template>
         </ServiceCase>

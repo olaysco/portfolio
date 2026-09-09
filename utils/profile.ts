@@ -32,4 +32,5 @@ export const media = {
   homeos: "/homeos.png",
   itan: "/itan.png",
   khanzuo: "/khnazuo.png",
+  akitekt: "/akitekt.png",
 };
